@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
-<template>FOOD ITEMS</template>
+<template>FOOD</template>
 
 <style scoped></style>

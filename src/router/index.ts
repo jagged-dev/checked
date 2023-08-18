@@ -25,9 +25,9 @@ const router = createRouter({
           component: () => import("../views/wizard/tabs/People.vue"),
         },
         {
-          path: "foodItems",
-          name: "foodItems",
-          component: () => import("../views/wizard/tabs/FoodItems.vue"),
+          path: "food",
+          name: "food",
+          component: () => import("../views/wizard/tabs/Food.vue"),
         },
         {
           path: "summary",
