@@ -540,12 +540,32 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.mb-\[-4rem\] {
+  margin-bottom: -4rem;
+}
+
+.ml-\[-1rem\] {
+  margin-left: -1rem;
+}
+
+.mr-\[-4rem\] {
+  margin-right: -4rem;
+}
+
 .flex {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .h-40 {
   height: 10rem;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .h-screen {
@@ -558,6 +578,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -576,17 +600,70 @@ video {
   gap: 4rem;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 .gap-8 {
   gap: 2rem;
 }
 
-.bg-charcoal {
+.place-self-center {
+  place-self: center;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+.rounded-tl-3xl {
+  border-top-left-radius: 1.5rem;
+}
+
+.border-l-8 {
+  border-left-width: 8px;
+}
+
+.border-t-8 {
+  border-top-width: 8px;
+}
+
+.border-gunmetal {
+  --tw-border-opacity: 1;
+  border-color: rgb(94 94 94 / var(--tw-border-opacity));
+}
+
+.border-opacity-25 {
+  --tw-border-opacity: 0.25;
+}
+
+.bg-ice {
   --tw-bg-opacity: 1;
-  background-color: rgb(31 31 31 / var(--tw-bg-opacity));
+  background-color: rgb(238 238 238 / var(--tw-bg-opacity));
+}
+
+.bg-summary-light {
+  background-image: url('../../assets/images/screenshots/summary-lt.png');
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-clip-content {
+  background-clip: content-box;
+}
+
+.p-16 {
+  padding: 4rem;
 }
 
 .text-10xl {
   font-size: 10rem;
+}
+
+.text-2xl {
+  font-size: 2rem;
 }
 
 .font-bold {
@@ -602,11 +679,44 @@ video {
   color: rgb(24 119 242 / var(--tw-text-opacity));
 }
 
-.text-ice {
+.text-charcoal {
   --tw-text-opacity: 1;
-  color: rgb(238 238 238 / var(--tw-text-opacity));
+  color: rgb(31 31 31 / var(--tw-text-opacity));
+}
+
+.text-gunmetal {
+  --tw-text-opacity: 1;
+  color: rgb(94 94 94 / var(--tw-text-opacity));
 }
 
 .dark {
   color-scheme: dark;
+}
+
+:is(.dark .dark\:border-silver) {
+  --tw-border-opacity: 1;
+  border-color: rgb(198 198 198 / var(--tw-border-opacity));
+}
+
+:is(.dark .dark\:border-opacity-25) {
+  --tw-border-opacity: 0.25;
+}
+
+:is(.dark .dark\:bg-charcoal) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 31 31 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-summary-dark) {
+  background-image: url('../../assets/images/screenshots/summary-dk.png');
+}
+
+:is(.dark .dark\:text-ice) {
+  --tw-text-opacity: 1;
+  color: rgb(238 238 238 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:text-silver) {
+  --tw-text-opacity: 1;
+  color: rgb(198 198 198 / var(--tw-text-opacity));
 }
