@@ -14,12 +14,12 @@ module.exports = {
       blue: "#1877f2",
       green: "#1ed760",
       yellow: "#fffc05",
-      snow: "#fafafa",
-      ice: "#f5f5f7",
-      silver: "#a1a1a6",
-      gunmetal: "#515154",
-      charcoal: "#1d1d1f",
-      coal: "#151516",
+      snow: "#f9f9f9",
+      ice: "#eeeeee",
+      silver: "#c6c6c6",
+      gunmetal: "#5e5e5e",
+      charcoal: "#1f1f1f",
+      coal: "#131313",
     },
     fontSize: {
       xs: "0.5rem",
@@ -42,7 +42,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['"Product Sans"', '"SF Pro"', ...defaultTheme.fontFamily.sans],
+        sans: ['"Product Sans"', ...defaultTheme.fontFamily.sans],
       },
       screens: {
         xs: "500px",
@@ -51,14 +51,8 @@ module.exports = {
         18: "4.5rem",
       },
       backgroundImage: {
-        "dots-white": "url('../../assets/images/backgrounds/dots-wh.png')",
-        "dots-black": "url('../../assets/images/backgrounds/dots-bk.png')",
         "cards-white": "url('../../assets/images/backgrounds/cards-wh.png')",
         "cards-black": "url('../../assets/images/backgrounds/cards-bk.png')",
-        "lines-white": "url('../../assets/images/backgrounds/lines-wh.png')",
-        "lines-black": "url('../../assets/images/backgrounds/lines-bk.png')",
-        "polygons-white": "url('../../assets/images/backgrounds/polygons-wh.png')",
-        "polygons-black": "url('../../assets/images/backgrounds/polygons-bk.png')",
         "amounts-light": "url('../../assets/images/screenshots/amounts-lt.png')",
         "amounts-dark": "url('../../assets/images/screenshots/amounts-dk.png')",
         "people-light": "url('../../assets/images/screenshots/people-lt.png')",
