@@ -1,6 +1,11 @@
 :root {
   --md-sys-color-primary: #1877f2;
   --md-ref-typeface-plain: "Product Sans";
+  --md-elevated-button-container-height: 3rem;
+  --md-filled-button-container-height: 3rem;
+  --md-filled-tonal-button-container-height: 3rem;
+  --md-outlined-button-container-height: 3rem;
+  --md-text-button-container-height: 3rem;
 }
 
 /* :root {
