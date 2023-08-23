@@ -76,6 +76,10 @@
   --md-primary-tab-divider-color: var(--md-ref-palette-transparent);
   --md-primary-tab-active-indicator-color: var(--md-ref-palette-transparent);
   --md-primary-tab-label-text-type: var(--md-sys-typescale-title-small-type);
+  --md-primary-tab-active-label-text-color: var(--md-sys-color-on-primary);
+  --md-primary-tab-active-focus-label-text-color: var(--md-sys-color-on-primary);
+  --md-primary-tab-active-hover-label-text-color: var(--md-sys-color-on-primary);
+  --md-primary-tab-active-pressed-label-text-color: var(--md-sys-color-on-primary);
 }
 
 .dark {
