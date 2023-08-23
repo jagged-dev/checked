@@ -11,11 +11,9 @@
   --md-ref-palette-yellow: #fffc05;
   --md-ref-palette-snow: #f9f9f9;
   --md-ref-palette-ice: #eeeeee;
-  --md-ref-palette-ice-dark: #e7e7e7;
   --md-ref-palette-silver: #c6c6c6;
   --md-ref-palette-gunmetal: #5e5e5e;
   --md-ref-palette-charcoal: #1f1f1f;
-  --md-ref-palette-charcoal-light: #272727;
   --md-ref-palette-coal: #131313;
   --md-ref-typeface-brand: "Product Sans";
   --md-ref-typeface-plain: "Product Sans";
@@ -40,13 +38,13 @@
   --md-sys-color-on-secondary-container: var(--md-ref-palette-blue);
   --md-sys-color-tertiary-container: var(--md-ref-palette-charcoal);
   --md-sys-color-on-tertiary-container: var(--md-ref-palette-ice);
-  --md-sys-color-surface: var(--md-ref-palette-snow);
+  --md-sys-color-surface: var(--md-ref-palette-ice);
   --md-sys-color-on-surface: var(--md-ref-palette-charcoal);
-  --md-sys-color-surface-variant: var(--md-ref-palette-snow);
+  --md-sys-color-surface-variant: var(--md-ref-palette-ice);
   --md-sys-color-on-surface-variant: var(--md-ref-palette-gunmetal);
-  --md-sys-color-surface-container: var(--md-ref-palette-snow);
-  --md-sys-color-surface-container-high: var(--md-ref-palette-snow);
-  --md-sys-color-surface-container-highest: var(--md-ref-palette-ice-dark);
+  --md-sys-color-surface-container: var(--md-ref-palette-ice);
+  --md-sys-color-surface-container-high: var(--md-ref-palette-ice);
+  --md-sys-color-surface-container-highest: var(--md-ref-palette-ice);
   --md-sys-color-outline: var(--md-ref-palette-gunmetal);
   --md-sys-typescale-title-small-type: var(--md-ref-typeface-weight-bold) var(--md-ref-typeface-size-medium) var(--md-ref-typeface-plain);
   --md-sys-typescale-label-large-type: var(--md-ref-typeface-weight-bold) var(--md-ref-typeface-size-small) var(--md-ref-typeface-plain);
@@ -86,12 +84,12 @@
   --md-sys-color-on-secondary: var(--md-ref-palette-charcoal);
   --md-sys-color-tertiary-container: var(--md-ref-palette-ice);
   --md-sys-color-on-tertiary-container: var(--md-ref-palette-charcoal);
-  --md-sys-color-surface: var(--md-ref-palette-coal);
+  --md-sys-color-surface: var(--md-ref-palette-charcoal);
   --md-sys-color-on-surface: var(--md-ref-palette-ice);
-  --md-sys-color-surface-variant: var(--md-ref-palette-coal);
+  --md-sys-color-surface-variant: var(--md-ref-palette-charcoal);
   --md-sys-color-on-surface-variant: var(--md-ref-palette-silver);
-  --md-sys-color-surface-container: var(--md-ref-palette-coal);
-  --md-sys-color-surface-container-high: var(--md-ref-palette-coal);
-  --md-sys-color-surface-container-highest: var(--md-ref-palette-charcoal-light);
+  --md-sys-color-surface-container: var(--md-ref-palette-charcoal);
+  --md-sys-color-surface-container-high: var(--md-ref-palette-charcoal);
+  --md-sys-color-surface-container-highest: var(--md-ref-palette-charcoal);
   --md-sys-color-outline: var(--md-ref-palette-silver);
 }
