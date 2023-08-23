@@ -1,75 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1");
+
 :root {
-  --md-sys-color-primary: #1877f2;
+  /* reference tokens */
+  --md-ref-palette-current: currentColor;
+  --md-ref-palette-transparent: transparent;
+  --md-ref-palette-blue: #1877f2;
+  --md-ref-palette-blue-light: #c5ddfc;
+  --md-ref-palette-red: #eb0028;
+  --md-ref-palette-green: #1ed760;
+  --md-ref-palette-yellow: #fffc05;
+  --md-ref-palette-snow: #f9f9f9;
+  --md-ref-palette-ice: #eeeeee;
+  --md-ref-palette-ice-dark: #e7e7e7;
+  --md-ref-palette-silver: #c6c6c6;
+  --md-ref-palette-gunmetal: #5e5e5e;
+  --md-ref-palette-charcoal: #1f1f1f;
+  --md-ref-palette-charcoal-light: #272727;
+  --md-ref-palette-coal: #131313;
+  --md-ref-typeface-brand: "Product Sans";
   --md-ref-typeface-plain: "Product Sans";
-  --md-elevated-button-container-height: 3rem;
-  --md-filled-button-container-height: 3rem;
-  --md-filled-tonal-button-container-height: 3rem;
-  --md-outlined-button-container-height: 3rem;
-  --md-text-button-container-height: 3rem;
+  --md-ref-typeface-size-small: 0.875rem;
+  --md-ref-typeface-size-medium: 1rem;
+  --md-ref-typeface-size-large: 1.375rem;
+  --md-ref-typeface-weight-regular: 400;
+  --md-ref-typeface-weight-bold: 700;
+  --md-ref-shape-height-small: 2rem;
+  --md-ref-shape-height-medium: 2.5rem;
+  --md-ref-shape-height-large: 3rem;
+  --md-ref-shape-corner-none: 0px;
+  --md-ref-shape-corner-full: 9999px;
+  /* system tokens */
+  --md-sys-color-primary: var(--md-ref-palette-blue);
+  --md-sys-color-on-primary: var(--md-ref-palette-ice);
+  --md-sys-color-secondary: var(--md-ref-palette-charcoal);
+  --md-sys-color-on-secondary: var(--md-ref-palette-ice);
+  --md-sys-color-primary-container: var(--md-ref-palette-blue);
+  --md-sys-color-on-primary-container: var(--md-ref-palette-ice);
+  --md-sys-color-secondary-container: var(--md-ref-palette-blue-light);
+  --md-sys-color-on-secondary-container: var(--md-ref-palette-blue);
+  --md-sys-color-tertiary-container: var(--md-ref-palette-charcoal);
+  --md-sys-color-on-tertiary-container: var(--md-ref-palette-ice);
+  --md-sys-color-surface: var(--md-ref-palette-snow);
+  --md-sys-color-on-surface: var(--md-ref-palette-charcoal);
+  --md-sys-color-surface-variant: var(--md-ref-palette-snow);
+  --md-sys-color-on-surface-variant: var(--md-ref-palette-gunmetal);
+  --md-sys-color-surface-container: var(--md-ref-palette-snow);
+  --md-sys-color-surface-container-high: var(--md-ref-palette-snow);
+  --md-sys-color-surface-container-highest: var(--md-ref-palette-ice-dark);
+  --md-sys-color-outline: var(--md-ref-palette-gunmetal);
+  --md-sys-typescale-title-small-type: var(--md-ref-typeface-weight-bold) var(--md-ref-typeface-size-medium) var(--md-ref-typeface-plain);
+  --md-sys-typescale-label-large-type: var(--md-ref-typeface-weight-bold) var(--md-ref-typeface-size-small) var(--md-ref-typeface-plain);
+  --md-sys-container-height: var(--md-ref-shape-height-large);
+  --md-sys-container-shape: var(--md-ref-shape-corner-full);
+  /* component tokens */
+  --md-elevated-button-container-color: var(--md-sys-color-surface);
+  --md-elevated-button-container-height: var(--md-sys-container-height);
+  --md-elevated-button-label-text-type: var(--md-sys-typescale-label-large-type);
+  --md-filled-button-container-height: var(--md-sys-container-height);
+  --md-filled-button-label-text-type: var(--md-sys-typescale-label-large-type);
+  --md-filled-tonal-button-container-height: var(--md-sys-container-height);
+  --md-filled-tonal-button-label-text-type: var(--md-sys-typescale-label-large-type);
+  --md-outlined-button-container-height: var(--md-sys-container-height);
+  --md-outlined-button-label-text-type: var(--md-sys-typescale-label-large-type);
+  --md-text-button-container-height: var(--md-sys-container-height);
+  --md-text-button-label-text-type: var(--md-sys-typescale-label-large-type);
+  --md-fab-label-text-type: var(--md-sys-typescale-label-large-type);
+  --md-fab-branded-label-text-type: var(--md-sys-typescale-label-large-type);
+  --md-switch-selected-icon-color: var(--md-sys-color-primary);
+  --md-switch-selected-focus-handle-color: var(--md-sys-color-on-primary);
+  --md-switch-selected-focus-icon-color: var(--md-sys-color-primary);
+  --md-switch-selected-hover-handle-color: var(--md-sys-color-on-primary);
+  --md-switch-selected-hover-icon-color: var(--md-sys-color-primary);
+  --md-switch-selected-pressed-handle-color: var(--md-sys-color-on-primary);
+  --md-switch-selected-pressed-icon-color: var(--md-sys-color-primary);
+  --md-primary-tab-container-color: var(--md-ref-palette-transparent);
+  --md-primary-tab-container-shape: var(--md-sys-container-shape);
+  --md-primary-tab-divider-color: var(--md-ref-palette-transparent);
+  --md-primary-tab-active-indicator-color: var(--md-ref-palette-transparent);
+  --md-primary-tab-label-text-type: var(--md-sys-typescale-title-small-type);
 }
 
-/* :root {
-  --md-sys-color-primary: #006a6a;
-  --md-sys-color-primary-container: #6ff7f6;
-  --md-sys-color-on-primary: #ffffff;
-  --md-sys-color-on-primary-container: #002020;
-  --md-sys-color-secondary: #4a6363;
-  --md-sys-color-secondary-container: #cce8e7;
-  --md-sys-color-on-secondary: #ffffff;
-  --md-sys-color-on-secondary-container: #051f1f;
-  --md-sys-color-tertiary: #4b607c;
-  --md-sys-color-tertiary-container: #d3e4ff;
-  --md-sys-color-on-tertiary: #ffffff;
-  --md-sys-color-on-tertiary-container: #041c35;
-  --md-sys-color-error: #ba1a1a;
-  --md-sys-color-error-container: #ffdad6;
-  --md-sys-color-on-error: #ffffff;
-  --md-sys-color-on-error-container: #410002;
-  --md-sys-color-outline: #6f7979;
-  --md-sys-color-background: #fafdfc;
-  --md-sys-color-on-background: #191c1c;
-  --md-sys-color-surface: #fafdfc;
-  --md-sys-color-on-surface: #191c1c;
-  --md-sys-color-surface-variant: #dae5e4;
-  --md-sys-color-on-surface-variant: #3f4948;
-  --md-sys-color-inverse-surface: #2d3131;
-  --md-sys-color-inverse-on-surface: #eff1f0;
-  --md-sys-color-inverse-primary: #4cdada;
-  --md-sys-color-shadow: #000000;
-  --md-sys-color-surface-tint: #006a6a;
-  --md-sys-color-outline-variant: #bec9c8;
-  --md-sys-color-scrim: #000000;
-} */
-
-/* .dark {
-  --md-sys-color-primary: #4cdada;
-  --md-sys-color-primary-container: #004f4f;
-  --md-sys-color-on-primary: #003737;
-  --md-sys-color-on-primary-container: #6ff7f6;
-  --md-sys-color-secondary: #b0cccb;
-  --md-sys-color-secondary-container: #324b4b;
-  --md-sys-color-on-secondary: #1b3534;
-  --md-sys-color-on-secondary-container: #cce8e7;
-  --md-sys-color-tertiary: #b3c8e8;
-  --md-sys-color-tertiary-container: #334863;
-  --md-sys-color-on-tertiary: #1c314b;
-  --md-sys-color-on-tertiary-container: #d3e4ff;
-  --md-sys-color-error: #ffb4ab;
-  --md-sys-color-error-container: #93000a;
-  --md-sys-color-on-error: #690005;
-  --md-sys-color-on-error-container: #ffdad6;
-  --md-sys-color-outline: #889392;
-  --md-sys-color-background: #191c1c;
-  --md-sys-color-on-background: #e0e3e2;
-  --md-sys-color-surface: #191c1c;
-  --md-sys-color-on-surface: #e0e3e2;
-  --md-sys-color-surface-variant: #3f4948;
-  --md-sys-color-on-surface-variant: #bec9c8;
-  --md-sys-color-inverse-surface: #e0e3e2;
-  --md-sys-color-inverse-on-surface: #191c1c;
-  --md-sys-color-inverse-primary: #006a6a;
-  --md-sys-color-shadow: #000000;
-  --md-sys-color-surface-tint: #4cdada;
-  --md-sys-color-outline-variant: #3f4948;
-  --md-sys-color-scrim: #000000;
-} */
+.dark {
+  /* system tokens */
+  --md-sys-color-secondary: var(--md-ref-palette-ice);
+  --md-sys-color-on-secondary: var(--md-ref-palette-charcoal);
+  --md-sys-color-tertiary-container: var(--md-ref-palette-ice);
+  --md-sys-color-on-tertiary-container: var(--md-ref-palette-charcoal);
+  --md-sys-color-surface: var(--md-ref-palette-coal);
+  --md-sys-color-on-surface: var(--md-ref-palette-ice);
+  --md-sys-color-surface-variant: var(--md-ref-palette-coal);
+  --md-sys-color-on-surface-variant: var(--md-ref-palette-silver);
+  --md-sys-color-surface-container: var(--md-ref-palette-coal);
+  --md-sys-color-surface-container-high: var(--md-ref-palette-coal);
+  --md-sys-color-surface-container-highest: var(--md-ref-palette-charcoal-light);
+  --md-sys-color-outline: var(--md-ref-palette-silver);
+}
