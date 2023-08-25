@@ -13,7 +13,7 @@ import Theme from "@/components/icons/Theme.vue";
             <div class="hidden xl:flex"></div>
             <!-- screenshot -->
             <div class="-mx-14 -mt-14 xl:row-span-3 xl:m-0 xl:-mb-16 xl:-mr-16">
-                <Screenshot class="xl:rounded-none xl:rounded-tl-3xl xl:border-b-0 xl:border-r-0" bg="bg-summary-light" bgDark="dark:bg-summary-dark" />
+                <Screenshot class="xl:rounded-none xl:rounded-tl-3xl xl:border-b-0 xl:border-r-0" bg="bg-results-light" bgDark="dark:bg-results-dark" />
             </div>
             <!-- title -->
             <div class="flex flex-col gap-8 place-self-center">

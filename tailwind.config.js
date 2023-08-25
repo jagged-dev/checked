@@ -63,8 +63,8 @@ module.exports = {
         "people-dark": "url('../../assets/images/screenshots/people-dk.png')",
         "food-light": "url('../../assets/images/screenshots/food-lt.png')",
         "food-dark": "url('../../assets/images/screenshots/food-dk.png')",
-        "summary-light": "url('../../assets/images/screenshots/summary-lt.png')",
-        "summary-dark": "url('../../assets/images/screenshots/summary-dk.png')",
+        "results-light": "url('../../assets/images/screenshots/results-lt.png')",
+        "results-dark": "url('../../assets/images/screenshots/results-dk.png')",
       },
       transitionProperty: {
         DEFAULT: "background-image, height, font-size, " + defaultTheme.transitionProperty.DEFAULT,
