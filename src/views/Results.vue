@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
-<template>SUMMARY</template>
+<template>RESULTS</template>
 
 <style scoped></style>
