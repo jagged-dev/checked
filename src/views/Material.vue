@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Navbar from "@/components/Navbar.vue";
-import Sidebar from "@/components/Sidebar.vue";
+import Navbar from "@/components/layout/Navbar.vue";
+import Sidebar from "@/components/layout/Sidebar.vue";
 
 function switchTabs(event: any) {
-    for (var tab of event.target.children) {
+    for (let tab of event.target.children) {
         tab.setAttribute("data-selected", tab.selected ? "true" : "false");
     }
 }
@@ -16,7 +16,7 @@ function switchTabs(event: any) {
 
         <div class="h-screen pl-24 pt-24">
             <div class="h-full overflow-y-auto rounded-tl-3xl bg-snow transition-background duration-500 dark:bg-coal">
-                <div class="flex flex-col gap-16 p-16">
+                <div class="flex flex-col gap-8 p-8">
                     <!-- tabs -->
                     <md-tabs class="rounded-full bg-ice dark:bg-charcoal" @change="switchTabs">
                         <md-tab class="h-20 rounded-full bg-blue transition-background data-[selected=false]:bg-transparent data-[selected=true]:bg-blue">
