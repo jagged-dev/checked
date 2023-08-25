@@ -32,14 +32,14 @@ const router = createRouter({
         {
           path: "food",
           name: "food",
-        },
-        {
-          path: "summary",
-          name: "summary",
-          component: () => import("../views/wizard/tabs/Summary.vue"),
           component: () => import("@/views/wizard/tabs/Food.vue"),
         },
       ],
+    },
+    {
+      path: "/results",
+      name: "results",
+      component: () => import("@/views/Results.vue"),
     },
   ],
 });
