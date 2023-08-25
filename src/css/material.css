@@ -58,6 +58,7 @@
   --md-filled-button-label-text-type: var(--md-sys-typescale-label-large-type);
   --md-filled-tonal-button-container-height: var(--md-sys-container-height);
   --md-filled-tonal-button-label-text-type: var(--md-sys-typescale-label-large-type);
+  --md-outlined-button-outline-color: var(--md-sys-color-primary);
   --md-outlined-button-container-height: var(--md-sys-container-height);
   --md-outlined-button-label-text-type: var(--md-sys-typescale-label-large-type);
   --md-text-button-container-height: var(--md-sys-container-height);
