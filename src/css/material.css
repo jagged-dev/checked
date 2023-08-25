@@ -46,6 +46,7 @@
   --md-sys-color-surface-container-high: var(--md-ref-palette-ice);
   --md-sys-color-surface-container-highest: var(--md-ref-palette-ice);
   --md-sys-color-outline: var(--md-ref-palette-gunmetal);
+  --md-sys-color-outline-variant: var(--md-ref-palette-ice);
   --md-sys-typescale-title-small-type: var(--md-ref-typeface-weight-bold) var(--md-ref-typeface-size-medium) var(--md-ref-typeface-plain);
   --md-sys-typescale-label-large-type: var(--md-ref-typeface-weight-bold) var(--md-ref-typeface-size-small) var(--md-ref-typeface-plain);
   --md-sys-container-height: var(--md-ref-shape-height-large);
@@ -97,4 +98,5 @@
   --md-sys-color-surface-container-high: var(--md-ref-palette-charcoal);
   --md-sys-color-surface-container-highest: var(--md-ref-palette-charcoal);
   --md-sys-color-outline: var(--md-ref-palette-silver);
+  --md-sys-color-outline-variant: var(--md-ref-palette-charcoal);
 }
