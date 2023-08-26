@@ -440,6 +440,12 @@ video {
   src: url("../../assets/fonts/product-sans/product-sans-regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "SF Pro";
+
+  src: url("../../assets/fonts/sf-pro/sf-pro-display-regular.ttf") format("truetype");
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -570,6 +576,10 @@ video {
   margin-top: -3.5rem;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
 .flex {
   display: flex;
 }
@@ -606,10 +616,6 @@ video {
   height: 100vh;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
 .w-16 {
   width: 4rem;
 }
@@ -632,6 +638,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-end {
@@ -668,6 +678,10 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-y-8 {
+  row-gap: 2rem;
 }
 
 .place-self-center {
@@ -723,7 +737,7 @@ video {
 
 .bg-snow {
   --tw-bg-opacity: 1;
-  background-color: rgb(249 249 249 / var(--tw-bg-opacity));
+  background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
 
 .bg-results-light {
@@ -758,16 +772,24 @@ video {
   padding-left: 6rem;
 }
 
+.pt-0 {
+  padding-top: 0px;
+}
+
 .pt-24 {
   padding-top: 6rem;
 }
 
-.font-sans {
-  font-family: "Product Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+.font-\[\'SF_Pro\'\] {
+  font-family: 'SF Pro';
 }
 
 .text-2xl {
   font-size: 2rem;
+}
+
+.text-3xl {
+  font-size: 3rem;
 }
 
 .text-4xl {
@@ -776,6 +798,10 @@ video {
 
 .text-lg {
   font-size: 1.25rem;
+}
+
+.text-md {
+  font-size: 0.875rem;
 }
 
 .text-xl {
@@ -803,6 +829,11 @@ video {
 .text-gunmetal {
   --tw-text-opacity: 1;
   color: rgb(94 94 94 / var(--tw-text-opacity));
+}
+
+.text-red {
+  --tw-text-opacity: 1;
+  color: rgb(235 0 40 / var(--tw-text-opacity));
 }
 
 .transition {
@@ -942,12 +973,32 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:order-1 {
+    order: 1;
+  }
+
+  .lg\:order-2 {
+    order: 2;
+  }
+
   .lg\:h-40 {
     height: 10rem;
   }
 
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
   .lg\:w-40 {
     width: 10rem;
+  }
+
+  .lg\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .lg\:justify-end {
+    justify-content: flex-end;
   }
 
   .lg\:text-10xl {
