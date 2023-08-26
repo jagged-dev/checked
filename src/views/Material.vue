@@ -68,7 +68,7 @@ function switchTabs(event: any) {
             <md-outlined-icon-button><md-icon>edit</md-icon></md-outlined-icon-button>
         </div>
 
-        <!-- elevation / focus / ripple -->
+        <!-- elevation / ripple -->
         <button class="relative h-16 w-16 rounded-2xl bg-ice dark:bg-charcoal" style="--md-elevation-level: 3">
             <md-elevation></md-elevation>
             <md-ripple></md-ripple>
