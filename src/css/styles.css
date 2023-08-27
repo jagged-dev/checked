@@ -708,8 +708,9 @@ video {
   border-radius: 9999px;
 }
 
-.rounded-tl-3xl {
+.rounded-t-3xl {
   border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }
 
 .border-8 {
@@ -766,10 +767,6 @@ video {
 
 .p-8 {
   padding: 2rem;
-}
-
-.pl-24 {
-  padding-left: 6rem;
 }
 
 .pt-0 {
@@ -981,6 +978,14 @@ video {
     order: 2;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:h-40 {
     height: 10rem;
   }
@@ -993,12 +998,24 @@ video {
     width: 10rem;
   }
 
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .lg\:justify-start {
     justify-content: flex-start;
   }
 
   .lg\:justify-end {
     justify-content: flex-end;
+  }
+
+  .lg\:rounded-tr-none {
+    border-top-right-radius: 0px;
+  }
+
+  .lg\:pl-24 {
+    padding-left: 6rem;
   }
 
   .lg\:text-10xl {
