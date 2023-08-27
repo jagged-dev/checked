@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
 import Logo from "@/components/icons/Logo.vue";
+import Theme from "@/components/icons/Theme.vue";
 </script>
 
 <template>
@@ -11,6 +12,9 @@ import Logo from "@/components/icons/Logo.vue";
                 <h1 class="text-2xl font-bold leading-none text-charcoal transition-font dark:text-ice">checked</h1>
             </div>
         </RouterLink>
+        <div class="flex w-full justify-end p-6 lg:hidden">
+            <Theme />
+        </div>
     </nav>
 </template>
 
