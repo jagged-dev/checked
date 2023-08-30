@@ -558,9 +558,8 @@ video {
   z-index: 50;
 }
 
-.-mx-14 {
-  margin-left: -3.5rem;
-  margin-right: -3.5rem;
+.row-span-3 {
+  grid-row: span 3 / span 3;
 }
 
 .my-auto {
@@ -568,12 +567,20 @@ video {
   margin-bottom: auto;
 }
 
+.-mb-16 {
+  margin-bottom: -4rem;
+}
+
 .-ml-4 {
   margin-left: -1rem;
 }
 
-.-mt-14 {
-  margin-top: -3.5rem;
+.-mr-16 {
+  margin-right: -4rem;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 .mt-auto {
@@ -632,8 +639,8 @@ video {
   width: 100%;
 }
 
-.grid-rows-2 {
-  grid-template-rows: repeat(2, minmax(0, 1fr));
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -660,16 +667,8 @@ video {
   justify-content: center;
 }
 
-.gap-16 {
-  gap: 4rem;
-}
-
 .gap-2 {
   gap: 0.5rem;
-}
-
-.gap-3 {
-  gap: 0.75rem;
 }
 
 .gap-4 {
@@ -708,13 +707,29 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-none {
+  border-radius: 0px;
+}
+
 .rounded-t-3xl {
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
 }
 
+.rounded-tl-3xl {
+  border-top-left-radius: 1.5rem;
+}
+
 .border-8 {
   border-width: 8px;
+}
+
+.border-b-0 {
+  border-bottom-width: 0px;
+}
+
+.border-r-0 {
+  border-right-width: 0px;
 }
 
 .border-gunmetal {
@@ -753,10 +768,6 @@ video {
   background-clip: content-box;
 }
 
-.p-16 {
-  padding: 4rem;
-}
-
 .p-3 {
   padding: 0.75rem;
 }
@@ -791,10 +802,6 @@ video {
 
 .text-4xl {
   font-size: 4rem;
-}
-
-.text-lg {
-  font-size: 1.25rem;
 }
 
 .text-md {
@@ -1024,22 +1031,6 @@ video {
 }
 
 @media (min-width: 1280px) {
-  .xl\:row-span-3 {
-    grid-row: span 3 / span 3;
-  }
-
-  .xl\:m-0 {
-    margin: 0px;
-  }
-
-  .xl\:-mb-16 {
-    margin-bottom: -4rem;
-  }
-
-  .xl\:-mr-16 {
-    margin-right: -4rem;
-  }
-
   .xl\:flex {
     display: flex;
   }
@@ -1056,24 +1047,12 @@ video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .xl\:grid-rows-3 {
-    grid-template-rows: repeat(3, minmax(0, 1fr));
+  .xl\:gap-16 {
+    gap: 4rem;
   }
 
-  .xl\:rounded-none {
-    border-radius: 0px;
-  }
-
-  .xl\:rounded-tl-3xl {
-    border-top-left-radius: 1.5rem;
-  }
-
-  .xl\:border-b-0 {
-    border-bottom-width: 0px;
-  }
-
-  .xl\:border-r-0 {
-    border-right-width: 0px;
+  .xl\:p-16 {
+    padding: 4rem;
   }
 
   .xl\:text-6xl {
