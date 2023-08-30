@@ -6,13 +6,12 @@ import Theme from "@/components/icons/Theme.vue";
 </script>
 
 <template>
-    <!-- hero -->
-    <div class="grid h-screen grid-rows-2 gap-16 p-16 xl:grid-cols-2 xl:grid-rows-3">
+    <div class="grid h-screen grid-rows-3 gap-8 p-8 xl:grid-cols-2 xl:gap-16 xl:p-16">
         <!-- blank -->
-        <div class="hidden xl:flex"></div>
+        <div></div>
         <!-- screenshot -->
-        <div class="-mx-14 -mt-14 xl:row-span-3 xl:m-0 xl:-mb-16 xl:-mr-16">
-            <Screenshot class="xl:rounded-none xl:rounded-tl-3xl xl:border-b-0 xl:border-r-0" bg="bg-results-light" bgDark="dark:bg-results-dark" />
+        <div class="row-span-3 -mb-16 -mr-16 hidden xl:flex">
+            <Screenshot class="rounded-none rounded-tl-3xl border-b-0 border-r-0" bg="bg-results-light" bgDark="dark:bg-results-dark" />
         </div>
         <!-- title -->
         <div class="flex flex-col gap-8 place-self-center">
@@ -21,9 +20,9 @@ import Theme from "@/components/icons/Theme.vue";
                 <RouterLink :to="{ name: 'wizard' }">
                     <md-filled-button>Get started</md-filled-button>
                 </RouterLink>
-                <a href="#landing">
+                <RouterLink :to="{ name: 'learn' }">
                     <md-outlined-button>Learn more</md-outlined-button>
-                </a>
+                </RouterLink>
             </div>
         </div>
         <!-- theme toggle -->
@@ -31,7 +30,6 @@ import Theme from "@/components/icons/Theme.vue";
             <Theme />
         </div>
     </div>
-    <!-- landing -->
 </template>
 
 <style scoped></style>
