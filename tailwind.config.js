@@ -41,9 +41,6 @@ module.exports = {
     container: {
       center: true,
     },
-    data: {
-      selected: "selected='true'",
-    },
     extend: {
       fontFamily: {
         sans: ['"Product Sans"', ...defaultTheme.fontFamily.sans],
