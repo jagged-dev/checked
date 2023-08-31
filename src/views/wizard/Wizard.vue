@@ -56,7 +56,11 @@ onUpdated(() => {
             </md-tab>
         </md-tabs>
         <!-- tab content -->
-        <RouterView :tabIdx="activeTab" @switchTab="(tabIdx: Number) => (activeTab = tabIdx)" />
+        <RouterView :tabIdx="activeTab" @switchTab="(tabIdx: Number) => (activeTab = tabIdx)" v-slot="{ Component }">
+            <KeepAlive>
+                <component :is="Component" />
+            </KeepAlive>
+        </RouterView>
     </div>
 </template>
 
