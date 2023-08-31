@@ -14,7 +14,7 @@ function switchTabs(event: any) {
                 <div class="flex items-center gap-2"><md-icon slot="icon">attach_money</md-icon>Amounts</div>
             </md-tab>
             <md-tab class="h-20 rounded-full transition-background data-[selected=true]:bg-blue">
-                <div class="flex items-center gap-2"><md-icon slot="icon">person</md-icon>People</div>
+                <div class="flex items-center gap-2"><md-icon slot="icon">person</md-icon>Party</div>
             </md-tab>
             <md-tab class="h-20 rounded-full transition-background data-[selected=true]:bg-blue">
                 <div class="flex items-center gap-2"><md-icon slot="icon">restaurant</md-icon>Food</div>

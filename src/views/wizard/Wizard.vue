@@ -28,7 +28,7 @@ onUpdated(() => {
             router.push({ name: "amounts" });
             break;
         case 1:
-            router.push({ name: "people" });
+            router.push({ name: "party" });
             break;
         case 2:
             router.push({ name: "food" });
@@ -49,7 +49,7 @@ onUpdated(() => {
                 <div class="flex items-center gap-2"><md-icon>payments</md-icon>Amounts</div>
             </md-tab>
             <md-tab class="h-20 rounded-full transition-background data-selected:bg-blue">
-                <div class="flex items-center gap-2"><md-icon>person</md-icon>People</div>
+                <div class="flex items-center gap-2"><md-icon>person</md-icon>Party</div>
             </md-tab>
             <md-tab class="h-20 rounded-full transition-background data-selected:bg-blue">
                 <div class="flex items-center gap-2"><md-icon>restaurant</md-icon>Food</div>

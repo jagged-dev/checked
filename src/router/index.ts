@@ -30,9 +30,9 @@ const router = createRouter({
           component: () => import("@/views/wizard/tabs/Amounts.vue"),
         },
         {
-          path: "people",
-          name: "people",
-          component: () => import("@/views/wizard/tabs/People.vue"),
+          path: "party",
+          name: "party",
+          component: () => import("@/views/wizard/tabs/Party.vue"),
         },
         {
           path: "food",

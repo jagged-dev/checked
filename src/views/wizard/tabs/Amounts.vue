@@ -12,7 +12,7 @@ defineEmits(["switchTab"]);
         <RouterLink :to="{ name: 'home' }">
             <Back label="Back">Home</Back>
         </RouterLink>
-        <Next label="Next" @click="$emit('switchTab', tabIdx! + 1)">People</Next>
+        <Next label="Next" @click="$emit('switchTab', tabIdx! + 1)">Party</Next>
     </div>
 </template>
 

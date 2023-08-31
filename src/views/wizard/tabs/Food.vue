@@ -9,7 +9,7 @@ defineEmits(["switchTab"]);
 
 <template>
     <div class="grid gap-4 lg:grid-cols-2">
-        <Back label="Previous" @click="$emit('switchTab', tabIdx! - 1)">People</Back>
+        <Back label="Previous" @click="$emit('switchTab', tabIdx! - 1)">Party</Back>
         <RouterLink :to="{ name: 'results' }">
             <Next label="Submit">Results</Next>
         </RouterLink>
