@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Logo from "@/components/icons/Logo.vue";
 
-defineProps({ desc: String });
+const props = defineProps({ desc: String });
 </script>
 
 <template>
