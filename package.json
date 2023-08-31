@@ -14,7 +14,7 @@
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
-    "@material/web": "^1.0.0-pre.15",
+    "@material/web": "^1.0.0-pre.16",
     "@tsconfig/node18": "^18.2.0",
     "@types/node": "^18.17.0",
     "@vitejs/plugin-vue": "^4.2.3",
