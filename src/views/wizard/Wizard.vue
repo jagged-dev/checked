@@ -49,10 +49,10 @@ onUpdated(() => {
                 <div class="flex items-center gap-2"><md-icon>payments</md-icon>Amounts</div>
             </md-tab>
             <md-tab class="h-20 rounded-full transition-background data-selected:bg-blue">
-                <div class="flex items-center gap-2"><md-icon>person</md-icon>Party</div>
+                <div class="flex items-center gap-2"><md-icon>group</md-icon>Party</div>
             </md-tab>
             <md-tab class="h-20 rounded-full transition-background data-selected:bg-blue">
-                <div class="flex items-center gap-2"><md-icon>restaurant</md-icon>Food</div>
+                <div class="flex items-center gap-2"><md-icon>restaurant_menu</md-icon>Food</div>
             </md-tab>
         </md-tabs>
         <!-- tab content -->
