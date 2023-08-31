@@ -22,9 +22,15 @@
   --md-ref-typeface-size-large: 1.375rem;
   --md-ref-typeface-weight-regular: 400;
   --md-ref-typeface-weight-bold: 700;
+  --md-ref-typeface-line-height-small: 1rem;
+  --md-ref-typeface-line-height-medium: 1.25rem;
+  --md-ref-typeface-line-height-large: 1.5rem;
   --md-ref-shape-height-small: 2rem;
   --md-ref-shape-height-medium: 2.5rem;
   --md-ref-shape-height-large: 3rem;
+  --md-ref-shape-weight-thin: 1px;
+  --md-ref-shape-weight-regular: 2px;
+  --md-ref-shape-weight-thick: 4px;
   --md-ref-shape-corner-none: 0px;
   --md-ref-shape-corner-full: 9999px;
   /* system tokens */
@@ -49,7 +55,9 @@
   --md-sys-color-outline-variant: var(--md-ref-palette-ice);
   --md-sys-typescale-title-small-type: var(--md-ref-typeface-weight-bold) var(--md-ref-typeface-size-medium) var(--md-ref-typeface-plain);
   --md-sys-typescale-label-large-type: var(--md-ref-typeface-weight-bold) var(--md-ref-typeface-size-small) var(--md-ref-typeface-plain);
+  --md-sys-typescale-body-large-type: var(--md-ref-typeface-weight-bold) var(--md-ref-typeface-size-medium) / var(--md-ref-typeface-line-height-large) var(--md-ref-typeface-plain);
   --md-sys-container-height: var(--md-ref-shape-height-large);
+  --md-sys-container-weight: var(--md-ref-shape-weight-regular);
   --md-sys-container-shape: var(--md-ref-shape-corner-full);
   /* component tokens */
   --md-elevated-button-container-color: var(--md-sys-color-surface);
@@ -64,6 +72,7 @@
   --md-outlined-button-label-text-type: var(--md-sys-typescale-label-large-type);
   --md-text-button-container-height: var(--md-sys-container-height);
   --md-text-button-label-text-type: var(--md-sys-typescale-label-large-type);
+  --md-divider-thickness: var(--md-sys-container-weight);
   --md-fab-label-text-type: var(--md-sys-typescale-label-large-type);
   --md-fab-branded-label-text-type: var(--md-sys-typescale-label-large-type);
   --md-switch-selected-icon-color: var(--md-sys-color-primary);
@@ -82,6 +91,7 @@
   --md-primary-tab-active-focus-label-text-color: var(--md-sys-color-on-primary);
   --md-primary-tab-active-hover-label-text-color: var(--md-sys-color-on-primary);
   --md-primary-tab-active-pressed-label-text-color: var(--md-sys-color-on-primary);
+  --md-filled-text-field-label-text-type: var(--md-sys-typescale-body-large-type);
 }
 
 .dark {
