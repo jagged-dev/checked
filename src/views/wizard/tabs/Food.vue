@@ -4,7 +4,11 @@ import Input from "@/components/Input.vue";
 import Back from "@/components/Back.vue";
 import Next from "@/components/Next.vue";
 
-const props = defineProps({ party: Object, tab: Number });
+const props = defineProps({
+    party: Object,
+    tab: Number,
+});
+
 const emit = defineEmits(["update:food", "switch:tab"]);
 
 const food = ref([
