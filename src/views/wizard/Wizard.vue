@@ -5,7 +5,7 @@ import router from "@/router";
 
 const wizard = ref();
 const activeTab = ref();
-const routes = ["amounts", "party", "food"];
+const routes = ["amounts", "party", "food", "results"];
 
 const data = ref({
     amounts: Object,

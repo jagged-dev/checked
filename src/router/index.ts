@@ -39,12 +39,12 @@ const router = createRouter({
           name: "food",
           component: () => import("@/views/wizard/tabs/Food.vue"),
         },
+        {
+          path: "results",
+          name: "results",
+          component: () => import("@/views/wizard/tabs/Results.vue"),
+        },
       ],
-    },
-    {
-      path: "/results",
-      name: "results",
-      component: () => import("@/views/Results.vue"),
     },
     {
       path: "/about",
