@@ -3,15 +3,12 @@ import { ref, onMounted, onUpdated } from "vue";
 import { RouterView } from "vue-router";
 import router from "@/router";
 
+const routes = ["amounts", "party", "food", "results"];
 const wizard = ref();
 const activeTab = ref();
-const routes = ["amounts", "party", "food", "results"];
-
-const data = ref({
-    amounts: Object,
-    party: Object,
-    food: Object,
-});
+const amounts = ref();
+const party = ref();
+const food = ref();
 
 onMounted(() => {
     let tabs: any = wizard.value!;
@@ -43,7 +40,7 @@ onUpdated(() => {
             </md-tab>
         </md-tabs>
         <!-- tab content -->
-        <RouterView :tabIdx="activeTab" @switch:tab="(tabIdx: Number) => (activeTab = tabIdx)" @update:amounts="(amounts: any) => (data.amounts = amounts)" @update:party="(party: any) => (data.party = party)" @update:food="(food: any) => (data.food = food)" v-slot="{ Component }">
+        <RouterView :tab="activeTab" @switch:tab="(tab: Number) => (activeTab = tab)" :amounts="amounts" @update:amounts="(a: any) => (amounts = a)" :party="party" @update:party="(p: any) => (party = p)" :food="food" @update:food="(f: any) => (food = f)" v-slot="{ Component }">
             <KeepAlive>
                 <component :is="Component" />
             </KeepAlive>
