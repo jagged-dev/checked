@@ -32,7 +32,7 @@ function removeGuest(guest: any) {
 
 <template>
     <!-- party -->
-    <div class="grid gap-8 lg:grid-cols-2">
+    <div class="grid gap-8 lg:grid-cols-2" v-if="party.length > 0">
         <div class="flex flex-col gap-4 rounded-3xl bg-ice p-12 transition-background dark:bg-charcoal lg:last:odd:col-span-2" v-for="guest in party">
             <div class="flex items-center">
                 <h1 class="mr-auto text-2xl font-bold text-charcoal transition-font dark:text-ice">{{ guest.name || "Guest" }}</h1>
@@ -43,8 +43,8 @@ function removeGuest(guest: any) {
         </div>
     </div>
     <!-- add button -->
-    <div class="flex justify-end">
-        <md-fab variant="tertiary" label="Add guest" @click="addGuest"><md-icon slot="icon">add</md-icon></md-fab>
+    <div class="flex justify-center">
+        <md-fab label="Add guest" variant="secondary" lowered @click="addGuest"><md-icon slot="icon">add</md-icon></md-fab>
     </div>
     <!-- nav buttons -->
     <div class="grid gap-4 lg:grid-cols-2">
