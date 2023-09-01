@@ -4,7 +4,7 @@ import Input from "@/components/Input.vue";
 import Back from "@/components/Back.vue";
 import Next from "@/components/Next.vue";
 
-const props = defineProps({ tabIdx: Number });
+const props = defineProps({ tab: Number });
 const emit = defineEmits(["update:party", "switch:tab"]);
 
 const party = ref([
@@ -48,8 +48,8 @@ function removeGuest(guest: any) {
     </div>
     <!-- nav buttons -->
     <div class="grid gap-4 lg:grid-cols-2">
-        <Back label="Previous" @click="$emit('switch:tab', tabIdx! - 1)">Amounts</Back>
-        <Next label="Next" @click="$emit('switch:tab', tabIdx! + 1)">Food</Next>
+        <Back label="Previous" @click="$emit('switch:tab', tab! - 1)">Amounts</Back>
+        <Next label="Next" @click="$emit('switch:tab', tab! + 1)">Food</Next>
     </div>
 </template>
 

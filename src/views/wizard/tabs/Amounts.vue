@@ -5,7 +5,7 @@ import Input from "@/components/Input.vue";
 import Back from "@/components/Back.vue";
 import Next from "@/components/Next.vue";
 
-const props = defineProps({ tabIdx: Number });
+const props = defineProps({ tab: Number });
 const emit = defineEmits(["update:amounts", "switch:tab"]);
 
 const amounts = ref({
@@ -34,7 +34,7 @@ onUpdated(() => {
         <RouterLink :to="{ name: 'home' }">
             <Back label="Back">Home</Back>
         </RouterLink>
-        <Next label="Next" @click="$emit('switch:tab', tabIdx! + 1)">Party</Next>
+        <Next label="Next" @click="$emit('switch:tab', tab! + 1)">Party</Next>
     </div>
 </template>
 
