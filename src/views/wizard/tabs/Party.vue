@@ -43,9 +43,7 @@ function removeGuest(guest: any) {
         </div>
     </div>
     <!-- add button -->
-    <div class="flex justify-center">
-        <md-fab label="Add guest" variant="secondary" lowered @click="addGuest"><md-icon slot="icon">add</md-icon></md-fab>
-    </div>
+    <md-filled-tonal-button class="h-16" @click="addGuest"><md-icon slot="icon">add</md-icon>Add guest</md-filled-tonal-button>
     <!-- nav buttons -->
     <div class="grid gap-4 lg:grid-cols-2">
         <Back label="Previous" @click="$emit('switch:tab', tab! - 1)">Amounts</Back>
