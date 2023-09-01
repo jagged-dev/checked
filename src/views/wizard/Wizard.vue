@@ -31,7 +31,7 @@ onUpdated(() => {
         <!-- active tab -->
         <div class="hidden">{{ activeTab }}</div>
         <!-- tabs -->
-        <md-tabs class="rounded-full bg-ice transition-background dark:bg-charcoal" ref="wizard">
+        <md-tabs class="rounded-full bg-ice transition-background dark:bg-charcoal" :class="{ hidden: activeTab === 3 }" ref="wizard">
             <md-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 0 }">
                 <div class="flex items-center gap-2"><md-icon>payments</md-icon>Amounts</div>
             </md-tab>

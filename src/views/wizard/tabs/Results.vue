@@ -1,9 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div class="flex flex-col gap-8 p-8">
-        <h1 class="text-3xl font-bold leading-none text-charcoal transition-font dark:text-ice">Results</h1>
-    </div>
+    <h1 class="text-3xl font-bold leading-none text-charcoal transition-font dark:text-ice">Results</h1>
 </template>
 
 <style scoped></style>
