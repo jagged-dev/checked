@@ -21,7 +21,7 @@ import Theme from "@/components/icons/Theme.vue";
                     <md-filled-button>Get started</md-filled-button>
                 </RouterLink>
                 <RouterLink :to="{ name: 'learn' }">
-                    <md-outlined-button>Learn more</md-outlined-button>
+                    <md-filled-tonal-button>Learn more</md-filled-tonal-button>
                 </RouterLink>
             </div>
         </div>
