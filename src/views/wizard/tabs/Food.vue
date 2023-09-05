@@ -67,7 +67,7 @@ function selectGuest(event: any, item: any) {
         </div>
     </div>
     <!-- add button -->
-    <md-filled-tonal-button class="h-16" @click="addItem"><md-icon slot="icon">add</md-icon>Add item</md-filled-tonal-button>
+    <md-text-button @click="addItem"><md-icon slot="icon">add</md-icon>Add item</md-text-button>
     <!-- nav buttons -->
     <div class="grid gap-4 lg:grid-cols-2">
         <Back label="Previous" @click="$emit('switch:tab', tab! - 1)">Party</Back>
