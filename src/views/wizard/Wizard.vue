@@ -41,7 +41,7 @@ onUpdated(() => {
         </md-tabs>
         <!-- tab content -->
         <RouterView :tab="activeTab" @switch:tab="(tab: Number) => (activeTab = tab)" :amounts="amounts" @update:amounts="(a: any) => (amounts = a)" :party="party" @update:party="(p: any) => (party = p)" :food="food" @update:food="(f: any) => (food = f)" v-slot="{ Component }">
-            <KeepAlive>
+            <KeepAlive exclude="Results">
                 <component :is="Component" />
             </KeepAlive>
         </RouterView>
