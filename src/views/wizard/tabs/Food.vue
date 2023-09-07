@@ -5,7 +5,7 @@ import Back from "@/components/Back.vue";
 import Next from "@/components/Next.vue";
 
 const props = defineProps({
-    party: Object,
+    party: Array<any>,
     tab: Number,
 });
 
