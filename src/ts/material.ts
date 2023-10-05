@@ -49,7 +49,8 @@ import "@material/web/switch/switch";
 
 // tabs
 import "@material/web/tabs/tabs";
-import "@material/web/tabs/tab";
+import "@material/web/tabs/primary-tab";
+import "@material/web/tabs/secondary-tab";
 
 // text field
 import "@material/web/textfield/filled-text-field";
