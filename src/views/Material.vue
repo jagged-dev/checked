@@ -4,15 +4,15 @@
     <div class="flex flex-col gap-8 p-8">
         <!-- tabs -->
         <md-tabs class="rounded-full bg-ice transition-background dark:bg-charcoal">
-            <md-tab class="h-20 rounded-full bg-blue transition-background">
+            <md-primary-tab class="h-20 rounded-full bg-blue transition-background">
                 <div class="flex items-center gap-2"><md-icon slot="icon">add</md-icon>Add</div>
-            </md-tab>
-            <md-tab class="h-20 rounded-full transition-background">
+            </md-primary-tab>
+            <md-primary-tab class="h-20 rounded-full transition-background">
                 <div class="flex items-center gap-2"><md-icon slot="icon">edit</md-icon>Edit</div>
-            </md-tab>
-            <md-tab class="h-20 rounded-full transition-background">
+            </md-primary-tab>
+            <md-primary-tab class="h-20 rounded-full transition-background">
                 <div class="flex items-center gap-2"><md-icon slot="icon">settings</md-icon>Settings</div>
-            </md-tab>
+            </md-primary-tab>
         </md-tabs>
 
         <!-- button -->
