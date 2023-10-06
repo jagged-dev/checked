@@ -29,15 +29,15 @@ onUpdated(() => {
         <div class="hidden">{{ activeTab }}</div>
         <!-- tabs -->
         <md-tabs class="rounded-full bg-ice transition-background dark:bg-charcoal" :class="{ hidden: activeTab === 3 }" ref="wizard">
-            <md-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 0 }">
+            <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 0 }">
                 <div class="flex items-center gap-2"><md-icon>payments</md-icon>Amounts</div>
-            </md-tab>
-            <md-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 1 }">
+            </md-primary-tab>
+            <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 1 }">
                 <div class="flex items-center gap-2"><md-icon>group</md-icon>Party</div>
-            </md-tab>
-            <md-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 2 }">
+            </md-primary-tab>
+            <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 2 }">
                 <div class="flex items-center gap-2"><md-icon>restaurant_menu</md-icon>Food</div>
-            </md-tab>
+            </md-primary-tab>
         </md-tabs>
         <!-- tab content -->
         <RouterView :tab="activeTab" @switch:tab="(tab: Number) => (activeTab = tab)" :amounts="amounts" @update:amounts="(a: any) => (amounts = a)" :party="party" @update:party="(p: any) => (party = p)" :food="food" @update:food="(f: any) => (food = f)" v-slot="{ Component }">
