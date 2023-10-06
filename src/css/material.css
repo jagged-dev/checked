@@ -53,28 +53,24 @@
   --md-sys-color-surface-container-highest: var(--md-ref-palette-ice);
   --md-sys-color-outline: var(--md-ref-palette-gunmetal);
   --md-sys-color-outline-variant: var(--md-ref-palette-ice);
-  --md-sys-typescale-title-small-type: var(--md-ref-typeface-weight-bold) var(--md-ref-typeface-size-medium) var(--md-ref-typeface-plain);
-  --md-sys-typescale-label-large-type: var(--md-ref-typeface-weight-bold) var(--md-ref-typeface-size-small) var(--md-ref-typeface-plain);
-  --md-sys-typescale-body-large-type: var(--md-ref-typeface-weight-bold) var(--md-ref-typeface-size-medium) / var(--md-ref-typeface-line-height-large) var(--md-ref-typeface-plain);
+  --md-sys-typescale-title-small-size: var(--md-ref-typeface-size-medium);
+  --md-sys-typescale-title-small-weight: var(--md-ref-typeface-weight-bold);
+  --md-sys-typescale-body-large-size: var(--md-ref-typeface-size-medium);
+  --md-sys-typescale-body-large-weight: var(--md-ref-typeface-weight-bold);
+  --md-sys-typescale-label-large-size: var(--md-ref-typeface-size-small);
+  --md-sys-typescale-label-large-weight: var(--md-ref-typeface-weight-bold);
   --md-sys-container-height: var(--md-ref-shape-height-large);
   --md-sys-container-weight: var(--md-ref-shape-weight-regular);
   --md-sys-container-shape: var(--md-ref-shape-corner-full);
   /* component tokens */
   --md-elevated-button-container-color: var(--md-sys-color-surface);
   --md-elevated-button-container-height: var(--md-sys-container-height);
-  --md-elevated-button-label-text-type: var(--md-sys-typescale-label-large-type);
   --md-filled-button-container-height: var(--md-sys-container-height);
-  --md-filled-button-label-text-type: var(--md-sys-typescale-label-large-type);
   --md-filled-tonal-button-container-height: var(--md-sys-container-height);
-  --md-filled-tonal-button-label-text-type: var(--md-sys-typescale-label-large-type);
   --md-outlined-button-outline-color: var(--md-sys-color-primary);
   --md-outlined-button-container-height: var(--md-sys-container-height);
-  --md-outlined-button-label-text-type: var(--md-sys-typescale-label-large-type);
   --md-text-button-container-height: var(--md-sys-container-height);
-  --md-text-button-label-text-type: var(--md-sys-typescale-label-large-type);
   --md-divider-thickness: var(--md-sys-container-weight);
-  --md-fab-label-text-type: var(--md-sys-typescale-label-large-type);
-  --md-fab-branded-label-text-type: var(--md-sys-typescale-label-large-type);
   --md-switch-selected-icon-color: var(--md-sys-color-primary);
   --md-switch-selected-focus-handle-color: var(--md-sys-color-on-primary);
   --md-switch-selected-focus-icon-color: var(--md-sys-color-primary);
@@ -84,14 +80,11 @@
   --md-switch-selected-pressed-icon-color: var(--md-sys-color-primary);
   --md-primary-tab-container-color: var(--md-ref-palette-transparent);
   --md-primary-tab-container-shape: var(--md-sys-container-shape);
-  --md-primary-tab-divider-color: var(--md-ref-palette-transparent);
   --md-primary-tab-active-indicator-color: var(--md-ref-palette-transparent);
-  --md-primary-tab-label-text-type: var(--md-sys-typescale-title-small-type);
   --md-primary-tab-active-label-text-color: var(--md-sys-color-on-primary);
   --md-primary-tab-active-focus-label-text-color: var(--md-sys-color-on-primary);
   --md-primary-tab-active-hover-label-text-color: var(--md-sys-color-on-primary);
   --md-primary-tab-active-pressed-label-text-color: var(--md-sys-color-on-primary);
-  --md-filled-text-field-label-text-type: var(--md-sys-typescale-body-large-type);
 }
 
 .dark {
