@@ -70,6 +70,7 @@
   --md-outlined-button-outline-color: var(--md-sys-color-primary);
   --md-outlined-button-container-height: var(--md-sys-container-height);
   --md-text-button-container-height: var(--md-sys-container-height);
+  --md-filter-chip-label-text-weight: var(--md-ref-typeface-weight-regular);
   --md-divider-thickness: var(--md-sys-container-weight);
   --md-switch-selected-icon-color: var(--md-sys-color-primary);
   --md-switch-selected-focus-handle-color: var(--md-sys-color-on-primary);
@@ -85,6 +86,7 @@
   --md-primary-tab-active-focus-label-text-color: var(--md-sys-color-on-primary);
   --md-primary-tab-active-hover-label-text-color: var(--md-sys-color-on-primary);
   --md-primary-tab-active-pressed-label-text-color: var(--md-sys-color-on-primary);
+  --md-filled-text-field-input-text-weight: var(--md-ref-typeface-weight-regular);
 }
 
 .dark {
