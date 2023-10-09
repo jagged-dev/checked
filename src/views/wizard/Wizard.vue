@@ -12,13 +12,13 @@ const food = ref();
 
 onMounted(() => {
     let tabs: any = wizard.value!;
-    activeTab.value = tabs.selected;
-    tabs.addEventListener("change", () => (activeTab.value = tabs.selected));
+    activeTab.value = 0;
+    tabs.addEventListener("change", () => (activeTab.value = tabs.activeTabIndex));
 });
 
 onUpdated(() => {
     let tabs: any = wizard.value!;
-    tabs.selected = activeTab.value;
+    tabs.activeTabIndex = activeTab.value;
     router.push({ name: routes[activeTab.value] });
 });
 </script>
