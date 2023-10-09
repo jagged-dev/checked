@@ -35,9 +35,9 @@ function removeItem(item: any) {
     food.value.splice(food.value.indexOf(item), 1);
 }
 
-function selectGuest(event: any, item: any) {
+function toggleGuest(event: any, item: any) {
     let guest = event.target;
-    if (guest.selected) {
+    if (!guest.selected) {
         item.guests.push(guest.label);
     } else {
         item.guests.splice(item.guests.indexOf(guest.label), 1);
@@ -60,7 +60,7 @@ function selectGuest(event: any, item: any) {
             <md-divider></md-divider>
             <!-- guests -->
             <div class="flex gap-2">
-                <md-filter-chip :label="guest.name" @selected="(event: any) => selectGuest(event, item)" v-for="guest in party">
+                <md-filter-chip :label="guest.name" @click="(event: any) => toggleGuest(event, item)" v-for="guest in party">
                     <md-icon slot="icon">person</md-icon>
                 </md-filter-chip>
             </div>
