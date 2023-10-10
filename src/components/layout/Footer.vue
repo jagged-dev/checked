@@ -11,14 +11,11 @@ import { RouterLink } from "vue-router";
             <RouterLink :to="{ name: 'about' }">
                 <span class="text-md font-bold text-gunmetal transition-font hover:text-blue dark:text-silver dark:hover:text-blue">About</span>
             </RouterLink>
-            <RouterLink :to="{ name: 'terms' }">
-                <span class="text-md font-bold text-gunmetal transition-font hover:text-blue dark:text-silver dark:hover:text-blue">Terms</span>
+            <RouterLink :to="{ name: 'contact' }">
+                <span class="text-md font-bold text-gunmetal transition-font hover:text-blue dark:text-silver dark:hover:text-blue">Contact</span>
             </RouterLink>
             <RouterLink :to="{ name: 'privacy' }">
                 <span class="text-md font-bold text-gunmetal transition-font hover:text-blue dark:text-silver dark:hover:text-blue">Privacy</span>
-            </RouterLink>
-            <RouterLink :to="{ name: 'contact' }">
-                <span class="text-md font-bold text-gunmetal transition-font hover:text-blue dark:text-silver dark:hover:text-blue">Contact</span>
             </RouterLink>
         </div>
         <!-- brand -->

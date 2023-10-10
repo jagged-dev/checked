@@ -52,19 +52,14 @@ const router = createRouter({
       component: () => import("@/views/About.vue"),
     },
     {
-      path: "/terms",
-      name: "terms",
-      component: () => import("@/views/Terms.vue"),
+      path: "/contact",
+      name: "contact",
+      component: () => import("@/views/Contact.vue"),
     },
     {
       path: "/privacy",
       name: "privacy",
       component: () => import("@/views/Privacy.vue"),
-    },
-    {
-      path: "/contact",
-      name: "contact",
-      component: () => import("@/views/Contact.vue"),
     },
   ],
 });
