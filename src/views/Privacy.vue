@@ -377,7 +377,7 @@ import { RouterLink } from "vue-router";
         <h1 class="text-xl font-bold leading-none text-charcoal transition-font dark:text-ice">Security of Your Personal Data</h1>
 
         <p class="text-gunmetal transition-font dark:text-silver">
-            The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.
+            The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its complete security.
         </p>
 
         <h1 class="text-2xl font-bold leading-none text-charcoal transition-font dark:text-ice">Children's Privacy</h1>
