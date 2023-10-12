@@ -76,7 +76,7 @@ import { RouterLink } from "vue-router";
                     <p class="text-gunmetal transition-font dark:text-silver">
                         <b>Website</b> refers to Checked, accessible from
                         <RouterLink :to="{ name: 'home' }">
-                            <span class="font-bold text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue">checked.vercel.app.</span>
+                            <b class="text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue">checked.vercel.app.</b>
                         </RouterLink>
                     </p>
                 </div>
@@ -410,7 +410,7 @@ import { RouterLink } from "vue-router";
         <p class="text-gunmetal transition-font dark:text-silver">
             If you have any questions about this Privacy Policy, please navigate to the
             <RouterLink :to="{ name: 'contact' }">
-                <span class="font-bold text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue">Contact Page.</span>
+                <b class="text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue">Contact Page.</b>
             </RouterLink>
         </p>
     </div>
