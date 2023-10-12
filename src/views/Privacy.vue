@@ -38,7 +38,7 @@ import { RouterLink } from "vue-router";
                 </div>
                 <div class="flex gap-4">
                     <p class="text-gunmetal transition-font dark:text-silver">&bull;</p>
-                    <p class="text-gunmetal transition-font dark:text-silver"><b>Company</b> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to Checked.</p>
+                    <p class="text-gunmetal transition-font dark:text-silver"><b>Company</b> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to <b>jagged creations</b>.</p>
                 </div>
                 <div class="flex gap-4">
                     <p class="text-gunmetal transition-font dark:text-silver">&bull;</p>
@@ -74,7 +74,7 @@ import { RouterLink } from "vue-router";
                 <div class="flex gap-4">
                     <p class="text-gunmetal transition-font dark:text-silver">&bull;</p>
                     <p class="text-gunmetal transition-font dark:text-silver">
-                        <b>Website</b> refers to Checked, accessible from
+                        <b>Website</b> refers to <b>checked</b>, accessible from
                         <RouterLink :to="{ name: 'home' }">
                             <b class="text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue">checked.vercel.app.</b>
                         </RouterLink>
