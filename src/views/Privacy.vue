@@ -11,7 +11,7 @@ import { RouterLink } from "vue-router";
             <p class="text-gunmetal transition-font dark:text-silver">This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
             <p class="text-gunmetal transition-font dark:text-silver">
                 We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of a
-                <a class="font-bold text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue" href="https://www.termsfeed.com/privacy-policy-generator/" target="_blank">Privacy Policy Generator</a>.
+                <a class="font-bold text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue" href="https://termsfeed.com/privacy-policy-generator" target="_blank">Privacy Policy Generator</a>.
             </p>
         </div>
 
@@ -149,7 +149,7 @@ import { RouterLink } from "vue-router";
             </div>
             <p class="text-gunmetal transition-font dark:text-silver">
                 Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. You can learn more about cookies on the
-                <a class="font-bold text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue" href="https://www.termsfeed.com/blog/cookies/#What_Are_Cookies" target="_blank">TermsFeed website article</a>.
+                <a class="font-bold text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue" href="https://termsfeed.com/blog/cookies/#What_Are_Cookies" target="_blank">TermsFeed website article</a>.
             </p>
             <p class="text-gunmetal transition-font dark:text-silver">We use both Session and Persistent Cookies for the purposes set out below:</p>
             <div class="flex flex-col gap-4 pl-4">
