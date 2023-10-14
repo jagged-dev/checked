@@ -6,7 +6,7 @@ const props = defineProps({
     bgDark: String,
 });
 
-const screenshot = ref(null);
+const screenshot = ref();
 
 onMounted(() => {
     let div: HTMLDivElement = screenshot.value!;
