@@ -52,6 +52,9 @@ module.exports = {
       spacing: {
         18: "4.5rem",
       },
+      height: {
+        "screen/2": "50vh",
+      },
       backgroundImage: {
         "cards-white": "url('../../assets/images/backgrounds/cards-wh.png')",
         "cards-black": "url('../../assets/images/backgrounds/cards-bk.png')",
