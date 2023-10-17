@@ -69,7 +69,7 @@ for (let guest in results.value) {
         <h1 class="ml-auto text-xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ results[guest.name].total }}</h1>
     </div>
     <!-- nav buttons -->
-    <div class="grid gap-4 lg:grid-cols-2">
+    <div class="grid gap-4 xl:grid-cols-2">
         <Back label="Previous" @click="$emit('switch:tab', tab! - 1)">Food</Back>
         <RouterLink :to="{ name: 'home' }">
             <Next label="Finish">Home</Next>

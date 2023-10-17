@@ -30,7 +30,7 @@ onUpdated(() => {
         <Input type="number" label="Tip" icon="receipt" prefix="$" :value="amounts.tip.toString()" @update:value="(value: Number) => (amounts.tip = Number(value))" />
     </div>
     <!-- nav buttons -->
-    <div class="grid gap-4 lg:grid-cols-2">
+    <div class="grid gap-4 xl:grid-cols-2">
         <RouterLink :to="{ name: 'home' }">
             <Back label="Back">Home</Back>
         </RouterLink>

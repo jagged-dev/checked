@@ -34,9 +34,9 @@ import LinkedIn from "@/components/icons/LinkedIn.vue";
         <!-- heading -->
         <h1 class="text-lg font-bold leading-none text-charcoal transition-font dark:text-ice">Meet the Developer</h1>
         <!-- avatar -->
-        <div class="flex flex-col items-center gap-8 lg:flex-row">
+        <div class="flex flex-col items-center gap-8 xl:flex-row">
             <img class="h-32 w-32 rounded-full" src="/assets/images/avatars/avatar-2.jpg" />
-            <div class="flex flex-col items-center gap-2 lg:items-start">
+            <div class="flex flex-col items-center gap-2 xl:items-start">
                 <h1 class="text-lg font-bold text-charcoal transition-font dark:text-ice">Jonathan Giang</h1>
                 <h1 class="font-bold text-gunmetal transition-font dark:text-silver">Full-Stack Software Engineer</h1>
             </div>

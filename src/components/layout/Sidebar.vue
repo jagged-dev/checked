@@ -3,7 +3,7 @@ import Theme from "@/components/icons/Theme.vue";
 </script>
 
 <template>
-    <div class="fixed hidden h-screen flex-col justify-end p-6 lg:flex">
+    <div class="fixed hidden h-screen flex-col justify-end p-6 xl:flex">
         <Theme />
     </div>
 </template>

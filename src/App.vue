@@ -12,8 +12,8 @@ import Footer from "@/components/layout/Footer.vue";
         <div v-else>
             <Navbar />
             <Sidebar />
-            <div class="h-screen pt-24 lg:pl-24">
-                <div class="flex h-full flex-col overflow-y-auto rounded-t-3xl bg-snow transition-background duration-500 dark:bg-coal lg:rounded-tr-none">
+            <div class="h-screen pt-24 xl:pl-24">
+                <div class="flex h-full flex-col overflow-y-auto rounded-t-3xl bg-snow transition-background duration-500 dark:bg-coal xl:rounded-tr-none">
                     <RouterView />
                     <Footer></Footer>
                 </div>

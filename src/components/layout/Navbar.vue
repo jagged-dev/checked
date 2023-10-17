@@ -14,7 +14,7 @@ import Theme from "@/components/icons/Theme.vue";
             </div>
         </RouterLink>
         <!-- theme toggle -->
-        <div class="ml-auto flex p-6 lg:hidden">
+        <div class="ml-auto flex p-6 xl:hidden">
             <Theme />
         </div>
     </nav>
