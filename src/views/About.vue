@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { RouterLink } from "vue-router";
 import Brand from "@/components/icons/Brand.vue";
 import GitHub from "@/components/icons/GitHub.vue";
 import LinkedIn from "@/components/icons/LinkedIn.vue";
@@ -18,9 +17,7 @@ import LinkedIn from "@/components/icons/LinkedIn.vue";
             <p class="text-gunmetal transition-font dark:text-silver">
                 To use this application, users must enter the amounts given from the check, enter each guest of the party, and enter each item that was ordered. Users must then specify who ordered each item as well as who paid for each item. From there, the application will perform the necessary calculations and then
                 display the final results of how much each guest owes and to whom they owe the amount to. For a more detailed guide, please visit the
-                <RouterLink :to="{ name: 'learn' }">
-                    <b class="text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue">Learn More Page.</b>
-                </RouterLink>
+                <a class="font-bold text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue" href="/#learn">Learn More</a> section.
             </p>
             <p class="text-gunmetal transition-font dark:text-silver">
                 This project was developed with
