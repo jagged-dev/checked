@@ -410,8 +410,9 @@ import { RouterLink } from "vue-router";
         <p class="text-gunmetal transition-font dark:text-silver">
             If you have any questions about this Privacy Policy, please navigate to the
             <RouterLink :to="{ name: 'contact' }">
-                <b class="text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue">Contact Page.</b>
+                <b class="text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue">Contact</b>
             </RouterLink>
+            page.
         </p>
     </div>
 </template>
