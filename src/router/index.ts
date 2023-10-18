@@ -10,6 +10,11 @@ const router = createRouter({
       component: Home,
     },
     {
+      path: "/learn",
+      name: "learn",
+      component: Home,
+    },
+    {
       path: "/material",
       name: "material",
       component: () => import("@/views/Material.vue"),
@@ -62,6 +67,13 @@ const router = createRouter({
       component: () => import("@/views/Error.vue"),
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (to.name === "learn") {
+      return {
+        el: "#learn",
+      };
+    }
+  },
 });
 
 export default router;

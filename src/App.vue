@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer.vue";
 
 <template>
     <main class="bg-ice transition-background duration-500 dark:bg-charcoal">
-        <RouterView v-if="router.currentRoute.value.name === 'home'" />
+        <RouterView v-if="router.currentRoute.value.name === 'home' || router.currentRoute.value.name === 'learn'" />
         <div v-else>
             <Navbar />
             <Sidebar />

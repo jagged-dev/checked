@@ -22,9 +22,9 @@ import Footer from "@/components/layout/Footer.vue";
                 <RouterLink :to="{ name: 'wizard' }">
                     <md-filled-button>Get started</md-filled-button>
                 </RouterLink>
-                <a href="#learn">
+                <RouterLink :to="{ name: 'learn' }">
                     <md-filled-tonal-button>Learn more</md-filled-tonal-button>
-                </a>
+                </RouterLink>
             </div>
         </div>
         <!-- theme toggle -->
