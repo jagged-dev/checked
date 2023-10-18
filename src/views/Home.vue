@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
-import Screenshot from "@/components/Screenshot.vue";
 import Title from "@/components/Title.vue";
 import Theme from "@/components/icons/Theme.vue";
+import Screenshot from "@/components/Screenshot.vue";
+import Footer from "@/components/layout/Footer.vue";
 </script>
 
 <template>
-    <div class="grid h-screen grid-rows-3 gap-8 p-8 xl:grid-cols-2 xl:gap-16 xl:p-16">
+    <!-- hero -->
+    <div class="grid h-screen grid-rows-3 gap-8 p-8 xs:gap-16 xs:p-16 xl:grid-cols-2">
         <!-- blank -->
         <div></div>
         <!-- screenshot -->
@@ -20,9 +22,9 @@ import Theme from "@/components/icons/Theme.vue";
                 <RouterLink :to="{ name: 'wizard' }">
                     <md-filled-button>Get started</md-filled-button>
                 </RouterLink>
-                <RouterLink :to="{ name: 'learn' }">
+                <a href="#learn">
                     <md-filled-tonal-button>Learn more</md-filled-tonal-button>
-                </RouterLink>
+                </a>
             </div>
         </div>
         <!-- theme toggle -->
