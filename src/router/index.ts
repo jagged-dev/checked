@@ -56,6 +56,11 @@ const router = createRouter({
       name: "privacy",
       component: () => import("@/views/Privacy.vue"),
     },
+    {
+      path: "/:pathMatch(.*)*",
+      name: "error",
+      component: () => import("@/views/Error.vue"),
+    },
   ],
 });
 
