@@ -63,14 +63,22 @@
   --md-sys-container-weight: var(--md-ref-shape-weight-regular);
   --md-sys-container-shape: var(--md-ref-shape-corner-full);
   /* component tokens */
-  --md-elevated-button-container-color: var(--md-sys-color-surface);
   --md-elevated-button-container-height: var(--md-sys-container-height);
   --md-filled-button-container-height: var(--md-sys-container-height);
   --md-filled-tonal-button-container-height: var(--md-sys-container-height);
-  --md-outlined-button-outline-color: var(--md-sys-color-primary);
   --md-outlined-button-container-height: var(--md-sys-container-height);
   --md-text-button-container-height: var(--md-sys-container-height);
+  --md-elevated-button-container-color: var(--md-sys-color-surface);
+  --md-outlined-button-outline-color: var(--md-sys-color-primary);
+  --md-assist-chip-label-text-weight: var(--md-ref-typeface-weight-regular);
+  --md-input-chip-label-text-weight: var(--md-ref-typeface-weight-regular);
   --md-filter-chip-label-text-weight: var(--md-ref-typeface-weight-regular);
+  --md-suggestion-chip-label-text-weight: var(--md-ref-typeface-weight-regular);
+  --md-assist-chip-outline-color: var(--md-sys-color-primary);
+  --md-assist-chip-label-text-color: var(--md-sys-color-primary);
+  --md-assist-chip-focus-label-text-color: var(--md-sys-color-primary);
+  --md-assist-chip-hover-label-text-color: var(--md-sys-color-primary);
+  --md-assist-chip-pressed-label-text-color: var(--md-sys-color-primary);
   --md-divider-thickness: var(--md-sys-container-weight);
   --md-switch-selected-icon-color: var(--md-sys-color-primary);
   --md-switch-selected-focus-handle-color: var(--md-sys-color-on-primary);
