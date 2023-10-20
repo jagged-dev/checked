@@ -25,14 +25,19 @@ const router = createRouter({
       component: () => import("@/views/wizard/Wizard.vue"),
       children: [
         {
-          path: "amounts",
-          name: "amounts",
-          component: () => import("@/views/wizard/tabs/Amounts.vue"),
+          path: "event",
+          name: "event",
+          component: () => import("@/views/wizard/tabs/Event.vue"),
         },
         {
           path: "party",
           name: "party",
           component: () => import("@/views/wizard/tabs/Party.vue"),
+        },
+        {
+          path: "amounts",
+          name: "amounts",
+          component: () => import("@/views/wizard/tabs/Amounts.vue"),
         },
         {
           path: "food",
@@ -68,11 +73,7 @@ const router = createRouter({
     },
   ],
   scrollBehavior(to, from, savedPosition) {
-    if (to.name === "learn") {
-      return {
-        el: "#learn",
-      };
-    }
+    if (to.name === "learn") return { el: "#learn" };
   },
 });
 
