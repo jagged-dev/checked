@@ -49,7 +49,7 @@ onUpdated(() => {
             </md-primary-tab>
         </md-tabs>
         <!-- tab content -->
-        <RouterView :event="event" @update:event="(e: any) => (event = e)" :party="party" @update:party="(p: any) => (party = p)" :amounts="amounts" @update:amounts="(a: any) => (amounts = a)" :food="food" @update:food="(f: any) => (food = f)" v-slot="{ Component }">
+        <RouterView :event="event" @update:event="event = $event" :party="party" @update:party="party = $event" :amounts="amounts" @update:amounts="amounts = $event" :food="food" @update:food="food = $event" v-slot="{ Component }">
             <KeepAlive exclude="Results">
                 <component :is="Component" />
             </KeepAlive>
