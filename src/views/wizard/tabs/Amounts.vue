@@ -1,12 +1,8 @@
 <script setup lang="ts">
 import { ref, onUpdated } from "vue";
-import { RouterLink } from "vue-router";
 import Input from "@/components/Input.vue";
-import Back from "@/components/Back.vue";
-import Next from "@/components/Next.vue";
 
-const props = defineProps({ tab: Number });
-const emit = defineEmits(["update:amounts", "switch:tab"]);
+const emit = defineEmits(["update:amounts"]);
 
 const amounts = ref({
     subtotal: NaN,
@@ -24,17 +20,14 @@ onUpdated(() => {
 <template>
     <!-- amounts -->
     <div class="flex flex-col gap-4 rounded-3xl bg-ice p-12 transition-background dark:bg-charcoal">
+        <!-- heading -->
         <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ amounts.total || 0 }}</h1>
-        <Input type="number" label="Subtotal" icon="receipt" prefix="$" :value="amounts.subtotal.toString()" @update:value="(value: Number) => (amounts.subtotal = Number(value))" />
-        <Input type="number" label="Tax" icon="receipt" prefix="$" :value="amounts.tax.toString()" @update:value="(value: Number) => (amounts.tax = Number(value))" />
-        <Input type="number" label="Tip" icon="receipt" prefix="$" :value="amounts.tip.toString()" @update:value="(value: Number) => (amounts.tip = Number(value))" />
-    </div>
-    <!-- nav buttons -->
-    <div class="grid gap-4 xl:grid-cols-2">
-        <RouterLink :to="{ name: 'home' }">
-            <Back label="Back">Home</Back>
-        </RouterLink>
-        <Next label="Next" @click="$emit('switch:tab', tab! + 1)">Party</Next>
+        <!-- subtotal -->
+        <Input type="number" label="Subtotal" icon="receipt" prefix="$" :value="amounts.subtotal.toString()" @update:value="(value: number) => (amounts.subtotal = Number(value))" />
+        <!-- tax -->
+        <Input type="number" label="Tax" icon="receipt" prefix="$" :value="amounts.tax.toString()" @update:value="(value: number) => (amounts.tax = Number(value))" />
+        <!-- tip -->
+        <Input type="number" label="Tip" icon="receipt" prefix="$" :value="amounts.tip.toString()" @update:value="(value: number) => (amounts.tip = Number(value))" />
     </div>
 </template>
 
