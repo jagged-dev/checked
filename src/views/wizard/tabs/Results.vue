@@ -1,15 +1,11 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { RouterLink } from "vue-router";
 import Input from "@/components/Input.vue";
-import Back from "@/components/Back.vue";
-import Next from "@/components/Next.vue";
 
 const props = defineProps({
     amounts: Object,
     party: Array<any>,
     food: Array<any>,
-    tab: Number,
 });
 
 const results: any = ref({});
@@ -67,13 +63,6 @@ for (let guest in results.value) {
         <md-divider></md-divider>
         <!-- total -->
         <h1 class="ml-auto text-xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ results[guest.name].total }}</h1>
-    </div>
-    <!-- nav buttons -->
-    <div class="grid gap-4 xl:grid-cols-2">
-        <Back label="Previous" @click="$emit('switch:tab', tab! - 1)">Food</Back>
-        <RouterLink :to="{ name: 'home' }">
-            <Next label="Finish">Home</Next>
-        </RouterLink>
     </div>
 </template>
 
