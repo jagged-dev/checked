@@ -27,7 +27,7 @@ function removeGuest(guest: string) {
         <!-- heading -->
         <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Party of {{ party.length || "0" }}</h1>
         <!-- guest -->
-        <Input type="text" label="Guest" icon="person" :value="guest" @update:value="(value: string) => (guest = value)" @keyup.enter="addGuest" />
+        <Input type="text" label="Guest" icon="person" v-model="guest" @keyup.enter="addGuest" />
         <!-- divider -->
         <md-divider></md-divider>
         <!-- guests -->

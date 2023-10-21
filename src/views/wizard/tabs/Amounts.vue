@@ -23,11 +23,11 @@ onUpdated(() => {
         <!-- heading -->
         <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ amounts.total || 0 }}</h1>
         <!-- subtotal -->
-        <Input type="number" label="Subtotal" icon="receipt" prefix="$" :value="amounts.subtotal.toString()" @update:value="(value: number) => (amounts.subtotal = Number(value))" />
+        <Input type="number" label="Subtotal" icon="receipt" prefix="$" v-model.number="amounts.subtotal" />
         <!-- tax -->
-        <Input type="number" label="Tax" icon="receipt" prefix="$" :value="amounts.tax.toString()" @update:value="(value: number) => (amounts.tax = Number(value))" />
+        <Input type="number" label="Tax" icon="receipt" prefix="$" v-model.number="amounts.tax" />
         <!-- tip -->
-        <Input type="number" label="Tip" icon="receipt" prefix="$" :value="amounts.tip.toString()" @update:value="(value: number) => (amounts.tip = Number(value))" />
+        <Input type="number" label="Tip" icon="receipt" prefix="$" v-model.number="amounts.tip" />
     </div>
 </template>
 

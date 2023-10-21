@@ -19,7 +19,7 @@ onUpdated(() => {
         <!-- heading -->
         <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">{{ event.name || "New event" }}</h1>
         <!-- name -->
-        <Input type="text" label="Event" icon="edit_calendar" :value="event.name" @update:value="(value: string) => (event.name = value)" />
+        <Input type="text" label="Event" icon="edit_calendar" v-model="event.name" />
     </div>
 </template>
 
