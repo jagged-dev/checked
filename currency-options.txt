@@ -1,0 +1,6 @@
+currency: 'USD',
+currencyDisplay: 'hidden',
+autoDecimalDigits: true,
+precision: 2,
+hideGroupingSeparatorOnFocus: false,
+valueRange: { min: 0 },
