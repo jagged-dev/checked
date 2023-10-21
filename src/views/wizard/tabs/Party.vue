@@ -1,53 +1,44 @@
 <script setup lang="ts">
 import { ref, onUpdated } from "vue";
 import Input from "@/components/Input.vue";
-import Back from "@/components/Back.vue";
-import Next from "@/components/Next.vue";
 
-const props = defineProps({ tab: Number });
-const emit = defineEmits(["update:party", "switch:tab"]);
+const emit = defineEmits(["update:party"]);
 
-const party = ref([
-    {
-        name: "",
-        email: "",
-    },
-]);
+const party = ref<string[]>([]);
+const guest = ref("");
 
 onUpdated(() => {
     emit("update:party", party.value);
 });
 
 function addGuest() {
-    party.value.push({
-        name: "",
-        email: "",
-    });
+    if (guest.value !== "") party.value.push(guest.value);
+    guest.value = "";
 }
 
-function removeGuest(guest: any) {
+function removeGuest(guest: string) {
     party.value.splice(party.value.indexOf(guest), 1);
 }
 </script>
 
 <template>
     <!-- party -->
-    <div class="grid gap-8 xl:grid-cols-2" v-if="party.length > 0">
-        <div class="flex flex-col gap-4 rounded-3xl bg-ice p-12 transition-background dark:bg-charcoal xl:last:odd:col-span-2" v-for="guest in party">
-            <div class="flex items-center">
-                <h1 class="mr-auto text-2xl font-bold text-charcoal transition-font dark:text-ice">{{ guest.name || "Guest" }}</h1>
-                <md-outlined-icon-button @click="removeGuest(guest)"><md-icon>close</md-icon></md-outlined-icon-button>
-            </div>
-            <Input type="text" label="Name" icon="person" :value="guest.name" @update:value="(value: String) => (guest.name = value.toString())" />
-            <Input type="text" label="Email" icon="mail" :value="guest.email" @update:value="(value: String) => (guest.email = value.toString())" />
+    <div class="flex flex-col gap-4 rounded-3xl bg-ice p-12 transition-background dark:bg-charcoal">
+        <!-- heading -->
+        <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Party of {{ party.length || "0" }}</h1>
+        <!-- guest -->
+        <Input type="text" label="Guest" icon="person" :value="guest" @update:value="(value: string) => (guest = value)" @keyup.enter="addGuest" />
+        <!-- divider -->
+        <md-divider></md-divider>
+        <!-- guests -->
+        <div class="flex flex-wrap gap-2">
+            <md-assist-chip label="Add guest" :disabled="guest === ''" @click="addGuest">
+                <md-icon slot="icon">add</md-icon>
+            </md-assist-chip>
+            <md-suggestion-chip :label="guest" @click="removeGuest(guest)" v-for="guest in party">
+                <md-icon slot="icon">close</md-icon>
+            </md-suggestion-chip>
         </div>
-    </div>
-    <!-- add button -->
-    <md-text-button @click="addGuest"><md-icon slot="icon">add</md-icon>Add guest</md-text-button>
-    <!-- nav buttons -->
-    <div class="grid gap-4 xl:grid-cols-2">
-        <Back label="Previous" @click="$emit('switch:tab', tab! - 1)">Amounts</Back>
-        <Next label="Next" @click="$emit('switch:tab', tab! + 1)">Food</Next>
     </div>
 </template>
 
