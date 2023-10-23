@@ -15,6 +15,10 @@ onUpdated(() => {
     amounts.value.total = Number(((amounts.value.subtotal || 0) + (amounts.value.tax || 0) + (amounts.value.tip || 0)).toFixed(2));
     emit("update:amounts", amounts.value);
 });
+
+function formatCurrency(amount: number) {
+    return Number((Number(amount.toString().replace(".", "")) / 100).toFixed(2));
+}
 </script>
 
 <template>
@@ -23,11 +27,11 @@ onUpdated(() => {
         <!-- heading -->
         <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ amounts.total || 0 }}</h1>
         <!-- subtotal -->
-        <Input type="number" label="Subtotal" icon="receipt" prefix="$" v-model.number="amounts.subtotal" />
+        <Input type="number" label="Subtotal" icon="receipt" prefix="$" v-model="amounts.subtotal" @input="amounts.subtotal = formatCurrency($event.target.value)" />
         <!-- tax -->
-        <Input type="number" label="Tax" icon="receipt" prefix="$" v-model.number="amounts.tax" />
+        <Input type="number" label="Tax" icon="receipt" prefix="$" v-model="amounts.tax" @input="amounts.tax = formatCurrency($event.target.value)" />
         <!-- tip -->
-        <Input type="number" label="Tip" icon="receipt" prefix="$" v-model.number="amounts.tip" />
+        <Input type="number" label="Tip" icon="receipt" prefix="$" v-model="amounts.tip" @input="amounts.tip = formatCurrency($event.target.value)" />
     </div>
 </template>
 
