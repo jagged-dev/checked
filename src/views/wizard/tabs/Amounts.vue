@@ -5,19 +5,23 @@ import Input from "@/components/Input.vue";
 const emit = defineEmits(["update:amounts"]);
 
 const amounts = ref({
-    subtotal: NaN,
-    tax: NaN,
-    tip: NaN,
-    total: NaN,
+    subtotal: "",
+    tax: "",
+    tip: "",
+    total: "",
 });
 
 onUpdated(() => {
-    amounts.value.total = Number(((amounts.value.subtotal || 0) + (amounts.value.tax || 0) + (amounts.value.tip || 0)).toFixed(2));
+    let subtotal = Number(amounts.value.subtotal);
+    let tax = Number(amounts.value.tax);
+    let tip = Number(amounts.value.tip);
+    let total = subtotal + tax + tip;
+    amounts.value.total = total.toFixed(2);
     emit("update:amounts", amounts.value);
 });
 
 function formatCurrency(amount: number) {
-    return Number((Number(amount.toString().replace(".", "")) / 100).toFixed(2));
+    return (Number(amount.toString().replace(".", "")) / 100).toFixed(2);
 }
 </script>
 
