@@ -80,6 +80,7 @@
   --md-assist-chip-hover-label-text-color: var(--md-sys-color-primary);
   --md-assist-chip-pressed-label-text-color: var(--md-sys-color-primary);
   --md-divider-thickness: var(--md-sys-container-weight);
+  --md-filled-select-text-field-input-text-weight: var(--md-ref-typeface-weight-regular);
   --md-switch-selected-icon-color: var(--md-sys-color-primary);
   --md-switch-selected-focus-handle-color: var(--md-sys-color-on-primary);
   --md-switch-selected-focus-icon-color: var(--md-sys-color-primary);
