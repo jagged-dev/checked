@@ -10,7 +10,7 @@ const food = ref([
         name: "",
         price: "",
         purchaser: "",
-        consumers: <string[]>[],
+        guests: <string[]>[],
     },
 ]);
 
@@ -21,8 +21,8 @@ onUpdated(() => {
 onActivated(() => {
     for (let item of food.value) {
         if (!props.party?.includes(item.purchaser)) item.purchaser = "";
-        for (let consumer of item.consumers) {
-            if (!props.party?.includes(consumer)) item.consumers.splice(item.consumers.indexOf(consumer), 1);
+        for (let guest of item.guests) {
+            if (!props.party?.includes(guest)) item.guests.splice(item.guests.indexOf(guest), 1);
         }
     }
 });
@@ -32,7 +32,7 @@ function addItem() {
         name: "",
         price: "",
         purchaser: "",
-        consumers: [],
+        guests: [],
     });
 }
 
@@ -44,9 +44,9 @@ function selectPurchaser(item: any, guest: string) {
     item.purchaser = guest;
 }
 
-function toggleConsumer(item: any, guest: string, selected: boolean) {
-    if (!selected) item.consumers.push(guest);
-    else item.consumers.splice(item.consumers.indexOf(guest), 1);
+function toggleGuest(item: any, guest: string, selected: boolean) {
+    if (!selected) item.guests.push(guest);
+    else item.guests.splice(item.guests.indexOf(guest), 1);
 }
 
 function formatCurrency(amount: number) {
@@ -78,9 +78,12 @@ function formatCurrency(amount: number) {
             </md-filled-select>
             <!-- divider -->
             <md-divider></md-divider>
-            <!-- consumers -->
+            <!-- guests -->
             <div class="flex flex-wrap gap-2">
-                <md-filter-chip :label="guest" :selected="item.consumers.includes(guest)" @click="toggleConsumer(item, guest, $event.target.selected)" v-for="guest in party">
+                <md-assist-chip label="Select guests" disabled>
+                    <md-icon slot="icon">check</md-icon>
+                </md-assist-chip>
+                <md-filter-chip :label="guest" :selected="item.guests.includes(guest)" @click="toggleGuest(item, guest, $event.target.selected)" v-for="guest in party">
                     <md-icon slot="icon">add</md-icon>
                 </md-filter-chip>
             </div>
