@@ -44,6 +44,7 @@
   --md-sys-color-on-secondary-container: var(--md-ref-palette-blue);
   --md-sys-color-tertiary-container: var(--md-ref-palette-charcoal);
   --md-sys-color-on-tertiary-container: var(--md-ref-palette-ice);
+  --md-sys-color-error: var(--md-ref-palette-red);
   --md-sys-color-surface: var(--md-ref-palette-ice);
   --md-sys-color-on-surface: var(--md-ref-palette-charcoal);
   --md-sys-color-surface-variant: var(--md-ref-palette-ice);
