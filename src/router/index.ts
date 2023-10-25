@@ -25,22 +25,22 @@ const router = createRouter({
       component: () => import("@/views/wizard/Wizard.vue"),
       children: [
         {
-          path: "event",
+          path: "",
           name: "event",
           component: () => import("@/views/wizard/tabs/Event.vue"),
         },
         {
-          path: "party",
+          path: "",
           name: "party",
           component: () => import("@/views/wizard/tabs/Party.vue"),
         },
         {
-          path: "amounts",
+          path: "",
           name: "amounts",
           component: () => import("@/views/wizard/tabs/Amounts.vue"),
         },
         {
-          path: "food",
+          path: "",
           name: "food",
           component: () => import("@/views/wizard/tabs/Food.vue"),
         },
