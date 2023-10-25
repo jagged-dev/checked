@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import { ref, onUpdated } from "vue";
+import { ref, onUpdated, onActivated } from "vue";
 import Input from "@/components/Input.vue";
 
-const props = defineProps({ party: Array<any> });
+const props = defineProps({ party: Array<string> });
 const emit = defineEmits(["update:food"]);
 
 const food = ref([
     {
         name: "",
-        price: NaN,
-        guests: [],
+        price: "",
+        purchaser: "",
+        consumers: <string[]>[],
     },
 ]);
 
@@ -17,11 +18,21 @@ onUpdated(() => {
     emit("update:food", food.value);
 });
 
+onActivated(() => {
+    for (let item of food.value) {
+        if (!props.party?.includes(item.purchaser)) item.purchaser = "";
+        for (let consumer of item.consumers) {
+            if (!props.party?.includes(consumer)) item.consumers.splice(item.consumers.indexOf(consumer), 1);
+        }
+    }
+});
+
 function addItem() {
     food.value.push({
         name: "",
-        price: NaN,
-        guests: [],
+        price: "",
+        purchaser: "",
+        consumers: [],
     });
 }
 
@@ -29,13 +40,17 @@ function removeItem(item: any) {
     food.value.splice(food.value.indexOf(item), 1);
 }
 
-function toggleGuest(event: any, item: any) {
-    let guest = event.target;
-    if (!guest.selected) {
-        item.guests.push(guest.label);
-    } else {
-        item.guests.splice(item.guests.indexOf(guest.label), 1);
-    }
+function selectPurchaser(item: any, guest: string) {
+    item.purchaser = guest;
+}
+
+function toggleConsumer(item: any, guest: string, selected: boolean) {
+    if (!selected) item.consumers.push(guest);
+    else item.consumers.splice(item.consumers.indexOf(guest), 1);
+}
+
+function formatCurrency(amount: number) {
+    return (Number(amount.toString().replace(".", "")) / 100).toFixed(2);
 }
 </script>
 
@@ -50,15 +65,23 @@ function toggleGuest(event: any, item: any) {
                 <md-outlined-icon-button @click="removeItem(item)"><md-icon>close</md-icon></md-outlined-icon-button>
             </div>
             <!-- name -->
-            <Input type="text" label="Item" icon="fastfood" :value="item.name" @update:value="(value: string) => (item.name = value)" />
+            <Input type="text" label="Item" icon="fastfood" v-model="item.name" />
             <!-- price -->
-            <Input type="number" label="Price" icon="receipt" prefix="$" :value="item.price.toString()" @update:value="(value: number) => (item.price = value)" />
+            <Input type="number" label="Price" icon="receipt" prefix="$" v-model="item.price" @input="item.price = formatCurrency($event.target.value)" />
+            <!-- purchaser -->
+            <md-filled-select label="Purchaser" :displayText="item.purchaser" hasLeadingIcon @change="selectPurchaser(item, $event.target.value)">
+                <md-icon slot="leading-icon">person</md-icon>
+                <md-select-option displayText=""><div slot="headline">...</div></md-select-option>
+                <md-select-option :value="guest" v-for="guest in party">
+                    <div slot="headline">{{ guest }}</div>
+                </md-select-option>
+            </md-filled-select>
             <!-- divider -->
             <md-divider></md-divider>
-            <!-- guests -->
+            <!-- consumers -->
             <div class="flex flex-wrap gap-2">
-                <md-filter-chip :label="guest.name" @click="(event: any) => toggleGuest(event, item)" v-for="guest in party">
-                    <md-icon slot="icon">person</md-icon>
+                <md-filter-chip :label="guest" :selected="item.consumers.includes(guest)" @click="toggleConsumer(item, guest, $event.target.selected)" v-for="guest in party">
+                    <md-icon slot="icon">add</md-icon>
                 </md-filter-chip>
             </div>
         </div>
