@@ -1,17 +1,43 @@
 <script setup lang="ts">
-import { ref, onMounted, onUpdated } from "vue";
+import { ref, computed, onMounted, onUpdated } from "vue";
 import { RouterView } from "vue-router";
 import router from "@/router";
 import Back from "@/components/Back.vue";
 import Next from "@/components/Next.vue";
 
-const routes = ["event", "party", "amounts", "food", "results"];
+const routes = ref([
+    {
+        name: "event",
+        valid: false,
+    },
+    {
+        name: "party",
+        valid: false,
+    },
+    {
+        name: "amounts",
+        valid: false,
+    },
+    {
+        name: "food",
+        valid: false,
+    },
+    {
+        name: "results",
+        valid: true,
+    },
+]);
+
 const tabs = ref();
 const activeTab = ref();
 const event = ref();
 const party = ref();
 const amounts = ref();
 const food = ref();
+
+const valid = computed(() => {
+    return routes.value.every((route) => route.valid);
+});
 
 onMounted(() => {
     activeTab.value = 0;
@@ -20,7 +46,7 @@ onMounted(() => {
 
 onUpdated(() => {
     tabs.value.activeTabIndex = activeTab.value;
-    router.push({ name: routes[activeTab.value] });
+    router.push({ name: routes.value[activeTab.value].name });
 });
 </script>
 
@@ -49,7 +75,7 @@ onUpdated(() => {
             </md-primary-tab>
         </md-tabs>
         <!-- tab content -->
-        <RouterView :event="event" @update:event="event = $event" :party="party" @update:party="party = $event" :amounts="amounts" @update:amounts="amounts = $event" :food="food" @update:food="food = $event" v-slot="{ Component }">
+        <RouterView :event="event" @update:event="event = $event" :party="party" @update:party="party = $event" :amounts="amounts" @update:amounts="amounts = $event" :food="food" @update:food="food = $event" @update:validity="routes[activeTab].valid = $event" v-slot="{ Component }">
             <KeepAlive exclude="Results">
                 <component :is="Component" />
             </KeepAlive>
@@ -76,7 +102,7 @@ onUpdated(() => {
             <!-- food -->
             <template v-if="activeTab === 3">
                 <Back label="Previous" @click="activeTab--">Amounts</Back>
-                <Next label="Submit" @click="activeTab++">Results</Next>
+                <Next label="Submit" :disabled="!valid" @click="activeTab++">Results</Next>
             </template>
             <!-- results -->
             <template v-if="activeTab === 4">
