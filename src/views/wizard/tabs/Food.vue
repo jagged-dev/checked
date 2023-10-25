@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref, onUpdated, onActivated } from "vue";
+import { ref, computed, onUpdated, onActivated } from "vue";
 import Input from "@/components/Input.vue";
 
 const props = defineProps({ party: Array<string> });
-const emit = defineEmits(["update:food"]);
+const emit = defineEmits(["update:food", "update:validity"]);
 
 const food = ref([
     {
@@ -14,8 +14,13 @@ const food = ref([
     },
 ]);
 
+const valid = computed(() => {
+    return food.value.length > 0 && food.value.every((item) => item.name !== "" && Number(item.price) > 0 && item.purchaser !== "" && item.guests.length > 0);
+});
+
 onUpdated(() => {
     emit("update:food", food.value);
+    emit("update:validity", valid.value);
 });
 
 onActivated(() => {

@@ -1,14 +1,18 @@
 <script setup lang="ts">
-import { ref, onUpdated } from "vue";
+import { ref, computed, onUpdated } from "vue";
 import Input from "@/components/Input.vue";
 
-const emit = defineEmits(["update:amounts"]);
+const emit = defineEmits(["update:amounts", "update:validity"]);
 
 const amounts = ref({
     subtotal: "",
     tax: "",
     tip: "",
     total: "",
+});
+
+const valid = computed(() => {
+    return Number(amounts.value.subtotal) > 0 && Number(amounts.value.tax) >= 0 && Number(amounts.value.tip) >= 0;
 });
 
 onUpdated(() => {
@@ -18,6 +22,7 @@ onUpdated(() => {
     let total = subtotal + tax + tip;
     amounts.value.total = total.toFixed(2);
     emit("update:amounts", amounts.value);
+    emit("update:validity", valid.value);
 });
 
 function formatCurrency(amount: number) {

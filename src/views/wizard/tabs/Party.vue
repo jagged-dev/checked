@@ -1,14 +1,19 @@
 <script setup lang="ts">
-import { ref, onUpdated } from "vue";
+import { ref, computed, onUpdated } from "vue";
 import Input from "@/components/Input.vue";
 
-const emit = defineEmits(["update:party"]);
+const emit = defineEmits(["update:party", "update:validity"]);
 
 const party = ref<string[]>([]);
 const guest = ref("");
 
+const valid = computed(() => {
+    return party.value.length > 0;
+});
+
 onUpdated(() => {
     emit("update:party", party.value);
+    emit("update:validity", valid.value);
 });
 
 function addGuest() {

@@ -1,15 +1,20 @@
 <script setup lang="ts">
-import { ref, onUpdated } from "vue";
+import { ref, computed, onUpdated } from "vue";
 import Input from "@/components/Input.vue";
 
-const emit = defineEmits(["update:event"]);
+const emit = defineEmits(["update:event", "update:validity"]);
 
 const event = ref({
     name: "",
 });
 
+const valid = computed(() => {
+    return event.value.name !== "";
+});
+
 onUpdated(() => {
     emit("update:event", event.value);
+    emit("update:validity", valid.value);
 });
 </script>
 
