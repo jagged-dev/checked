@@ -1025,6 +1025,10 @@ video {
   .xs\:p-16 {
     padding: 4rem;
   }
+
+  .xs\:p-12 {
+    padding: 3rem;
+  }
 }
 
 @media (min-width: 640px) {

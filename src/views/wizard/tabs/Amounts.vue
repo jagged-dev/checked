@@ -32,7 +32,7 @@ function formatCurrency(amount: number) {
 
 <template>
     <!-- amounts -->
-    <div class="flex flex-col gap-4 rounded-3xl bg-ice p-12 transition-background dark:bg-charcoal">
+    <div class="flex flex-col gap-4 rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xs:p-12">
         <!-- heading -->
         <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ amounts.total || 0 }}</h1>
         <!-- subtotal -->

@@ -63,7 +63,7 @@ function formatCurrency(amount: number) {
     <!-- food -->
     <div class="grid gap-8 xl:grid-cols-2" v-if="food.length > 0">
         <!-- item -->
-        <div class="flex flex-col gap-4 rounded-3xl bg-ice p-12 transition-background dark:bg-charcoal xl:last:odd:col-span-2" v-for="item in food">
+        <div class="flex flex-col gap-4 rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xs:p-12 xl:last:odd:col-span-2" v-for="item in food">
             <!-- heading -->
             <div class="flex items-center">
                 <h1 class="mr-auto text-2xl font-bold text-charcoal transition-font dark:text-ice">{{ item.name || "Item" }}:&ensp;${{ item.price || 0 }}</h1>
