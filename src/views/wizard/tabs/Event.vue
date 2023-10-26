@@ -8,11 +8,14 @@ const event = ref({
     name: "",
 });
 
+const touched = ref(false);
+
 const valid = computed(() => {
     return event.value.name !== "";
 });
 
 onUpdated(() => {
+    touched.value = true;
     emit("update:event", event.value);
     emit("update:validity", valid.value);
 });
@@ -24,7 +27,7 @@ onUpdated(() => {
         <!-- heading -->
         <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">{{ event.name || "New event" }}</h1>
         <!-- name -->
-        <Input type="text" label="Event" icon="edit_calendar" v-model="event.name" />
+        <Input type="text" label="Event" icon="edit_calendar" errorText="Event name is required." :error="touched && event.name === ''" v-model="event.name" />
     </div>
 </template>
 

@@ -11,11 +11,14 @@ const amounts = ref({
     total: "",
 });
 
+const touched = ref(false);
+
 const valid = computed(() => {
     return Number(amounts.value.subtotal) > 0 && Number(amounts.value.tax) >= 0 && Number(amounts.value.tip) >= 0;
 });
 
 onUpdated(() => {
+    touched.value = true;
     let subtotal = Number(amounts.value.subtotal);
     let tax = Number(amounts.value.tax);
     let tip = Number(amounts.value.tip);
@@ -36,11 +39,11 @@ function formatCurrency(amount: number) {
         <!-- heading -->
         <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ amounts.total || 0 }}</h1>
         <!-- subtotal -->
-        <Input type="number" label="Subtotal" icon="receipt" prefix-text="$" v-model="amounts.subtotal" @input="amounts.subtotal = formatCurrency($event.target.value)" />
+        <Input type="number" label="Subtotal" icon="receipt" prefix-text="$" errorText="Subtotal amount must be more than $0." :error="touched && Number(amounts.subtotal) <= 0" v-model="amounts.subtotal" @input="amounts.subtotal = formatCurrency($event.target.value)" />
         <!-- tax -->
-        <Input type="number" label="Tax" icon="receipt" prefix-text="$" v-model="amounts.tax" @input="amounts.tax = formatCurrency($event.target.value)" />
+        <Input type="number" label="Tax" icon="receipt" prefix-text="$" errorText="Tax amount must be at least $0." :error="touched && Number(amounts.tax) < 0" v-model="amounts.tax" @input="amounts.tax = formatCurrency($event.target.value)" />
         <!-- tip -->
-        <Input type="number" label="Tip" icon="receipt" prefix-text="$" v-model="amounts.tip" @input="amounts.tip = formatCurrency($event.target.value)" />
+        <Input type="number" label="Tip" icon="receipt" prefix-text="$" errorText="Tip amount must be at least $0." :error="touched && Number(amounts.tip) < 0" v-model="amounts.tip" @input="amounts.tip = formatCurrency($event.target.value)" />
     </div>
 </template>
 

@@ -6,12 +6,14 @@ const emit = defineEmits(["update:party", "update:validity"]);
 
 const party = ref<string[]>([]);
 const guest = ref("");
+const touched = ref(false);
 
 const valid = computed(() => {
     return party.value.length > 0;
 });
 
 onUpdated(() => {
+    touched.value = true;
     emit("update:party", party.value);
     emit("update:validity", valid.value);
 });
@@ -32,7 +34,7 @@ function removeGuest(guest: string) {
         <!-- heading -->
         <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Party of {{ party.length || 0 }}</h1>
         <!-- guest -->
-        <Input type="text" label="Guest" icon="person" v-model="guest" @keyup.enter="addGuest" />
+        <Input type="text" label="Guest" icon="person" errorText="There must be at least one guest in the party." :error="touched && guest === '' && party.length === 0" v-model="guest" @keyup.enter="addGuest" />
         <!-- divider -->
         <md-divider></md-divider>
         <!-- guests -->

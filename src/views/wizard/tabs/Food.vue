@@ -12,6 +12,7 @@ const emit = defineEmits(["update:food", "update:validity"]);
 
 const food = ref<any[]>([]);
 const item = ref("");
+const touched = ref(false);
 
 const total = computed(() => {
     let total = 0;
@@ -24,6 +25,7 @@ const valid = computed(() => {
 });
 
 onUpdated(() => {
+    touched.value = true;
     emit("update:food", food.value);
     emit("update:validity", valid.value);
 });
@@ -68,10 +70,10 @@ function formatCurrency(amount: number) {
         <!-- heading -->
         <div class="flex items-end gap-4">
             <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ total || 0 }}</h1>
-            <h1 class="text-xl font-bold text-gunmetal transition-font dark:text-silver">/&ensp;${{ amounts?.subtotal || 0 }}</h1>
+            <h1 class="text-xl font-bold transition-font" :class="{ 'text-red': touched && food.length > 0 && total !== amounts?.subtotal, 'text-gunmetal  dark:text-silver': !touched || food.length === 0 || total === amounts?.subtotal }">/&ensp;${{ amounts?.subtotal || 0 }}</h1>
         </div>
         <!-- item -->
-        <Input type="text" label="Item" icon="restaurant" v-model="item" @keyup.enter="addItem" />
+        <Input type="text" label="Item" icon="restaurant" errorText="At least one item needs to be entered." :error="touched && item === '' && food.length === 0" v-model="item" @keyup.enter="addItem" />
         <!-- divider -->
         <md-divider></md-divider>
         <!-- items -->
@@ -94,11 +96,11 @@ function formatCurrency(amount: number) {
                 <md-outlined-icon-button @click="removeItem(item)"><md-icon>close</md-icon></md-outlined-icon-button>
             </div>
             <!-- name -->
-            <Input type="text" label="Item" icon="restaurant" v-model="item.name" />
+            <Input type="text" label="Item" icon="restaurant" errorText="Item name is required." :error="touched && item.name === ''" v-model="item.name" />
             <!-- price -->
-            <Input type="number" label="Price" icon="receipt" prefix-text="$" v-model="item.price" @input="item.price = formatCurrency($event.target.value)" />
+            <Input type="number" label="Price" icon="receipt" prefix-text="$" errorText="Item price must be more than $0." :error="touched && Number(item.price) <= 0" v-model="item.price" @input="item.price = formatCurrency($event.target.value)" />
             <!-- purchaser -->
-            <Select label="Purchaser" icon="person" :displayText="item.purchaser" v-model="item.purchaser">
+            <Select label="Purchaser" icon="person" :displayText="item.purchaser" errorText="Item purchaser and guests are required." :error="touched && (item.purchaser === '' || item.guests.length === 0)" v-model="item.purchaser">
                 <md-select-option :value="guest" v-for="guest in party">
                     <div slot="headline">{{ guest }}</div>
                 </md-select-option>
