@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onUpdated, onActivated } from "vue";
 import Input from "@/components/Input.vue";
+import Select from "@/components/Select.vue";
 
 const props = defineProps({
     party: Array<string>,
@@ -51,10 +52,6 @@ function removeItem(item: any) {
     food.value.splice(food.value.indexOf(item), 1);
 }
 
-function selectPurchaser(item: any, guest: string) {
-    item.purchaser = guest;
-}
-
 function toggleGuest(item: any, guest: string, selected: boolean) {
     if (!selected) item.guests.push(guest);
     else item.guests.splice(item.guests.indexOf(guest), 1);
@@ -101,13 +98,11 @@ function formatCurrency(amount: number) {
             <!-- price -->
             <Input type="number" label="Price" icon="receipt" prefix-text="$" v-model="item.price" @input="item.price = formatCurrency($event.target.value)" />
             <!-- purchaser -->
-            <md-filled-select label="Purchaser" :displayText="item.purchaser" hasLeadingIcon quick @change="selectPurchaser(item, $event.target.value)">
-                <md-icon slot="leading-icon">person</md-icon>
-                <md-select-option displayText=""><div slot="headline">...</div></md-select-option>
+            <Select label="Purchaser" icon="person" :displayText="item.purchaser" v-model="item.purchaser">
                 <md-select-option :value="guest" v-for="guest in party">
                     <div slot="headline">{{ guest }}</div>
                 </md-select-option>
-            </md-filled-select>
+            </Select>
             <!-- divider -->
             <md-divider></md-divider>
             <!-- guests -->
