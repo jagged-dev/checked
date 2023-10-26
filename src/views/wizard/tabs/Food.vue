@@ -33,9 +33,9 @@ onUpdated(() => {
 onActivated(() => {
     for (let item of food.value) {
         if (!props.party?.includes(item.purchaser)) item.purchaser = "";
-        for (let guest of item.guests) {
-            if (!props.party?.includes(guest)) item.guests.splice(item.guests.indexOf(guest), 1);
-        }
+        let removed = [];
+        for (let guest of item.guests) if (!props.party?.includes(guest)) removed.push(guest);
+        for (let guest of removed) item.guests.splice(item.guests.indexOf(guest), 1);
     }
 });
 
