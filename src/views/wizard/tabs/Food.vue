@@ -2,20 +2,24 @@
 import { ref, computed, onUpdated, onActivated } from "vue";
 import Input from "@/components/Input.vue";
 
-const props = defineProps({ party: Array<string> });
+const props = defineProps({
+    party: Array<string>,
+    amounts: Object,
+});
+
 const emit = defineEmits(["update:food", "update:validity"]);
 
-const food = ref([
-    {
-        name: "",
-        price: "",
-        purchaser: "",
-        guests: <string[]>[],
-    },
-]);
+const food = ref<any[]>([]);
+const item = ref("");
+
+const total = computed(() => {
+    let total = 0;
+    for (let item of food.value) total += Number(item.price);
+    return total === 0 ? total.toString() : total.toFixed(2);
+});
 
 const valid = computed(() => {
-    return food.value.length > 0 && food.value.every((item) => item.name !== "" && Number(item.price) > 0 && item.purchaser !== "" && item.guests.length > 0);
+    return food.value.length > 0 && food.value.every((item) => item.name !== "" && Number(item.price) > 0 && item.purchaser !== "" && item.guests.length > 0) && total.value === props.amounts?.subtotal;
 });
 
 onUpdated(() => {
@@ -33,12 +37,14 @@ onActivated(() => {
 });
 
 function addItem() {
-    food.value.push({
-        name: "",
-        price: "",
-        purchaser: "",
-        guests: [],
-    });
+    if (item.value !== "")
+        food.value.push({
+            name: item.value,
+            price: "",
+            purchaser: "",
+            guests: [],
+        });
+    item.value = "";
 }
 
 function removeItem(item: any) {
@@ -61,6 +67,27 @@ function formatCurrency(amount: number) {
 
 <template>
     <!-- food -->
+    <div class="flex flex-col gap-4 rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xs:p-12">
+        <!-- heading -->
+        <div class="flex items-end gap-4">
+            <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ total || 0 }}</h1>
+            <h1 class="text-xl font-bold text-gunmetal transition-font dark:text-silver">/&ensp;${{ amounts?.subtotal || 0 }}</h1>
+        </div>
+        <!-- item -->
+        <Input type="text" label="Item" icon="restaurant" v-model="item" @keyup.enter="addItem" />
+        <!-- divider -->
+        <md-divider></md-divider>
+        <!-- items -->
+        <div class="flex flex-wrap gap-2">
+            <md-assist-chip label="Add item" :disabled="item === ''" @click="addItem">
+                <md-icon slot="icon">add</md-icon>
+            </md-assist-chip>
+            <md-suggestion-chip :label="item.name" @click="removeItem(item)" v-for="item in food">
+                <md-icon slot="icon">close</md-icon>
+            </md-suggestion-chip>
+        </div>
+    </div>
+    <!-- items -->
     <div class="grid gap-8 xl:grid-cols-2" v-if="food.length > 0">
         <!-- item -->
         <div class="flex flex-col gap-4 rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xs:p-12 xl:last:odd:col-span-2" v-for="item in food">
@@ -70,11 +97,11 @@ function formatCurrency(amount: number) {
                 <md-outlined-icon-button @click="removeItem(item)"><md-icon>close</md-icon></md-outlined-icon-button>
             </div>
             <!-- name -->
-            <Input type="text" label="Item" icon="fastfood" v-model="item.name" />
+            <Input type="text" label="Item" icon="restaurant" v-model="item.name" />
             <!-- price -->
             <Input type="number" label="Price" icon="receipt" prefix-text="$" v-model="item.price" @input="item.price = formatCurrency($event.target.value)" />
             <!-- purchaser -->
-            <md-filled-select label="Purchaser" :displayText="item.purchaser" hasLeadingIcon @change="selectPurchaser(item, $event.target.value)">
+            <md-filled-select label="Purchaser" :displayText="item.purchaser" hasLeadingIcon quick @change="selectPurchaser(item, $event.target.value)">
                 <md-icon slot="leading-icon">person</md-icon>
                 <md-select-option displayText=""><div slot="headline">...</div></md-select-option>
                 <md-select-option :value="guest" v-for="guest in party">
@@ -94,8 +121,6 @@ function formatCurrency(amount: number) {
             </div>
         </div>
     </div>
-    <!-- add button -->
-    <md-text-button @click="addItem"><md-icon slot="icon">add</md-icon>Add item</md-text-button>
 </template>
 
 <style scoped></style>
