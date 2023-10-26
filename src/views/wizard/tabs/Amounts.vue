@@ -20,7 +20,7 @@ onUpdated(() => {
     let tax = Number(amounts.value.tax);
     let tip = Number(amounts.value.tip);
     let total = subtotal + tax + tip;
-    amounts.value.total = total.toFixed(2);
+    amounts.value.total = total === 0 ? total.toString() : total.toFixed(2);
     emit("update:amounts", amounts.value);
     emit("update:validity", valid.value);
 });
