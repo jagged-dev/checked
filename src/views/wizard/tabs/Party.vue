@@ -30,7 +30,7 @@ function removeGuest(guest: string) {
     <!-- party -->
     <div class="flex flex-col gap-4 rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xs:p-12">
         <!-- heading -->
-        <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Party of {{ party.length || "0" }}</h1>
+        <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Party of {{ party.length || 0 }}</h1>
         <!-- guest -->
         <Input type="text" label="Guest" icon="person" v-model="guest" @keyup.enter="addGuest" />
         <!-- divider -->
