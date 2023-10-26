@@ -36,11 +36,11 @@ function formatCurrency(amount: number) {
         <!-- heading -->
         <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ amounts.total || 0 }}</h1>
         <!-- subtotal -->
-        <Input type="number" label="Subtotal" icon="receipt" prefix="$" v-model="amounts.subtotal" @input="amounts.subtotal = formatCurrency($event.target.value)" />
+        <Input type="number" label="Subtotal" icon="receipt" prefix-text="$" v-model="amounts.subtotal" @input="amounts.subtotal = formatCurrency($event.target.value)" />
         <!-- tax -->
-        <Input type="number" label="Tax" icon="receipt" prefix="$" v-model="amounts.tax" @input="amounts.tax = formatCurrency($event.target.value)" />
+        <Input type="number" label="Tax" icon="receipt" prefix-text="$" v-model="amounts.tax" @input="amounts.tax = formatCurrency($event.target.value)" />
         <!-- tip -->
-        <Input type="number" label="Tip" icon="receipt" prefix="$" v-model="amounts.tip" @input="amounts.tip = formatCurrency($event.target.value)" />
+        <Input type="number" label="Tip" icon="receipt" prefix-text="$" v-model="amounts.tip" @input="amounts.tip = formatCurrency($event.target.value)" />
     </div>
 </template>
 

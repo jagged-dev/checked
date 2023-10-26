@@ -72,7 +72,7 @@ function formatCurrency(amount: number) {
             <!-- name -->
             <Input type="text" label="Item" icon="fastfood" v-model="item.name" />
             <!-- price -->
-            <Input type="number" label="Price" icon="receipt" prefix="$" v-model="item.price" @input="item.price = formatCurrency($event.target.value)" />
+            <Input type="number" label="Price" icon="receipt" prefix-text="$" v-model="item.price" @input="item.price = formatCurrency($event.target.value)" />
             <!-- purchaser -->
             <md-filled-select label="Purchaser" :displayText="item.purchaser" hasLeadingIcon @change="selectPurchaser(item, $event.target.value)">
                 <md-icon slot="leading-icon">person</md-icon>
