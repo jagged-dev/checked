@@ -34,11 +34,47 @@ import Footer from "@/components/layout/Footer.vue";
     </div>
     <!-- learn more -->
     <div class="flex flex-col rounded-t-3xl bg-snow transition-background duration-500 dark:bg-coal xl:rounded-tr-none">
+        <!-- info -->
         <div class="grid items-center gap-8 p-8 xs:gap-16 xs:p-16 xl:grid-cols-2" id="learn">
-            <!-- amounts -->
+            <!-- event -->
             <div class="flex flex-col gap-4">
                 <div class="ml-2 flex flex-col">
                     <h1 class="text-xl font-bold text-gunmetal transition-font dark:text-silver">Step 1</h1>
+                    <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Enter event details</h1>
+                </div>
+                <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Enter event name</p>
+                </div>
+                <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">e.g. name of restaurant, activity, or trip</p>
+                </div>
+            </div>
+            <div class="h-screen/2 xl:-m-16 xl:h-screen xl:p-16 xl:pr-0">
+                <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-event-light" bgDark="dark:bg-event-dark" />
+            </div>
+            <!-- party -->
+            <div class="flex flex-col gap-4">
+                <div class="ml-2 flex flex-col">
+                    <h1 class="text-xl font-bold text-gunmetal transition-font dark:text-silver">Step 2</h1>
+                    <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Enter party guests</h1>
+                </div>
+                <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Enter guest name</p>
+                </div>
+                <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Press the <code class="mx-2">Add guest</code> button to add the guest to the party</p>
+                </div>
+                <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">To remove a guest, click on the button labeled with the guest's name</p>
+                </div>
+            </div>
+            <div class="h-screen/2 xl:-m-16 xl:h-screen xl:p-16 xl:pr-0">
+                <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-party-light" bgDark="dark:bg-party-dark" />
+            </div>
+            <!-- amounts -->
+            <div class="flex flex-col gap-4">
+                <div class="ml-2 flex flex-col">
+                    <h1 class="text-xl font-bold text-gunmetal transition-font dark:text-silver">Step 3</h1>
                     <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Enter check amounts</h1>
                 </div>
                 <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
@@ -54,42 +90,36 @@ import Footer from "@/components/layout/Footer.vue";
             <div class="h-screen/2 xl:-m-16 xl:h-screen xl:p-16 xl:pr-0">
                 <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-amounts-light" bgDark="dark:bg-amounts-dark" />
             </div>
-            <!-- party -->
-            <div class="flex flex-col gap-4">
-                <div class="ml-2 flex flex-col">
-                    <h1 class="text-xl font-bold text-gunmetal transition-font dark:text-silver">Step 2</h1>
-                    <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Enter party guests</h1>
-                </div>
-                <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
-                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Enter guest name</p>
-                </div>
-                <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
-                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Optionally enter guest email</p>
-                </div>
-            </div>
-            <div class="h-screen/2 xl:-m-16 xl:h-screen xl:p-16 xl:pr-0">
-                <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-party-light" bgDark="dark:bg-party-dark" />
-            </div>
             <!-- food -->
             <div class="flex flex-col gap-4">
                 <div class="ml-2 flex flex-col">
-                    <h1 class="text-xl font-bold text-gunmetal transition-font dark:text-silver">Step 3</h1>
+                    <h1 class="text-xl font-bold text-gunmetal transition-font dark:text-silver">Step 4</h1>
                     <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Enter food items</h1>
                 </div>
                 <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
                     <p class="font-bold text-gunmetal transition-font dark:text-silver">Enter item name</p>
                 </div>
                 <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
-                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Enter item price</p>
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Press the <code class="mx-2">Add item</code> button to add the item</p>
                 </div>
                 <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
-                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Enter item guests</p>
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">To remove an item, click on the button labeled with the item's name</p>
+                </div>
+                <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Enter the item's price</p>
+                </div>
+                <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Select the item's purchaser</p>
+                </div>
+                <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Select the guests who shared this item</p>
                 </div>
             </div>
             <div class="h-screen/2 xl:-m-16 xl:h-screen xl:p-16 xl:pr-0">
                 <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-food-light" bgDark="dark:bg-food-dark" />
             </div>
         </div>
+        <!-- footer -->
         <Footer></Footer>
     </div>
 </template>
