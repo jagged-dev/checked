@@ -793,6 +793,10 @@ video {
   background-image: url('../../assets/images/screenshots/amounts-lt.png');
 }
 
+.bg-event-light {
+  background-image: url('../../assets/images/screenshots/event-lt.png');
+}
+
 .bg-food-light {
   background-image: url('../../assets/images/screenshots/food-lt.png');
 }
@@ -980,6 +984,10 @@ video {
 
 :is(.dark .dark\:bg-amounts-dark) {
   background-image: url('../../assets/images/screenshots/amounts-dk.png');
+}
+
+:is(.dark .dark\:bg-event-dark) {
+  background-image: url('../../assets/images/screenshots/event-dk.png');
 }
 
 :is(.dark .dark\:bg-food-dark) {
