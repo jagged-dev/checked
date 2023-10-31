@@ -112,7 +112,7 @@ import Footer from "@/components/layout/Footer.vue";
                     <p class="font-bold text-gunmetal transition-font dark:text-silver">Select the item's purchaser</p>
                 </div>
                 <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
-                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Select the guests who shared this item</p>
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Select the guests who shared the item</p>
                 </div>
             </div>
             <div class="h-screen/2 xl:-m-16 xl:h-screen xl:p-16 xl:pr-0">
