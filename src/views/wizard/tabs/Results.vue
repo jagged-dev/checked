@@ -23,7 +23,7 @@ function toggleGuest(guest: string, selected: boolean) {
     <!-- results -->
     <div class="flex flex-col gap-4 rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xs:p-12">
         <!-- heading -->
-        <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">{{ event!.name }}</h1>
+        <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">{{ event?.name }}</h1>
         <!-- divider -->
         <md-divider></md-divider>
         <!-- guests -->
