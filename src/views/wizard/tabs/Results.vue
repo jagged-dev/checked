@@ -11,7 +11,10 @@ const props = defineProps({
 const results = ref();
 const expanded = ref();
 
-onMounted(() => {});
+onMounted(() => {
+    if (props.event && props.party && props.amounts && props.food) {
+    }
+});
 
 function toggleGuest(guest: string, selected: boolean) {
     if (!selected) expanded.value = guest;
