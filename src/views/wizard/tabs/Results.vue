@@ -37,9 +37,15 @@ function toggleGuest(guest: string, selected: boolean) {
         </div>
     </div>
     <!-- details -->
-    <div class="flex flex-col" :class="{ hidden: guest !== expanded }" v-for="guest in party">
-        <div class="rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal">
+    <div class="grid gap-8 xl:grid-cols-3" :class="{ hidden: guest !== expanded }" v-for="guest in party">
+        <div class="rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xl:col-span-3">
             <h1 class="text-xl font-bold text-charcoal transition-font dark:text-ice">{{ guest }}</h1>
+        </div>
+        <div class="rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal">
+            <h1 class="text-xl font-bold text-charcoal transition-font dark:text-ice">Guests</h1>
+        </div>
+        <div class="rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xl:col-span-2">
+            <h1 class="text-xl font-bold text-charcoal transition-font dark:text-ice">Items</h1>
         </div>
     </div>
     <!-- test -->
