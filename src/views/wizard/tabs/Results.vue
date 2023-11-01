@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onActivated } from "vue";
+import { ref, onMounted } from "vue";
 
 const props = defineProps({
     event: Object,
@@ -11,7 +11,7 @@ const props = defineProps({
 const results = ref();
 const expanded = ref();
 
-onActivated(() => {});
+onMounted(() => {});
 
 function toggleGuest(guest: string, selected: boolean) {
     if (!selected) expanded.value = guest;
@@ -23,21 +23,21 @@ function toggleGuest(guest: string, selected: boolean) {
     <!-- results -->
     <div class="flex flex-col gap-4 rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xs:p-12">
         <!-- heading -->
-        <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">{{ event?.name }}</h1>
+        <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">{{ event!.name }}</h1>
         <!-- divider -->
         <md-divider></md-divider>
         <!-- guests -->
         <div class="flex flex-wrap gap-2">
-            <md-assist-chip label="View guest" disabled>
+            <md-assist-chip label="View results" disabled>
                 <md-icon slot="icon">visibility</md-icon>
             </md-assist-chip>
             <md-filter-chip :label="guest" :selected="guest === expanded" @click="toggleGuest(guest, $event.target.selected)" v-for="guest in party">
-                <md-icon slot="icon">add</md-icon>
+                <md-icon slot="icon">arrow_drop_down</md-icon>
             </md-filter-chip>
         </div>
     </div>
     <!-- details -->
-    <div class="grid gap-8 xl:grid-cols-3" :class="{ hidden: guest !== expanded }" v-for="guest in party">
+    <div class="grid gap-4 xl:grid-cols-3" :class="{ hidden: guest !== expanded }" v-for="guest in party">
         <div class="rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xl:col-span-3">
             <h1 class="text-xl font-bold text-charcoal transition-font dark:text-ice">{{ guest }}</h1>
         </div>
