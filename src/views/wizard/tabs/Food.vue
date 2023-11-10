@@ -16,6 +16,7 @@ const food = ref<any[]>([
         guests: [],
     },
 ]);
+
 const touched = ref(false);
 
 const total = computed(() => {
