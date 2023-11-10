@@ -4,7 +4,7 @@ import { ref, onMounted } from "vue";
 const props = defineProps({
     event: Object,
     party: Array<string>,
-    amounts: Object,
+    check: Object,
     food: Array<any>,
 });
 
@@ -12,9 +12,9 @@ const results = ref<any>({});
 const expanded = ref();
 
 onMounted(() => {
-    if (props.event && props.party && props.amounts && props.food) {
-        let taxPct = Number(props.amounts.tax) / Number(props.amounts.subtotal);
-        let tipPct = Number(props.amounts.tip) / Number(props.amounts.subtotal);
+    if (props.event && props.party && props.check && props.food) {
+        let taxPct = Number(props.check.tax) / Number(props.check.subtotal);
+        let tipPct = Number(props.check.tip) / Number(props.check.subtotal);
 
         for (let guest of props.party!) {
             results.value[guest] = {
@@ -153,7 +153,7 @@ function toggleGuest(guest: string, selected: boolean) {
     <div class="flex flex-col gap-4">
         <span>{{ event }}</span>
         <span>{{ party }}</span>
-        <span>{{ amounts }}</span>
+        <span>{{ check }}</span>
         <span>{{ food }}</span>
         <span>{{ results }}</span>
     </div>

@@ -5,7 +5,7 @@ import Select from "@/components/Select.vue";
 
 const props = defineProps({
     party: Array<string>,
-    amounts: Object,
+    check: Object,
 });
 
 const emit = defineEmits(["update:food", "update:validity"]);
@@ -21,7 +21,7 @@ const total = computed(() => {
 });
 
 const valid = computed(() => {
-    return food.value.length > 0 && food.value.every((item) => item.name !== "" && Number(item.price) > 0 && item.purchaser !== "" && item.guests.length > 0) && total.value === props.amounts?.subtotal;
+    return food.value.length > 0 && food.value.every((item) => item.name !== "" && Number(item.price) > 0 && item.purchaser !== "" && item.guests.length > 0) && total.value === props.check?.subtotal;
 });
 
 onUpdated(() => {
@@ -70,7 +70,7 @@ function formatCurrency(amount: number) {
         <!-- heading -->
         <div class="flex items-end gap-4">
             <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ total || 0 }}</h1>
-            <h1 class="text-xl font-bold transition-font" :class="{ 'text-red': touched && food.length > 0 && total !== amounts?.subtotal, 'text-gunmetal  dark:text-silver': !touched || food.length === 0 || total === amounts?.subtotal }">/&ensp;${{ amounts?.subtotal || 0 }}</h1>
+            <h1 class="text-xl font-bold transition-font" :class="{ 'text-red': touched && food.length > 0 && total !== check?.subtotal, 'text-gunmetal  dark:text-silver': !touched || food.length === 0 || total === check?.subtotal }">/&ensp;${{ check?.subtotal || 0 }}</h1>
         </div>
         <!-- item -->
         <Input type="text" label="Item" icon="restaurant" errorText="At least one item needs to be entered." :error="touched && item === '' && food.length === 0" v-model="item" @keyup.enter="addItem" />

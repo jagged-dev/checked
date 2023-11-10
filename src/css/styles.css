@@ -789,8 +789,8 @@ video {
   background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
 
-.bg-amounts-light {
-  background-image: url('../../assets/images/screenshots/amounts-lt.png');
+.bg-check-light {
+  background-image: url('../../assets/images/screenshots/check-lt.png');
 }
 
 .bg-event-light {
@@ -982,8 +982,8 @@ video {
   background-color: rgb(19 19 19 / var(--tw-bg-opacity));
 }
 
-:is(.dark .dark\:bg-amounts-dark) {
-  background-image: url('../../assets/images/screenshots/amounts-dk.png');
+:is(.dark .dark\:bg-check-dark) {
+  background-image: url('../../assets/images/screenshots/check-dk.png');
 }
 
 :is(.dark .dark\:bg-event-dark) {

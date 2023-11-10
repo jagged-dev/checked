@@ -15,7 +15,7 @@ const routes = ref([
         valid: false,
     },
     {
-        name: "amounts",
+        name: "check",
         valid: false,
     },
     {
@@ -32,7 +32,7 @@ const tabs = ref();
 const activeTab = ref();
 const event = ref();
 const party = ref();
-const amounts = ref();
+const check = ref();
 const food = ref();
 
 const valid = computed(() => {
@@ -65,9 +65,9 @@ onUpdated(() => {
             <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 1 }">
                 <div class="flex items-center gap-2"><md-icon>group</md-icon>Party</div>
             </md-primary-tab>
-            <!-- amounts -->
+            <!-- check -->
             <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 2 }">
-                <div class="flex items-center gap-2"><md-icon>payments</md-icon>Amounts</div>
+                <div class="flex items-center gap-2"><md-icon>payments</md-icon>Check</div>
             </md-primary-tab>
             <!-- food -->
             <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 3 }">
@@ -75,7 +75,7 @@ onUpdated(() => {
             </md-primary-tab>
         </md-tabs>
         <!-- tab content -->
-        <RouterView :event="event" @update:event="event = $event" :party="party" @update:party="party = $event" :amounts="amounts" @update:amounts="amounts = $event" :food="food" @update:food="food = $event" @update:validity="routes[activeTab].valid = $event" v-slot="{ Component }">
+        <RouterView :event="event" @update:event="event = $event" :party="party" @update:party="party = $event" :check="check" @update:check="check = $event" :food="food" @update:food="food = $event" @update:validity="routes[activeTab].valid = $event" v-slot="{ Component }">
             <KeepAlive exclude="Results">
                 <component :is="Component" />
             </KeepAlive>
@@ -92,16 +92,16 @@ onUpdated(() => {
             <!-- party -->
             <template v-if="activeTab === 1">
                 <Back label="Previous" @click="activeTab--">Event</Back>
-                <Next label="Next" @click="activeTab++">Amounts</Next>
+                <Next label="Next" @click="activeTab++">Check</Next>
             </template>
-            <!-- amounts -->
+            <!-- check -->
             <template v-if="activeTab === 2">
                 <Back label="Previous" @click="activeTab--">Party</Back>
                 <Next label="Next" @click="activeTab++">Food</Next>
             </template>
             <!-- food -->
             <template v-if="activeTab === 3">
-                <Back label="Previous" @click="activeTab--">Amounts</Back>
+                <Back label="Previous" @click="activeTab--">Check</Back>
                 <Next label="Submit" :disabled="!valid" @click="activeTab++">Results</Next>
             </template>
             <!-- results -->

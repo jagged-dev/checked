@@ -31,8 +31,8 @@ const router = createRouter({
         },
         {
           path: "",
-          name: "amounts",
-          component: () => import("@/views/wizard/tabs/Amounts.vue"),
+          name: "check",
+          component: () => import("@/views/wizard/tabs/Check.vue"),
         },
         {
           path: "",

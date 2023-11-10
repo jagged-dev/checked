@@ -71,7 +71,7 @@ import Footer from "@/components/layout/Footer.vue";
             <div class="h-screen/2 xl:-m-16 xl:h-screen xl:p-16 xl:pr-0">
                 <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-party-light" bgDark="dark:bg-party-dark" />
             </div>
-            <!-- amounts -->
+            <!-- check -->
             <div class="flex flex-col gap-4">
                 <div class="ml-2 flex flex-col">
                     <h1 class="text-xl font-bold text-gunmetal transition-font dark:text-silver">Step 3</h1>
@@ -88,7 +88,7 @@ import Footer from "@/components/layout/Footer.vue";
                 </div>
             </div>
             <div class="h-screen/2 xl:-m-16 xl:h-screen xl:p-16 xl:pr-0">
-                <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-amounts-light" bgDark="dark:bg-amounts-dark" />
+                <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-check-light" bgDark="dark:bg-check-dark" />
             </div>
             <!-- food -->
             <div class="flex flex-col gap-4">
