@@ -67,7 +67,7 @@ onUpdated(() => {
             </md-primary-tab>
             <!-- check -->
             <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 2 }">
-                <div class="flex items-center gap-2"><md-icon>payments</md-icon>Check</div>
+                <div class="flex items-center gap-2"><md-icon>receipt</md-icon>Check</div>
             </md-primary-tab>
             <!-- food -->
             <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 3 }">

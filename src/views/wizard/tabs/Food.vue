@@ -86,7 +86,7 @@ function formatCurrency(amount: number) {
             <!-- name -->
             <Input type="text" label="Item" icon="restaurant" errorText="Item name is required." :error="touched && item.name === ''" v-model="item.name" />
             <!-- price -->
-            <Input type="number" label="Price" icon="receipt" prefix-text="$" errorText="Item price must be more than $0." :error="touched && Number(item.price) <= 0" v-model="item.price" @input="item.price = formatCurrency($event.target.value)" />
+            <Input type="number" label="Price" icon="payments" prefix-text="$" errorText="Item price must be more than $0." :error="touched && Number(item.price) <= 0" v-model="item.price" @input="item.price = formatCurrency($event.target.value)" />
             <!-- divider -->
             <md-divider></md-divider>
             <!-- guests -->

@@ -39,11 +39,11 @@ function formatCurrency(amount: number) {
         <!-- heading -->
         <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ check.total || 0 }}</h1>
         <!-- subtotal -->
-        <Input type="number" label="Subtotal" icon="receipt" prefix-text="$" errorText="Subtotal amount must be more than $0." :error="touched && Number(check.subtotal) <= 0" v-model="check.subtotal" @input="check.subtotal = formatCurrency($event.target.value)" />
+        <Input type="number" label="Subtotal" icon="payments" prefix-text="$" errorText="Subtotal amount must be more than $0." :error="touched && Number(check.subtotal) <= 0" v-model="check.subtotal" @input="check.subtotal = formatCurrency($event.target.value)" />
         <!-- tax -->
-        <Input type="number" label="Tax" icon="receipt" prefix-text="$" errorText="Tax amount must be at least $0." :error="touched && Number(check.tax) < 0" v-model="check.tax" @input="check.tax = formatCurrency($event.target.value)" />
+        <Input type="number" label="Tax" icon="payments" prefix-text="$" errorText="Tax amount must be at least $0." :error="touched && Number(check.tax) < 0" v-model="check.tax" @input="check.tax = formatCurrency($event.target.value)" />
         <!-- tip -->
-        <Input type="number" label="Tip" icon="receipt" prefix-text="$" errorText="Tip amount must be at least $0." :error="touched && Number(check.tip) < 0" v-model="check.tip" @input="check.tip = formatCurrency($event.target.value)" />
+        <Input type="number" label="Tip" icon="payments" prefix-text="$" errorText="Tip amount must be at least $0." :error="touched && Number(check.tip) < 0" v-model="check.tip" @input="check.tip = formatCurrency($event.target.value)" />
     </div>
 </template>
 
