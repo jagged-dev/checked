@@ -55,6 +55,15 @@ function removeItem(item: any) {
     food.value.splice(food.value.indexOf(item), 1);
 }
 
+function selectGuests(item: any) {
+    item.guests = [];
+    for (let guest of props.party!) item.guests.push(guest);
+}
+
+function removeGuests(item: any) {
+    item.guests = [];
+}
+
 function toggleGuest(item: any, guest: string, selected: boolean) {
     if (!selected) item.guests.push(guest);
     else item.guests.splice(item.guests.indexOf(guest), 1);
@@ -73,6 +82,17 @@ function formatCurrency(amount: number) {
             <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ total || 0 }}</h1>
             <h1 class="text-xl font-bold transition-font" :class="{ 'text-red': touched && food.length > 0 && total !== check?.subtotal, 'text-gunmetal  dark:text-silver': !touched || food.length === 0 || total === check?.subtotal }">/&ensp;${{ check?.subtotal || 0 }}</h1>
         </div>
+        <!-- divider -->
+        <md-divider></md-divider>
+        <!-- items -->
+        <div class="flex flex-wrap gap-2">
+            <md-assist-chip label="Items" disabled>
+                <md-icon slot="icon">restaurant</md-icon>
+            </md-assist-chip>
+            <md-suggestion-chip :label="item.name || 'Item ' + (food.indexOf(item) + 1)" @click="removeItem(item)" v-for="item in food">
+                <md-icon slot="icon">close</md-icon>
+            </md-suggestion-chip>
+        </div>
     </div>
     <!-- items -->
     <div class="grid gap-8 xl:grid-cols-2" v-if="food.length > 0">
@@ -80,7 +100,7 @@ function formatCurrency(amount: number) {
         <div class="flex flex-col gap-4 rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xs:p-12 xl:last:odd:col-span-2" v-for="item in food">
             <!-- heading -->
             <div class="flex items-center">
-                <h1 class="mr-auto text-2xl font-bold text-charcoal transition-font dark:text-ice">{{ item.name || "Item" }}:&ensp;${{ item.price || 0 }}</h1>
+                <h1 class="mr-auto text-2xl font-bold text-charcoal transition-font dark:text-ice">{{ item.name || "Item #" + (food.indexOf(item) + 1) }}:&ensp;${{ item.price || 0 }}</h1>
                 <md-outlined-icon-button @click="removeItem(item)"><md-icon>close</md-icon></md-outlined-icon-button>
             </div>
             <!-- name -->
@@ -91,8 +111,11 @@ function formatCurrency(amount: number) {
             <md-divider></md-divider>
             <!-- guests -->
             <div class="flex flex-wrap gap-2">
-                <md-assist-chip label="Select guests" disabled>
+                <md-assist-chip label="Select all" @click="selectGuests(item)" v-if="!party?.every((guest) => item.guests.includes(guest))">
                     <md-icon slot="icon">check</md-icon>
+                </md-assist-chip>
+                <md-assist-chip label="Remove all" @click="removeGuests(item)" v-else>
+                    <md-icon slot="icon">close</md-icon>
                 </md-assist-chip>
                 <md-filter-chip :label="guest" :selected="item.guests.includes(guest)" @click="toggleGuest(item, guest, $event.target.selected)" v-for="guest in party">
                     <md-icon slot="icon">add</md-icon>
