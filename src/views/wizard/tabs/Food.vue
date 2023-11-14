@@ -76,7 +76,7 @@ function formatCurrency(amount: number) {
 
 <template>
     <!-- food -->
-    <div class="flex flex-col gap-4 rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xs:p-12">
+    <div class="flex flex-col gap-4 rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xl:p-12">
         <!-- heading -->
         <div class="flex items-end gap-4">
             <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ total || 0 }}</h1>
@@ -97,7 +97,7 @@ function formatCurrency(amount: number) {
     <!-- items -->
     <div class="grid gap-8 xl:grid-cols-2" v-if="food.length > 0">
         <!-- item -->
-        <div class="flex flex-col gap-4 rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xs:p-12 xl:last:odd:col-span-2" v-for="item in food">
+        <div class="flex flex-col gap-4 rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xl:p-12 xl:last:odd:col-span-2" v-for="item in food">
             <!-- heading -->
             <div class="flex items-center">
                 <h1 class="mr-auto text-2xl font-bold text-charcoal transition-font dark:text-ice">{{ item.name || "Item #" + (food.indexOf(item) + 1) }}:&ensp;${{ item.price || 0 }}</h1>
