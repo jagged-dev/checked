@@ -89,7 +89,7 @@ function formatCurrency(amount: number) {
             <md-assist-chip label="Items" disabled>
                 <md-icon slot="icon">restaurant</md-icon>
             </md-assist-chip>
-            <md-suggestion-chip :label="item.name || 'Item ' + (food.indexOf(item) + 1)" @click="removeItem(item)" v-for="item in food">
+            <md-suggestion-chip :label="item.name || 'Item ' + (index + 1)" @click="removeItem(item)" v-for="(item, index) in food">
                 <md-icon slot="icon">close</md-icon>
             </md-suggestion-chip>
         </div>
@@ -97,10 +97,10 @@ function formatCurrency(amount: number) {
     <!-- items -->
     <div class="grid gap-8 xl:grid-cols-2" v-if="food.length > 0">
         <!-- item -->
-        <div class="flex flex-col gap-4 rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xl:p-12 xl:last:odd:col-span-2" v-for="item in food">
+        <div class="flex flex-col gap-4 rounded-3xl bg-ice p-8 transition-background dark:bg-charcoal xl:p-12 xl:last:odd:col-span-2" v-for="(item, index) in food">
             <!-- heading -->
             <div class="flex items-center">
-                <h1 class="mr-auto text-2xl font-bold text-charcoal transition-font dark:text-ice">{{ item.name || "Item #" + (food.indexOf(item) + 1) }}:&ensp;${{ item.price || 0 }}</h1>
+                <h1 class="mr-auto text-2xl font-bold text-charcoal transition-font dark:text-ice">{{ item.name || "Item #" + (index + 1) }}:&ensp;${{ item.price || 0 }}</h1>
                 <md-outlined-icon-button @click="removeItem(item)"><md-icon>close</md-icon></md-outlined-icon-button>
             </div>
             <!-- name -->
