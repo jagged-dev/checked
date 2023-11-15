@@ -28,7 +28,6 @@ const routes = ref([
     },
 ]);
 
-const tabs = ref();
 const activeTab = ref();
 const event = ref();
 const party = ref();
@@ -41,11 +40,9 @@ const valid = computed(() => {
 
 onMounted(() => {
     activeTab.value = 0;
-    tabs.value.addEventListener("change", () => (activeTab.value = tabs.value.activeTabIndex));
 });
 
 onUpdated(() => {
-    tabs.value.activeTabIndex = activeTab.value;
     router.push({ name: routes.value[activeTab.value].name });
 });
 </script>
@@ -56,23 +53,15 @@ onUpdated(() => {
         <!-- active tab -->
         <div class="hidden">{{ activeTab }}</div>
         <!-- tabs -->
-        <md-tabs class="rounded-full bg-ice transition-background dark:bg-charcoal" :class="{ hidden: activeTab === 4 }" ref="tabs">
+        <md-tabs class="rounded-full bg-ice transition-background dark:bg-charcoal" :class="{ hidden: activeTab === 4 }" :activeTabIndex="activeTab" @change="activeTab = $event.target.activeTabIndex">
             <!-- event -->
-            <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 0 }">
-                <div class="flex items-center gap-2"><md-icon>event</md-icon>Event</div>
-            </md-primary-tab>
+            <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 0 }" inlineIcon><md-icon>event</md-icon>Event</md-primary-tab>
             <!-- party -->
-            <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 1 }">
-                <div class="flex items-center gap-2"><md-icon>group</md-icon>Party</div>
-            </md-primary-tab>
+            <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 1 }" inlineIcon><md-icon>group</md-icon>Party</md-primary-tab>
             <!-- check -->
-            <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 2 }">
-                <div class="flex items-center gap-2"><md-icon>receipt</md-icon>Check</div>
-            </md-primary-tab>
+            <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 2 }" inlineIcon><md-icon>receipt</md-icon>Check</md-primary-tab>
             <!-- food -->
-            <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 3 }">
-                <div class="flex items-center gap-2"><md-icon>restaurant_menu</md-icon>Food</div>
-            </md-primary-tab>
+            <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 3 }" inlineIcon><md-icon>restaurant_menu</md-icon>Food</md-primary-tab>
         </md-tabs>
         <!-- tab content -->
         <RouterView :event="event" @update:event="event = $event" :party="party" @update:party="party = $event" :check="check" @update:check="check = $event" :food="food" @update:food="food = $event" @update:validity="routes[activeTab].valid = $event" v-slot="{ Component }">
