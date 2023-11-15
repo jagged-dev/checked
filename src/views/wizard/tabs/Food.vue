@@ -111,10 +111,10 @@ function formatCurrency(amount: number) {
             <md-divider></md-divider>
             <!-- guests -->
             <div class="flex flex-wrap gap-2">
-                <md-assist-chip label="Select all" @click="selectGuests(item)" v-if="!party?.every((guest) => item.guests.includes(guest))">
+                <md-assist-chip label="Guests" :disabled="party?.length === 0" @click="selectGuests(item)" v-if="party?.length === 0 || !party?.every((guest) => item.guests.includes(guest))">
                     <md-icon slot="icon">check</md-icon>
                 </md-assist-chip>
-                <md-assist-chip label="Remove all" @click="removeGuests(item)" v-else>
+                <md-assist-chip label="Guests" @click="removeGuests(item)" v-else>
                     <md-icon slot="icon">close</md-icon>
                 </md-assist-chip>
                 <md-filter-chip :label="guest" :selected="item.guests.includes(guest)" @click="toggleGuest(item, guest, $event.target.selected)" v-for="guest in party">
