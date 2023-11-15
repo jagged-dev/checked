@@ -43,11 +43,18 @@ onMounted(() => {
                     total: total.toFixed(2),
                 });
 
-                results.value[guest].subtotal = (Number(results.value[guest].subtotal) + subtotal).toFixed(2);
-                results.value[guest].tax = (Number(results.value[guest].tax) + tax).toFixed(2);
-                results.value[guest].tip = (Number(results.value[guest].tip) + tip).toFixed(2);
-                results.value[guest].total = (Number(results.value[guest].total) + total).toFixed(2);
+                results.value[guest].subtotal = Number(results.value[guest].subtotal) + subtotal;
+                results.value[guest].tax = Number(results.value[guest].tax) + tax;
+                results.value[guest].tip = Number(results.value[guest].tip) + tip;
+                results.value[guest].total = Number(results.value[guest].total) + total;
             }
+        }
+
+        for (let guest in results.value) {
+            results.value[guest].subtotal = Number(results.value[guest].subtotal).toFixed(2);
+            results.value[guest].tax = Number(results.value[guest].tax).toFixed(2);
+            results.value[guest].tip = Number(results.value[guest].tip).toFixed(2);
+            results.value[guest].total = Number(results.value[guest].total).toFixed(2);
         }
     }
 });
