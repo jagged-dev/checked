@@ -115,3 +115,15 @@
   --md-sys-color-outline: var(--md-ref-palette-silver);
   --md-sys-color-outline-variant: var(--md-ref-palette-charcoal);
 }
+
+.error {
+  --md-filter-chip-outline-color: var(--md-sys-color-error);
+  --md-filter-chip-label-text-color: var(--md-sys-color-error);
+  --md-filter-chip-focus-label-text-color: var(--md-sys-color-error);
+  --md-filter-chip-hover-label-text-color: var(--md-sys-color-error);
+  --md-filter-chip-pressed-label-text-color: var(--md-sys-color-error);
+  --md-filter-chip-leading-icon-color: var(--md-sys-color-error);
+  --md-filter-chip-focus-leading-icon-color: var(--md-sys-color-error);
+  --md-filter-chip-hover-leading-icon-color: var(--md-sys-color-error);
+  --md-filter-chip-pressed-leading-icon-color: var(--md-sys-color-error);
+}
