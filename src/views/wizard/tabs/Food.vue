@@ -117,7 +117,7 @@ function formatCurrency(amount: number) {
                 <md-assist-chip label="Guests" @click="removeGuests(item)" v-else>
                     <md-icon slot="icon">close</md-icon>
                 </md-assist-chip>
-                <md-filter-chip :label="guest" :selected="item.guests.includes(guest)" @click="toggleGuest(item, guest, $event.target.selected)" v-for="guest in party">
+                <md-filter-chip :class="{ error: touched && item.guests.length === 0 }" :label="guest" :selected="item.guests.includes(guest)" @click="toggleGuest(item, guest, $event.target.selected)" v-for="guest in party">
                     <md-icon slot="icon">add</md-icon>
                 </md-filter-chip>
             </div>
