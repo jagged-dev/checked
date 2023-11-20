@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onUpdated, onActivated } from "vue";
+import { onBeforeRouteLeave } from "vue-router";
 import Input from "@/components/Input.vue";
 
 const props = defineProps({
@@ -17,7 +18,15 @@ const food = ref<any[]>([
     },
 ]);
 
-const touched = ref(false);
+const touched = ref<any[]>([
+    {
+        name: false,
+        price: false,
+        guests: false,
+    },
+]);
+
+const left = ref(false);
 
 const total = computed(() => {
     let total = 0;
@@ -30,7 +39,6 @@ const valid = computed(() => {
 });
 
 onUpdated(() => {
-    touched.value = true;
     emit("update:food", food.value);
     emit("update:validity", valid.value);
 });
@@ -43,15 +51,25 @@ onActivated(() => {
     }
 });
 
+onBeforeRouteLeave((to, from) => {
+    left.value = true;
+});
+
 function addItem() {
     food.value.push({
         name: "",
         price: "",
         guests: [],
     });
+    touched.value.push({
+        name: false,
+        price: false,
+        guests: false,
+    });
 }
 
 function removeItem(item: any) {
+    touched.value.splice(food.value.indexOf(item), 1);
     food.value.splice(food.value.indexOf(item), 1);
 }
 
@@ -61,11 +79,13 @@ function toggleGuests(item: any) {
             if (!item.guests.includes(guest)) item.guests.push(guest);
         }
     } else item.guests = [];
+    touched.value[food.value.indexOf(item)].guests = true;
 }
 
 function toggleGuest(item: any, guest: string) {
     if (!item.guests.includes(guest)) item.guests.push(guest);
     else item.guests.splice(item.guests.indexOf(guest), 1);
+    touched.value[food.value.indexOf(item)].guests = true;
 }
 </script>
 
@@ -75,7 +95,7 @@ function toggleGuest(item: any, guest: string) {
         <!-- heading -->
         <div class="flex items-end gap-4">
             <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ total || 0 }}</h1>
-            <h1 class="text-xl font-bold transition-font" :class="{ 'text-red': touched && food.length > 0 && total !== check?.subtotal, 'text-gunmetal  dark:text-silver': !touched || food.length === 0 || total === check?.subtotal }">/&ensp;${{ check?.subtotal || 0 }}</h1>
+            <h1 class="text-xl font-bold transition-font" :class="{ 'text-gunmetal  dark:text-silver': food.length === 0 || total === check?.subtotal, 'text-red': food.length > 0 && total !== check?.subtotal }">/&ensp;${{ check?.subtotal || 0 }}</h1>
         </div>
         <!-- divider -->
         <md-divider></md-divider>
@@ -99,9 +119,9 @@ function toggleGuest(item: any, guest: string) {
                 <md-outlined-icon-button @click="removeItem(item)"><md-icon>close</md-icon></md-outlined-icon-button>
             </div>
             <!-- name -->
-            <Input type="text" label="Item" icon="restaurant" error-text="Item name is required." :error="touched && item.name === ''" v-model="item.name" />
+            <Input type="text" label="Item" icon="restaurant" error-text="Item name is required." :error="(touched[index].name || left) && item.name === ''" v-model="item.name" @input="touched[index].name = true" />
             <!-- price -->
-            <Input type="currency" label="Price" icon="payments" error-text="Item price must be more than $0." :error="touched && Number(item.price) <= 0" v-model="item.price" />
+            <Input type="currency" label="Price" icon="payments" error-text="Item price must be more than $0." :error="(touched[index].price || left) && Number(item.price) <= 0" v-model="item.price" @input="touched[index].price = true" />
             <!-- divider -->
             <md-divider></md-divider>
             <!-- guests -->
@@ -110,7 +130,7 @@ function toggleGuest(item: any, guest: string) {
                     <md-icon slot="icon" v-if="party?.length === 0 || !party?.every((guest) => item.guests.includes(guest))">check</md-icon>
                     <md-icon slot="icon" v-else>close</md-icon>
                 </md-assist-chip>
-                <md-filter-chip :class="{ error: touched && item.guests.length === 0 }" :label="guest" :selected="item.guests.includes(guest)" @click="toggleGuest(item, guest)" v-for="guest in party">
+                <md-filter-chip :class="{ error: (touched[index].guests || left) && item.guests.length === 0 }" :label="guest" :selected="item.guests.includes(guest)" @click="toggleGuest(item, guest)" v-for="guest in party">
                     <md-icon slot="icon">add</md-icon>
                 </md-filter-chip>
             </div>
