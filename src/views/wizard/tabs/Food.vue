@@ -57,15 +57,14 @@ function removeItem(item: any) {
 
 function toggleGuests(item: any) {
     if (!props.party?.every((guest) => item.guests.includes(guest))) {
-        item.guests = [];
-        for (let guest of props.party!) item.guests.push(guest);
-    } else {
-        item.guests = [];
-    }
+        for (let guest of props.party!) {
+            if (!item.guests.includes(guest)) item.guests.push(guest);
+        }
+    } else item.guests = [];
 }
 
-function toggleGuest(item: any, guest: string, selected: boolean) {
-    if (!selected) item.guests.push(guest);
+function toggleGuest(item: any, guest: string) {
+    if (!item.guests.includes(guest)) item.guests.push(guest);
     else item.guests.splice(item.guests.indexOf(guest), 1);
 }
 </script>
@@ -111,7 +110,7 @@ function toggleGuest(item: any, guest: string, selected: boolean) {
                     <md-icon slot="icon" v-if="party?.length === 0 || !party?.every((guest) => item.guests.includes(guest))">check</md-icon>
                     <md-icon slot="icon" v-else>close</md-icon>
                 </md-assist-chip>
-                <md-filter-chip :class="{ error: touched && item.guests.length === 0 }" :label="guest" :selected="item.guests.includes(guest)" @click="toggleGuest(item, guest, $event.target.selected)" v-for="guest in party">
+                <md-filter-chip :class="{ error: touched && item.guests.length === 0 }" :label="guest" :selected="item.guests.includes(guest)" @click="toggleGuest(item, guest)" v-for="guest in party">
                     <md-icon slot="icon">add</md-icon>
                 </md-filter-chip>
             </div>
