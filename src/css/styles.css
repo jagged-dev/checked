@@ -961,6 +961,15 @@ video {
   color-scheme: dark;
 }
 
+.hover\:bg-gunmetal:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(94 94 94 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-opacity-10:hover {
+  --tw-bg-opacity: 0.1;
+}
+
 .hover\:text-blue:hover {
   --tw-text-opacity: 1;
   color: rgb(24 119 242 / var(--tw-text-opacity));
@@ -1022,6 +1031,15 @@ video {
 :is(.dark .dark\:text-silver) {
   --tw-text-opacity: 1;
   color: rgb(198 198 198 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:hover\:bg-silver:hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(198 198 198 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:hover\:bg-opacity-10:hover) {
+  --tw-bg-opacity: 0.1;
 }
 
 :is(.dark .dark\:hover\:text-blue:hover) {
