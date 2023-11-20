@@ -50,8 +50,6 @@ onUpdated(() => {
 <template>
     <!-- wizard -->
     <div class="flex flex-col gap-8 p-8">
-        <!-- active tab -->
-        <div class="hidden">{{ activeTab }}</div>
         <!-- tabs -->
         <md-tabs class="rounded-full bg-ice transition-background dark:bg-charcoal" :activeTabIndex="activeTab" @change="activeTab = $event.target.activeTabIndex" v-if="activeTab !== 4">
             <!-- event -->
