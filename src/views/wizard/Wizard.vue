@@ -53,7 +53,7 @@ onUpdated(() => {
         <!-- active tab -->
         <div class="hidden">{{ activeTab }}</div>
         <!-- tabs -->
-        <md-tabs class="rounded-full bg-ice transition-background dark:bg-charcoal" :class="{ hidden: activeTab === 4 }" :activeTabIndex="activeTab" @change="activeTab = $event.target.activeTabIndex">
+        <md-tabs class="rounded-full bg-ice transition-background dark:bg-charcoal" :activeTabIndex="activeTab" @change="activeTab = $event.target.activeTabIndex" v-if="activeTab !== 4">
             <!-- event -->
             <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 0 }" inlineIcon><md-icon>event</md-icon>Event</md-primary-tab>
             <!-- party -->
@@ -63,6 +63,8 @@ onUpdated(() => {
             <!-- food -->
             <md-primary-tab class="h-20 rounded-full transition-background" :class="{ 'bg-blue': activeTab === 3 }" inlineIcon><md-icon>restaurant_menu</md-icon>Food</md-primary-tab>
         </md-tabs>
+        <!-- progress -->
+        <md-linear-progress class="w-full rounded-full" :value="(activeTab + 1) / 4" v-if="activeTab !== 4"></md-linear-progress>
         <!-- tab content -->
         <RouterView :event="event" @update:event="event = $event" :party="party" @update:party="party = $event" :check="check" @update:check="check = $event" :food="food" @update:food="food = $event" @update:validity="routes[activeTab].valid = $event" v-slot="{ Component }">
             <KeepAlive exclude="Results">
