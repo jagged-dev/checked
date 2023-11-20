@@ -62,7 +62,7 @@ import Footer from "@/components/layout/Footer.vue";
                     <p class="font-bold text-gunmetal transition-font dark:text-silver">Enter guest name</p>
                 </div>
                 <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
-                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Press the <code class="mx-2">Add guest</code> button to add the guest to the party</p>
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Click the <code class="mx-2">Add guest</code> button or press <code class="mx-2">enter</code> to add the guest to the party</p>
                 </div>
                 <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
                     <p class="font-bold text-gunmetal transition-font dark:text-silver">To remove a guest, click on the button labeled with the guest's name</p>
@@ -100,19 +100,16 @@ import Footer from "@/components/layout/Footer.vue";
                     <p class="font-bold text-gunmetal transition-font dark:text-silver">Enter item name</p>
                 </div>
                 <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
-                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Press the <code class="mx-2">Add item</code> button to add the item</p>
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Enter item price</p>
                 </div>
                 <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
-                    <p class="font-bold text-gunmetal transition-font dark:text-silver">To remove an item, click on the button labeled with the item's name</p>
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Select the guests who ordered the item</p>
                 </div>
                 <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
-                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Enter the item's price</p>
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Click the <code class="mx-2">Add item</code> button to add another item</p>
                 </div>
                 <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
-                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Select the item's purchaser</p>
-                </div>
-                <div class="rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal">
-                    <p class="font-bold text-gunmetal transition-font dark:text-silver">Select the guests who shared the item</p>
+                    <p class="font-bold text-gunmetal transition-font dark:text-silver">To remove an item, click on the button labeled with the item's name, or click on the <code class="mx-2">X</code></p>
                 </div>
             </div>
             <div class="h-screen/2 xl:-m-16 xl:h-screen xl:p-16 xl:pr-0">
