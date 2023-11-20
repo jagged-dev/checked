@@ -96,19 +96,21 @@ function toggleResult(result: string, selected: boolean) {
                 </tr>
             </thead>
             <tbody>
-                <tr class="transition-background hover:bg-gunmetal hover:bg-opacity-10 dark:hover:bg-silver dark:hover:bg-opacity-10" v-for="guest in party">
+                <tr class="relative" v-for="guest in party">
                     <td class="text-start text-gunmetal transition-font dark:text-silver">{{ guest }}</td>
                     <td class="text-end text-gunmetal transition-font dark:text-silver">${{ results[guest]?.subtotal }}</td>
                     <td class="text-end text-gunmetal transition-font dark:text-silver">${{ results[guest]?.tax }}</td>
                     <td class="text-end text-gunmetal transition-font dark:text-silver">${{ results[guest]?.tip }}</td>
                     <td class="text-end text-gunmetal transition-font dark:text-silver">${{ results[guest]?.total }}</td>
+                    <md-ripple></md-ripple>
                 </tr>
-                <tr class="transition-background hover:bg-gunmetal hover:bg-opacity-10 dark:hover:bg-silver dark:hover:bg-opacity-10">
+                <tr class="relative">
                     <td class="text-start text-charcoal transition-font dark:text-ice">TOTAL</td>
                     <td class="text-end text-charcoal transition-font dark:text-ice">${{ check?.subtotal }}</td>
                     <td class="text-end text-charcoal transition-font dark:text-ice">${{ check?.tax }}</td>
                     <td class="text-end text-charcoal transition-font dark:text-ice">${{ check?.tip }}</td>
                     <td class="text-end text-blue">${{ check?.total }}</td>
+                    <md-ripple></md-ripple>
                 </tr>
             </tbody>
         </table>
@@ -129,19 +131,21 @@ function toggleResult(result: string, selected: boolean) {
                 </tr>
             </thead>
             <tbody>
-                <tr class="transition-background hover:bg-gunmetal hover:bg-opacity-10 dark:hover:bg-silver dark:hover:bg-opacity-10" v-for="item in results[guest]?.items">
+                <tr class="relative" v-for="item in results[guest]?.items">
                     <td class="text-start text-gunmetal transition-font dark:text-silver">{{ item.name }}</td>
                     <td class="text-end text-gunmetal transition-font dark:text-silver">${{ item.subtotal }}</td>
                     <td class="text-end text-gunmetal transition-font dark:text-silver">${{ item.tax }}</td>
                     <td class="text-end text-gunmetal transition-font dark:text-silver">${{ item.tip }}</td>
                     <td class="text-end text-gunmetal transition-font dark:text-silver">${{ item.total }}</td>
+                    <md-ripple></md-ripple>
                 </tr>
-                <tr class="transition-background hover:bg-gunmetal hover:bg-opacity-10 dark:hover:bg-silver dark:hover:bg-opacity-10">
+                <tr class="relative">
                     <td class="text-start text-charcoal transition-font dark:text-ice">TOTAL</td>
                     <td class="text-end text-charcoal transition-font dark:text-ice">${{ results[guest]?.subtotal }}</td>
                     <td class="text-end text-charcoal transition-font dark:text-ice">${{ results[guest]?.tax }}</td>
                     <td class="text-end text-charcoal transition-font dark:text-ice">${{ results[guest]?.tip }}</td>
                     <td class="text-end text-blue">${{ results[guest]?.total }}</td>
+                    <md-ripple></md-ripple>
                 </tr>
             </tbody>
         </table>
