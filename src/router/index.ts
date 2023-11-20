@@ -72,4 +72,11 @@ const router = createRouter({
   },
 });
 
+router.beforeEach((to, from) => {
+  if (from.path.includes("wizard") && !to.path.includes("wizard")) {
+    const answer = window.confirm("Are you sure you want to leave? All data will be lost.");
+    if (!answer) return false;
+  }
+});
+
 export default router;
