@@ -736,6 +736,10 @@ video {
   scroll-behavior: smooth;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .rounded-3xl {
   border-radius: 1.5rem;
 }
@@ -879,6 +883,10 @@ video {
 
 .text-md {
   font-size: 0.875rem;
+}
+
+.text-sm {
+  font-size: 0.75rem;
 }
 
 .text-xl {
