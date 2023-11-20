@@ -15,8 +15,8 @@ import LinkedIn from "@/components/icons/LinkedIn.vue";
                 <b>checked</b> is a free to use application that is aimed at combatting this issue and is designed to help groups split large checks both accurately and hassle-free.
             </p>
             <p class="text-gunmetal transition-font dark:text-silver">
-                To use this application, users must enter the name of the event, enter each guest in the party, enter the amounts given from the check, and enter each item that was ordered. Users must then specify who ordered as well as who paid for each item. From there, the application will perform the necessary
-                calculations and then display the final results of how much each guest owes and to whom they owe the amount to. For a more detailed guide, please visit the
+                To use this application, users must enter the name of the event, enter each guest in the party, enter the amounts given from the check, and enter each item that was ordered. Users must then specify who ordered each item. From there, the application will perform the necessary calculations and then
+                display the final results of how much each guest owes. For a more detailed guide, please visit the
                 <RouterLink :to="{ name: 'learn' }">
                     <b class="text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue">Learn More</b>
                 </RouterLink>
