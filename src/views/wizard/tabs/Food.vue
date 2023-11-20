@@ -100,9 +100,9 @@ function toggleGuest(item: any, guest: string, selected: boolean) {
                 <md-outlined-icon-button @click="removeItem(item)"><md-icon>close</md-icon></md-outlined-icon-button>
             </div>
             <!-- name -->
-            <Input type="text" label="Item" icon="restaurant" errorText="Item name is required." :error="touched && item.name === ''" v-model="item.name" />
+            <Input type="text" label="Item" icon="restaurant" error-text="Item name is required." :error="touched && item.name === ''" v-model="item.name" />
             <!-- price -->
-            <Input type="currency" label="Price" icon="payments" errorText="Item price must be more than $0." :error="touched && Number(item.price) <= 0" v-model="item.price" />
+            <Input type="currency" label="Price" icon="payments" error-text="Item price must be more than $0." :error="touched && Number(item.price) <= 0" v-model="item.price" />
             <!-- divider -->
             <md-divider></md-divider>
             <!-- guests -->

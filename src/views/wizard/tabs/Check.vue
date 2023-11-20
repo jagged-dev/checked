@@ -35,11 +35,11 @@ onUpdated(() => {
         <!-- heading -->
         <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">Total:&ensp;${{ check.total || 0 }}</h1>
         <!-- subtotal -->
-        <Input type="currency" label="Subtotal" icon="payments" errorText="Subtotal amount must be more than $0." :error="touched && Number(check.subtotal) <= 0" v-model="check.subtotal" />
+        <Input type="currency" label="Subtotal" icon="payments" error-text="Subtotal amount must be more than $0." :error="touched && Number(check.subtotal) <= 0" v-model="check.subtotal" />
         <!-- tax -->
-        <Input type="currency" label="Tax" icon="payments" errorText="Tax amount must be at least $0." :error="touched && Number(check.tax) < 0" v-model="check.tax" />
+        <Input type="currency" label="Tax" icon="payments" error-text="Tax amount must be at least $0." :error="touched && Number(check.tax) < 0" v-model="check.tax" />
         <!-- tip -->
-        <Input type="currency" label="Tip" icon="payments" errorText="Tip amount must be at least $0." :error="touched && Number(check.tip) < 0" v-model="check.tip" />
+        <Input type="currency" label="Tip" icon="payments" error-text="Tip amount must be at least $0." :error="touched && Number(check.tip) < 0" v-model="check.tip" />
     </div>
 </template>
 

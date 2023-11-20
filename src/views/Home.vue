@@ -13,7 +13,7 @@ import Footer from "@/components/layout/Footer.vue";
         <div></div>
         <!-- screenshot -->
         <div class="row-span-3 -mb-16 -mr-16 hidden xl:flex">
-            <Screenshot class="rounded-none rounded-tl-3xl border-b-0 border-r-0" bg="bg-results-light" bgDark="dark:bg-results-dark" />
+            <Screenshot class="rounded-none rounded-tl-3xl border-b-0 border-r-0" bg="bg-results-light" bg-dark="dark:bg-results-dark" />
         </div>
         <!-- title -->
         <div class="flex flex-col gap-8 place-self-center">
@@ -50,7 +50,7 @@ import Footer from "@/components/layout/Footer.vue";
                 </div>
             </div>
             <div class="h-screen/2 xl:-m-16 xl:h-screen xl:p-16 xl:pr-0">
-                <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-event-light" bgDark="dark:bg-event-dark" />
+                <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-event-light" bg-dark="dark:bg-event-dark" />
             </div>
             <!-- party -->
             <div class="flex flex-col gap-4">
@@ -69,7 +69,7 @@ import Footer from "@/components/layout/Footer.vue";
                 </div>
             </div>
             <div class="h-screen/2 xl:-m-16 xl:h-screen xl:p-16 xl:pr-0">
-                <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-party-light" bgDark="dark:bg-party-dark" />
+                <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-party-light" bg-dark="dark:bg-party-dark" />
             </div>
             <!-- check -->
             <div class="flex flex-col gap-4">
@@ -88,7 +88,7 @@ import Footer from "@/components/layout/Footer.vue";
                 </div>
             </div>
             <div class="h-screen/2 xl:-m-16 xl:h-screen xl:p-16 xl:pr-0">
-                <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-check-light" bgDark="dark:bg-check-dark" />
+                <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-check-light" bg-dark="dark:bg-check-dark" />
             </div>
             <!-- food -->
             <div class="flex flex-col gap-4">
@@ -116,7 +116,7 @@ import Footer from "@/components/layout/Footer.vue";
                 </div>
             </div>
             <div class="h-screen/2 xl:-m-16 xl:h-screen xl:p-16 xl:pr-0">
-                <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-food-light" bgDark="dark:bg-food-dark" />
+                <Screenshot class="xl:rounded-r-none xl:border-r-0" bg="bg-food-light" bg-dark="dark:bg-food-dark" />
             </div>
         </div>
         <!-- footer -->

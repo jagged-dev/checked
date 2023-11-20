@@ -27,7 +27,7 @@ onUpdated(() => {
         <!-- heading -->
         <h1 class="text-2xl font-bold text-charcoal transition-font dark:text-ice">{{ event.name || "New event" }}</h1>
         <!-- name -->
-        <Input type="text" label="Event" icon="edit_calendar" errorText="Event name is required." :error="touched && event.name === ''" v-model="event.name" />
+        <Input type="text" label="Event" icon="edit_calendar" error-text="Event name is required." :error="touched && event.name === ''" v-model="event.name" />
     </div>
 </template>
 
