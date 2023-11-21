@@ -22,9 +22,6 @@
   --md-ref-typeface-size-large: 1.375rem;
   --md-ref-typeface-weight-regular: 400;
   --md-ref-typeface-weight-bold: 700;
-  --md-ref-typeface-line-height-small: 1rem;
-  --md-ref-typeface-line-height-medium: 1.25rem;
-  --md-ref-typeface-line-height-large: 1.5rem;
   --md-ref-shape-height-small: 2rem;
   --md-ref-shape-height-medium: 2.5rem;
   --md-ref-shape-height-large: 3rem;
@@ -42,9 +39,6 @@
   --md-sys-color-on-primary-container: var(--md-ref-palette-ice);
   --md-sys-color-secondary-container: var(--md-ref-palette-blue-light);
   --md-sys-color-on-secondary-container: var(--md-ref-palette-blue);
-  --md-sys-color-tertiary-container: var(--md-ref-palette-charcoal);
-  --md-sys-color-on-tertiary-container: var(--md-ref-palette-ice);
-  --md-sys-color-error: var(--md-ref-palette-red);
   --md-sys-color-surface: var(--md-ref-palette-ice);
   --md-sys-color-on-surface: var(--md-ref-palette-charcoal);
   --md-sys-color-surface-variant: var(--md-ref-palette-ice);
@@ -54,6 +48,7 @@
   --md-sys-color-surface-container-highest: var(--md-ref-palette-ice);
   --md-sys-color-outline: var(--md-ref-palette-gunmetal);
   --md-sys-color-outline-variant: var(--md-ref-palette-ice);
+  --md-sys-color-error: var(--md-ref-palette-red);
   --md-sys-typescale-title-small-size: var(--md-ref-typeface-size-medium);
   --md-sys-typescale-title-small-weight: var(--md-ref-typeface-weight-bold);
   --md-sys-typescale-body-large-size: var(--md-ref-typeface-size-medium);
@@ -64,31 +59,18 @@
   --md-sys-container-weight: var(--md-ref-shape-weight-regular);
   --md-sys-container-shape: var(--md-ref-shape-corner-full);
   /* component tokens */
-  --md-elevated-button-container-height: var(--md-sys-container-height);
   --md-filled-button-container-height: var(--md-sys-container-height);
   --md-filled-tonal-button-container-height: var(--md-sys-container-height);
-  --md-outlined-button-container-height: var(--md-sys-container-height);
   --md-text-button-container-height: var(--md-sys-container-height);
-  --md-elevated-button-container-color: var(--md-sys-color-surface);
-  --md-outlined-button-outline-color: var(--md-sys-color-primary);
-  --md-assist-chip-label-text-weight: var(--md-ref-typeface-weight-regular);
-  --md-input-chip-label-text-weight: var(--md-ref-typeface-weight-regular);
-  --md-filter-chip-label-text-weight: var(--md-ref-typeface-weight-regular);
-  --md-suggestion-chip-label-text-weight: var(--md-ref-typeface-weight-regular);
   --md-assist-chip-outline-color: var(--md-sys-color-primary);
   --md-assist-chip-label-text-color: var(--md-sys-color-primary);
   --md-assist-chip-focus-label-text-color: var(--md-sys-color-primary);
   --md-assist-chip-hover-label-text-color: var(--md-sys-color-primary);
   --md-assist-chip-pressed-label-text-color: var(--md-sys-color-primary);
+  --md-assist-chip-label-text-weight: var(--md-ref-typeface-weight-regular);
+  --md-filter-chip-label-text-weight: var(--md-ref-typeface-weight-regular);
+  --md-suggestion-chip-label-text-weight: var(--md-ref-typeface-weight-regular);
   --md-divider-thickness: var(--md-sys-container-weight);
-  --md-filled-select-text-field-input-text-weight: var(--md-ref-typeface-weight-regular);
-  --md-switch-selected-icon-color: var(--md-sys-color-primary);
-  --md-switch-selected-focus-handle-color: var(--md-sys-color-on-primary);
-  --md-switch-selected-focus-icon-color: var(--md-sys-color-primary);
-  --md-switch-selected-hover-handle-color: var(--md-sys-color-on-primary);
-  --md-switch-selected-hover-icon-color: var(--md-sys-color-primary);
-  --md-switch-selected-pressed-handle-color: var(--md-sys-color-on-primary);
-  --md-switch-selected-pressed-icon-color: var(--md-sys-color-primary);
   --md-primary-tab-container-color: var(--md-ref-palette-transparent);
   --md-primary-tab-container-shape: var(--md-sys-container-shape);
   --md-primary-tab-active-indicator-color: var(--md-ref-palette-transparent);
@@ -103,8 +85,6 @@
   /* system tokens */
   --md-sys-color-secondary: var(--md-ref-palette-ice);
   --md-sys-color-on-secondary: var(--md-ref-palette-charcoal);
-  --md-sys-color-tertiary-container: var(--md-ref-palette-ice);
-  --md-sys-color-on-tertiary-container: var(--md-ref-palette-charcoal);
   --md-sys-color-surface: var(--md-ref-palette-charcoal);
   --md-sys-color-on-surface: var(--md-ref-palette-ice);
   --md-sys-color-surface-variant: var(--md-ref-palette-charcoal);
