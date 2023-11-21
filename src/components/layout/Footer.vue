@@ -3,17 +3,21 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
+    <!-- footer -->
     <div class="mt-auto flex flex-wrap gap-y-8 p-8 pt-0">
         <!-- divider -->
         <md-divider></md-divider>
         <!-- pages -->
         <div class="flex w-full justify-center gap-4 xl:order-2 xl:w-1/2 xl:justify-end">
+            <!-- about -->
             <RouterLink :to="{ name: 'about' }">
                 <span class="text-md font-bold text-gunmetal transition-font hover:text-blue dark:text-silver dark:hover:text-blue">About</span>
             </RouterLink>
+            <!-- contact -->
             <RouterLink :to="{ name: 'contact' }">
                 <span class="text-md font-bold text-gunmetal transition-font hover:text-blue dark:text-silver dark:hover:text-blue">Contact</span>
             </RouterLink>
+            <!-- privacy -->
             <RouterLink :to="{ name: 'privacy' }">
                 <span class="text-md font-bold text-gunmetal transition-font hover:text-blue dark:text-silver dark:hover:text-blue">Privacy</span>
             </RouterLink>

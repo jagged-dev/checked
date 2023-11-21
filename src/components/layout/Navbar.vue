@@ -5,6 +5,7 @@ import Theme from "@/components/icons/Theme.vue";
 </script>
 
 <template>
+    <!-- navbar -->
     <nav class="fixed z-50 flex w-full">
         <!-- title -->
         <RouterLink :to="{ name: 'home' }">
