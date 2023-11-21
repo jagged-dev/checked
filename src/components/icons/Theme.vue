@@ -16,7 +16,9 @@ function toggleTheme() {
 <template>
     <!-- theme -->
     <button class="relative rounded-full p-3 text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue" @click="toggleTheme">
+        <!-- icon -->
         <svg class="h-6 w-6 transition-transform duration-500 ease-out dark:rotate-180"><use xlink:href="/assets/images/icons/icons.svg#theme" /></svg>
+        <!-- ripple -->
         <md-ripple></md-ripple>
     </button>
 </template>
