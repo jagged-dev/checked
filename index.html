@@ -3,28 +3,13 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="/assets/images/favicon.ico" rel="icon" />
+        <link rel="icon" href="/assets/images/favicon.ico" />
         <title>checked</title>
 
-        <link href="/src/css/styles.css" rel="stylesheet" />
-        <link href="/src/css/material.css" rel="stylesheet" />
-        <script src="/src/ts/main.ts" type="module"></script>
-        <script src="/src/ts/material.ts" type="module"></script>
-
-        <script>
-            window.onload = function () {
-                if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-                    document.documentElement.classList.add("dark");
-                } else {
-                    document.documentElement.classList.remove("dark");
-                }
-            };
-
-            function toggleTheme() {
-                document.documentElement.classList.toggle("dark");
-                localStorage.theme = document.documentElement.classList.contains("dark") ? "dark" : "light";
-            }
-        </script>
+        <link rel="stylesheet" href="/src/css/styles.css" />
+        <link rel="stylesheet" href="/src/css/material.css" />
+        <script type="module" src="/src/ts/main.ts"></script>
+        <script type="module" src="/src/ts/material.ts"></script>
     </head>
     <body>
         <div id="app"></div>
