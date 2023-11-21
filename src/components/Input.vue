@@ -13,9 +13,11 @@ function formatCurrency(amount: number) {
 </script>
 
 <template>
+    <!-- currency -->
     <md-filled-text-field type="number" prefix-text="$" :value="modelValue" @input="$emit('update:modelValue', formatCurrency($event.target.value))" v-if="type === 'currency'">
         <md-icon slot="leading-icon">{{ icon }}</md-icon>
     </md-filled-text-field>
+    <!-- other -->
     <md-filled-text-field :type="type" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" v-else>
         <md-icon slot="leading-icon">{{ icon }}</md-icon>
     </md-filled-text-field>

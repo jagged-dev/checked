@@ -15,6 +15,7 @@ onMounted(() => {
 </script>
 
 <template>
+    <!-- screenshot -->
     <div class="h-full w-full rounded-3xl border-8 border-gunmetal border-opacity-25 bg-cover bg-clip-content transition dark:border-silver dark:border-opacity-25" ref="screenshot"></div>
 </template>
 
