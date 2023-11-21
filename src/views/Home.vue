@@ -27,7 +27,7 @@ import Footer from "@/components/layout/Footer.vue";
                 </RouterLink>
             </div>
         </div>
-        <!-- theme toggle -->
+        <!-- theme -->
         <div class="flex items-end justify-center">
             <Theme />
         </div>
