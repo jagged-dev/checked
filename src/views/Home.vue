@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer.vue";
 </script>
 
 <template>
-    <!-- hero -->
+    <!-- home -->
     <div class="grid h-screen grid-rows-3 gap-8 p-8 xs:gap-16 xs:p-16 xl:grid-cols-2">
         <!-- blank -->
         <div></div>

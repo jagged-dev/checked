@@ -1,6 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
+    <!-- contact -->
     <div class="flex flex-col gap-8 p-8">
         <!-- heading -->
         <h1 class="text-3xl font-bold leading-none text-charcoal transition-font dark:text-ice">Contact</h1>

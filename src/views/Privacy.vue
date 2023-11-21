@@ -3,6 +3,7 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
+    <!-- privacy -->
     <div class="flex flex-col gap-8 p-8">
         <h1 class="text-3xl font-bold leading-none text-charcoal transition-font dark:text-ice">Privacy Policy</h1>
 
