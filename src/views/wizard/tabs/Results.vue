@@ -81,7 +81,7 @@ function toggleResult(result: string, selected: boolean) {
         </div>
     </div>
     <!-- disclaimer -->
-    <div class="flex items-center justify-center gap-2 rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal" v-if="expanded !== ''">
+    <div class="flex items-center gap-2 rounded-3xl bg-ice p-6 transition-background dark:bg-charcoal" v-if="expanded !== ''">
         <md-icon class="text-blue">error</md-icon>
         <p class="text-sm text-charcoal transition-font dark:text-ice">DISCLAIMER: Please note that the amounts are rounded to the nearest cent and therefore cannot always be split perfectly.</p>
     </div>
