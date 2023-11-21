@@ -5,7 +5,7 @@ import Theme from "@/components/icons/Theme.vue";
 <template>
     <!-- sidebar -->
     <div class="fixed hidden h-screen flex-col justify-end p-6 xl:flex">
-        <!-- theme toggle -->
+        <!-- theme -->
         <Theme />
     </div>
 </template>

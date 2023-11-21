@@ -14,7 +14,7 @@ import Theme from "@/components/icons/Theme.vue";
                 <h1 class="text-2xl font-bold leading-none text-charcoal transition-font dark:text-ice">checked</h1>
             </div>
         </RouterLink>
-        <!-- theme toggle -->
+        <!-- theme -->
         <div class="ml-auto flex p-6 xl:hidden">
             <Theme />
         </div>
