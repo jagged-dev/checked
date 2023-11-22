@@ -12,7 +12,7 @@ import LinkedIn from "@/components/icons/LinkedIn.vue";
         <!-- description -->
         <div class="flex flex-col gap-4">
             <p class="text-gunmetal transition-font dark:text-silver">
-                It's no secret that checks can become quite complicated to split, especially with larger groups and with multiple people paying.
+                It's no secret that checks can become quite complicated to split, especially with larger groups and with multiple people sharing.
                 <b>checked</b> is a free to use application that is aimed at combatting this issue and is designed to help groups split large checks both accurately and hassle-free.
             </p>
             <p class="text-gunmetal transition-font dark:text-silver">
