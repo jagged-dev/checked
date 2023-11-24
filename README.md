@@ -1,5 +1,12 @@
 # checked
 
+<p align="center">
+    <a href="https://checked.jagged-dev.vercel.app">
+        <!-- <img src="" alt="Bootstrap logo" width="256" height="256"> -->
+        <svg style="color:#1877f2"><use xlink:href="/assets/images/icons/icons.svg#logo" /></svg>
+    </a>
+</p>
+
 ## About
 
 It's no secret that checks can become quite complicated to split, especially with larger groups and with multiple people sharing. <b>checked</b> is a free to use application that is aimed at combatting this issue and is designed to help groups split large checks both accurately and hassle-free.
@@ -11,7 +18,7 @@ display the final results of how much each guest owes.
 
 ### Step 1: Enter event details
 
-- `Enter event name`
+- `Enter event name`x
 - `e.g. name of restaurant, activity, or trip`
 
 ### Step 2: Enter party guests
