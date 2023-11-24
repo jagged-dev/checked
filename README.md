@@ -1,7 +1,5 @@
-<div style="display: flex; align-items: center; justify-content: center">
-    <img src="/assets/images/icons/logo.svg" width="256" height="256" />
-    <b style="font-size: 8rem;">checked</b>
-</div>
+<img src="/assets/images/icons/logo.svg" width="128" height="128" />
+<p style="font-size: 8rem; font-weight: bold;">checked</p>
 
 ## About
 
