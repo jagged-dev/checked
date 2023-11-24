@@ -1,40 +1,42 @@
 # Checked
 
-This template should help get you started developing with Vue 3 in Vite.
+<p align="center">
+    <a href="https://checked.jagged-dev.vercel.app/" target="_blank">
+        <img src="/assets/images/logo.svg" alt="checked" width="350" height="70" style="max-width: 100%;">
+    </a>
+    <h1>checked</h1>
+</p>
 
-## Recommended IDE Setup
+## About
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+It's no secret that checks can become quite complicated to split, especially with larger groups and with multiple people sharing. <b>checked</b> is a free to use application that is aimed at combatting this issue and is designed to help groups split large checks both accurately and hassle-free.
 
-## Type Support for `.vue` Imports in TS
+To use this application, users must enter the name of the event, enter each guest in the party, enter the amounts given from the check, and enter each item that was ordered. Users must then specify who ordered each item. From there, the application will perform the necessary calculations and then
+display the final results of how much each guest owes.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## Instructions
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+### Step 1: Enter event details
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+1. Enter event name
+2. e.g. name of restaurant, activity, or trip
 
-## Customize configuration
+### Step 2: Enter party guests
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+1. Enter guest name
+2. Click the Add guest button or press enter to add the guest to the party
+3. To remove a guest, click on the button labeled with the guest's name
 
-## Project Setup
+### Step 3: Enter check amounts
 
-```sh
-npm install
-```
+1. Enter subtotal amount
+2. Enter tax amount
+3. Enter tip amount
 
-### Compile and Hot-Reload for Development
+### Step 4: Enter food items
 
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
+1. Enter item name
+2. Enter item price
+3. Select the guests who ordered the item
+4. Click the Add item button to add another item
+5. To remove an item, click on the button labeled with the item's name, or click on the X
