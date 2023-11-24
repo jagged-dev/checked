@@ -1,7 +1,8 @@
-<a href="https://checked.jagged-dev.vercel.app/" target="_blank">
-    <img align="center" src="/assets/images/icons/logo.svg" alt="checked" width="120" height="120">
-    <h1 align="center">checked</h1>
+<a align="center" href="https://checked.jagged-dev.vercel.app/" target="_blank">
+    <img style="color:#1877f2" src="/assets/images/icons/logo.svg" alt="checked" width="120" height="120">
 </a>
+
+<h1 align="center">checked</h1>
 
 # About
 
