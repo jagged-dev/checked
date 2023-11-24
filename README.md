@@ -1,11 +1,11 @@
 # checked
 
-<p align="center">
+<div style="display:flex;text-align:center;">
     <a href="https://checked.jagged-dev.vercel.app/" target="_blank">
-        <img src="/assets/images/icons/logo.svg" alt="checked" width="350" height="70" style="max-width: 100%;">
-        <h1>checked</h1>
+        <img src="/assets/images/icons/logo.svg" alt="checked" width="200" height="200" style="max-width: 100%;">
     </a>
-</p>
+    <h1>checked</h1>
+</div>
 
 ## About
 
