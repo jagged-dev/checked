@@ -1,12 +1,9 @@
-<img src="/assets/images/favicon.ico" width="128" height="128" />
-<span style="font-size: 8rem;">checked</span>
+<img align="center" src="/assets/images/favicon.ico" alt="checked" width="128" height="128" />
+<h1 align="center">checked</h1>
 
 ## About
 
 It's no secret that checks can become quite complicated to split, especially with larger groups and with multiple people sharing. **checked** is a free to use application that is aimed at combatting this issue and is designed to help groups split large checks both accurately and hassle-free.
-
-To use this application, users must enter the name of the event, enter each guest in the party, enter the amounts given from the check, and enter each item that was ordered. Users must then specify who ordered each item. From there, the application will perform the necessary calculations and then
-display the final results of how much each guest owes.
 
 ## Guide
 
