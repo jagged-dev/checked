@@ -1,8 +1,7 @@
-<p align="center">
-    <img src="/assets/images/favicon.ico" alt="checked" width="128" height="128" />
-</p>
-
-<h3 align="center">checked</h3>
+<h1 align="center">
+    <img style="float: left;" src="/assets/images/favicon.ico" alt="checked" width="128" height="128" />
+    checked
+</h1>
 
 ## About
 
