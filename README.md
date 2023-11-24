@@ -1,6 +1,4 @@
-<h3 align="center">
-    <img style="pointer-events: none;" src="/assets/images/favicon.ico" alt="checked" width="128" height="128" />
-</h3>
+<h3 align="center"><img src="/assets/images/icons/logo.svg" alt="checked" width="128" height="128" /></h3>
 
 <h3 align="center">checked</h3>
 
