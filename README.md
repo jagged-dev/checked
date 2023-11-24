@@ -16,6 +16,12 @@ display the final results of how much each guest owes.
 1. Enter event name
 2. e.g. name of restaurant, activity, or trip
 
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/images/screenshots/event-dk.png">
+    <source media="(prefers-color-scheme: light)" srcset="/assets/images/screenshots/event-lt.png">
+    <img src="/assets/images/screenshots/event-lt.png" alt="Event details" style="width:100%;">
+</picture>
+
 ## Step 2
 
 ### Enter party guests
@@ -24,6 +30,12 @@ display the final results of how much each guest owes.
 2. Click the Add guest button or press enter to add the guest to the party
 3. To remove a guest, click on the button labeled with the guest's name
 
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/images/screenshots/party-dk.png">
+    <source media="(prefers-color-scheme: light)" srcset="/assets/images/screenshots/party-lt.png">
+    <img src="/assets/images/screenshots/party-lt.png" alt="Party guests" style="width:100%;">
+</picture>
+
 ## Step 3
 
 ### Enter check amounts
@@ -31,6 +43,12 @@ display the final results of how much each guest owes.
 1. Enter subtotal amount
 2. Enter tax amount
 3. Enter tip amount
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/images/screenshots/check-dk.png">
+    <source media="(prefers-color-scheme: light)" srcset="/assets/images/screenshots/check-lt.png">
+    <img src="/assets/images/screenshots/check-lt.png" alt="Check amounts" style="width:100%;">
+</picture>
 
 ## Step 4
 
@@ -41,6 +59,12 @@ display the final results of how much each guest owes.
 3. Select the guests who ordered the item
 4. Click the Add item button to add another item
 5. To remove an item, click on the button labeled with the item's name, or click on the X
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/images/screenshots/food-dk.png">
+    <source media="(prefers-color-scheme: light)" srcset="/assets/images/screenshots/food-lt.png">
+    <img src="/assets/images/screenshots/food-lt.png" alt="Food items" style="width:100%;">
+</picture>
 
 # Contact
 
