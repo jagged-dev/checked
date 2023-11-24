@@ -1,10 +1,10 @@
-# Checked
+# checked
 
 <p align="center">
     <a href="https://checked.jagged-dev.vercel.app/" target="_blank">
-        <img src="/assets/images/logo.svg" alt="checked" width="350" height="70" style="max-width: 100%;">
+        <img src="/assets/images/icons/logo.svg" alt="checked" width="350" height="70" style="max-width: 100%;">
+        <h1>checked</h1>
     </a>
-    <h1>checked</h1>
 </p>
 
 ## About
@@ -16,24 +16,32 @@ display the final results of how much each guest owes.
 
 ## Instructions
 
-### Step 1: Enter event details
+## Step 1
+
+### Enter event details
 
 1. Enter event name
 2. e.g. name of restaurant, activity, or trip
 
-### Step 2: Enter party guests
+## Step 2
+
+### Enter party guests
 
 1. Enter guest name
 2. Click the Add guest button or press enter to add the guest to the party
 3. To remove a guest, click on the button labeled with the guest's name
 
-### Step 3: Enter check amounts
+## Step 3
+
+### Enter check amounts
 
 1. Enter subtotal amount
 2. Enter tax amount
 3. Enter tip amount
 
-### Step 4: Enter food items
+## Step 4
+
+### Enter food items
 
 1. Enter item name
 2. Enter item price
