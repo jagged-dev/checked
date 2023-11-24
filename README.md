@@ -1,8 +1,4 @@
-<a align="center" href="https://checked.jagged-dev.vercel.app/" target="_blank">
-    <img style="color:#1877f2" src="/assets/images/icons/logo.svg" alt="checked" width="120" height="120">
-</a>
-
-<h1 align="center">checked</h1>
+# checked
 
 # About
 
@@ -45,3 +41,9 @@ display the final results of how much each guest owes.
 3. Select the guests who ordered the item
 4. Click the Add item button to add another item
 5. To remove an item, click on the button labeled with the item's name, or click on the X
+
+# Contact
+
+For any bug reports, feature requests, business inquiries, or general questions, you can contact me at
+[jgiang.430@gmail.com](mailto:jgiang.430@gmail.com).
+I am typically quick to respond and am generally available on weekdays after 5pm PST.
