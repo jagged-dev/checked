@@ -1,4 +1,4 @@
-<img src="/assets/images/icons/logo.svg" width="128" height="128" />
+<img src="/assets/images/favicon.ico" width="128" height="128" />
 <p style="font-size: 8rem; font-weight: bold;">checked</p>
 
 ## About
