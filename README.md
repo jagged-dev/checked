@@ -1,20 +1,18 @@
-# checked
-
-<div style="display:flex;text-align:center;">
+<div align="center">
     <a href="https://checked.jagged-dev.vercel.app/" target="_blank">
-        <img src="/assets/images/icons/logo.svg" alt="checked" width="200" height="200" style="max-width: 100%;">
+        <img align="left" src="/assets/images/icons/logo.svg" alt="checked" width="120" height="120">
     </a>
     <h1>checked</h1>
 </div>
 
-## About
+# About
 
 It's no secret that checks can become quite complicated to split, especially with larger groups and with multiple people sharing. <b>checked</b> is a free to use application that is aimed at combatting this issue and is designed to help groups split large checks both accurately and hassle-free.
 
 To use this application, users must enter the name of the event, enter each guest in the party, enter the amounts given from the check, and enter each item that was ordered. Users must then specify who ordered each item. From there, the application will perform the necessary calculations and then
 display the final results of how much each guest owes.
 
-## Instructions
+# Instructions
 
 ## Step 1
 
