@@ -1,3 +1,8 @@
 {
-  "rewrites": [{ "source": "/learn", "destination": "/learn" }]
+  "rewrites": [
+    {
+      "source": "/learn",
+      "destination": "https://checked-jagged.vercel.app/learn"
+    }
+  ]
 }
