@@ -965,6 +965,28 @@ video {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+@supports (-webkit-touch-callout: none) {
+  @font-face {
+    font-family: "Product Sans";
+
+    src: url("../../assets/fonts/product-sans/product-sans-bold.ttf") format("truetype");
+
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: "SF Pro";
+
+    src: url("../../assets/fonts/sf-pro/sf-pro-display-semibold.ttf") format("truetype");
+
+    font-weight: bold;
+  }
+
+  .font-bold {
+    letter-spacing: -0.03em;
+  }
+}
+
 .dark {
   color-scheme: dark;
 }
