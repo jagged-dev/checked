@@ -75,10 +75,7 @@ import { RouterLink } from "vue-router";
                 <div class="flex gap-4">
                     <p class="text-gunmetal transition-font dark:text-silver">&bull;</p>
                     <p class="text-gunmetal transition-font dark:text-silver">
-                        <b>Website</b> refers to <b>checked</b>, accessible from
-                        <RouterLink :to="{ name: 'home' }">
-                            <b class="text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue">checked.vercel.app.</b>
-                        </RouterLink>
+                        <b>Website</b> refers to <b>checked</b>, accessible from <a class="font-bold text-charcoal transition-font hover:text-blue dark:text-ice dark:hover:text-blue" href="https://checked-jagged.vercel.app" target="_blank">checked-jagged.vercel.app</a>.
                     </p>
                 </div>
                 <div class="flex gap-4">
