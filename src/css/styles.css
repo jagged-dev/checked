@@ -798,23 +798,23 @@ video {
 }
 
 .bg-check-light {
-  background-image: url('../../assets/images/screenshots/check-lt.png');
+  background-image: url('../../assets/images/screenshots/check-light.png');
 }
 
 .bg-event-light {
-  background-image: url('../../assets/images/screenshots/event-lt.png');
+  background-image: url('../../assets/images/screenshots/event-light.png');
 }
 
 .bg-food-light {
-  background-image: url('../../assets/images/screenshots/food-lt.png');
+  background-image: url('../../assets/images/screenshots/food-light.png');
 }
 
 .bg-party-light {
-  background-image: url('../../assets/images/screenshots/party-lt.png');
+  background-image: url('../../assets/images/screenshots/party-light.png');
 }
 
 .bg-results-light {
-  background-image: url('../../assets/images/screenshots/results-lt.png');
+  background-image: url('../../assets/images/screenshots/results-light.png');
 }
 
 .bg-cover {
@@ -932,9 +932,9 @@ video {
 }
 
 .transition {
-  transition-property: background-image, height, font-size, color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: background-image, height, font-size, color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: background-image, height, font-size, color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-property: background-image, height, width, font-size, color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-image, height, width, font-size, color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-image, height, width, font-size, color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1025,23 +1025,23 @@ video {
 }
 
 :is(.dark .dark\:bg-check-dark) {
-  background-image: url('../../assets/images/screenshots/check-dk.png');
+  background-image: url('../../assets/images/screenshots/check-dark.png');
 }
 
 :is(.dark .dark\:bg-event-dark) {
-  background-image: url('../../assets/images/screenshots/event-dk.png');
+  background-image: url('../../assets/images/screenshots/event-dark.png');
 }
 
 :is(.dark .dark\:bg-food-dark) {
-  background-image: url('../../assets/images/screenshots/food-dk.png');
+  background-image: url('../../assets/images/screenshots/food-dark.png');
 }
 
 :is(.dark .dark\:bg-party-dark) {
-  background-image: url('../../assets/images/screenshots/party-dk.png');
+  background-image: url('../../assets/images/screenshots/party-dark.png');
 }
 
 :is(.dark .dark\:bg-results-dark) {
-  background-image: url('../../assets/images/screenshots/results-dk.png');
+  background-image: url('../../assets/images/screenshots/results-dark.png');
 }
 
 :is(.dark .dark\:text-ice) {
