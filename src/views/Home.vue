@@ -17,7 +17,7 @@ import Footer from "@/components/layout/Footer.vue";
         </div>
         <!-- title -->
         <div class="flex flex-col gap-8 place-self-center">
-            <Title desc="Split checks easier than ever with checked.">checked</Title>
+            <Title desc="split checks easier than ever with checked">checked</Title>
             <div class="flex gap-4">
                 <RouterLink :to="{ name: 'wizard' }">
                     <md-filled-button>Get started</md-filled-button>
