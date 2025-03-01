@@ -1,67 +1,86 @@
-<p align="center">
-  <a href="https://checked-jagged.vercel.app" target="_blank">
-    <img src="/assets/images/icons/logo.svg" alt="checked" width="128" height="128" />
-  </a>
-</p>
+<a href="https://checked-jagged.vercel.app" target="_blank">
+  <img src="/public/opengraph-image.png" alt="checked" width="830" />
+</a>
 
-<h3 align="center">checked</h3>
+[![Vue.js][vue]][vue-url]
+[![TypeScript][typescript]][typescript-url]
+[![TailwindCSS][tailwind]][tailwind-url]
+[![Material Web][material]][material-url]
+[![Git][git]][git-url]
+[![GitHub][github]][github-url]
+[![Vercel][vercel]][vercel-url]
 
-<h6 align="center">Split checks easier than ever with checked.</h6>
+## Introduction
 
-## About
+Split checks easier than ever with **checked**, a tool aimed at helping groups split checks both accurately and hassle-free.
 
-**checked** is a free to use application that is designed to help groups split large checks both accurately and hassle-free.
+## Getting Started
 
-## Guide
+> Be sure to have the following installed before proceeding: `Git`, `Node.js`, `npm`
 
-### Step 1: Enter event details
+### Clone the repository
+
+```bash
+git clone https://github.com/jagged-dev/checked.git
+cd checked
+```
+
+### Install node modules
+
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
+npm run dev
+```
+
+### Check for type errors
+
+```bash
+npm run type-check
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Run the build
+
+```bash
+npm run preview
+```
+
+## Usage
+
+### Enter event details
 
 - `Enter event name`
 - `e.g. name of restaurant, activity, or trip`
 
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/assets/images/screenshots/event-dk.png">
-    <source media="(prefers-color-scheme: light)" srcset="/assets/images/screenshots/event-lt.png">
-    <img src="/assets/images/screenshots/event-lt.png" alt="Event details">
-</picture>
-
-### Step 2: Enter party guests
+### Enter party guests
 
 - `Enter guest name`
 - `Click the Add guest button or press enter to add the guest to the party`
 - `To remove a guest, click on the button labeled with the guest's name`
 
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/assets/images/screenshots/party-dk.png">
-    <source media="(prefers-color-scheme: light)" srcset="/assets/images/screenshots/party-lt.png">
-    <img src="/assets/images/screenshots/party-lt.png" alt="Party guests">
-</picture>
-
-### Step 3: Enter check amounts
+### Enter check amounts
 
 - `Enter subtotal amount`
 - `Enter tax amount`
 - `Enter tip amount`
 
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/assets/images/screenshots/check-dk.png">
-    <source media="(prefers-color-scheme: light)" srcset="/assets/images/screenshots/check-lt.png">
-    <img src="/assets/images/screenshots/check-lt.png" alt="Check amounts">
-</picture>
-
-### Step 4: Enter food items
+### Enter food items
 
 - `Enter item name`
 - `Enter item price`
 - `Select the guests who ordered the item`
 - `Click the Add item button to add another item`
 - `To remove an item, click on the button labeled with the item's name, or click on the X`
-
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/assets/images/screenshots/food-dk.png">
-    <source media="(prefers-color-scheme: light)" srcset="/assets/images/screenshots/food-lt.png">
-    <img src="/assets/images/screenshots/food-lt.png" alt="Food items">
-</picture>
 
 ## Roadmap
 
@@ -112,5 +131,19 @@
 
 ## Contact
 
-For any bug reports, feature requests, business inquiries, or general questions, you can contact me at
-[jgiang.430@gmail.com](mailto:jgiang.430@gmail.com).
+For any bug reports, feature requests, business inquiries, or general questions, you can contact me at <jgiang.430@gmail.com>.
+
+[vue]: https://img.shields.io/badge/Vue.js-1a1a1a?style=for-the-badge&logo=vuedotjs&logoColor=3fb984
+[vue-url]: https://vuejs.org/
+[typescript]: https://img.shields.io/badge/TypeScript-3377c4?style=for-the-badge&logo=typescript&logoColor=ffffff
+[typescript-url]: https://typescriptlang.org/
+[tailwind]: https://img.shields.io/badge/TailwindCSS-030712?style=for-the-badge&logo=tailwindcss&logoColor=3cbcf6
+[tailwind-url]: https://tailwindcss.com/
+[material]: https://img.shields.io/badge/Material%20Web-00639b?style=for-the-badge&logo=materialdesign&logoColor=fbf7ff
+[material-url]: https://m3.material.io/develop/web/
+[git]: https://img.shields.io/badge/Git-f0f0e8?style=for-the-badge&logo=git&logoColor=fa5534
+[git-url]: https://git-scm.com/
+[github]: https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=ffffff
+[github-url]: https://github.com/
+[vercel]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=ffffff
+[vercel-url]: https://vercel.com/
