@@ -11,7 +11,7 @@ const props = defineProps({ label: String });
             <span class="font-bold text-gunmetal transition-font dark:text-silver">{{ label }}</span>
         </div>
         <!-- text -->
-        <h1 class="text-xl font-bold text-charcoal transition-font dark:text-ice"><slot></slot></h1>
+        <h1 class="text-start text-xl font-bold text-charcoal transition-font dark:text-ice"><slot></slot></h1>
         <!-- ripple -->
         <md-ripple></md-ripple>
     </button>
