@@ -2,7 +2,7 @@
   <img src="/public/opengraph-image.png" alt="checked" width="830" />
 </a>
 
-[![Vue.js][vue]][vue-url]
+[![Vue][vue]][vue-url]
 [![TypeScript][typescript]][typescript-url]
 [![CSS][css]][css-url]
 [![Tailwind][tailwind]][tailwind-url]
@@ -134,7 +134,7 @@ npm run preview
 
 For any bug reports, feature requests, business inquiries, or general questions, you can contact me at <jgiang.430@gmail.com>.
 
-[vue]: https://img.shields.io/badge/Vue.js-1a1a1a?style=for-the-badge&logo=vuedotjs&logoColor=3fb984
+[vue]: https://img.shields.io/badge/Vue-1a1a1a?style=for-the-badge&logo=vuedotjs&logoColor=3fb984
 [vue-url]: https://vuejs.org/
 [typescript]: https://img.shields.io/badge/TypeScript-3377c4?style=for-the-badge&logo=typescript&logoColor=ffffff
 [typescript-url]: https://typescriptlang.org/
