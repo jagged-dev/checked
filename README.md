@@ -5,7 +5,7 @@
 [![Vue.js][vue]][vue-url]
 [![TypeScript][typescript]][typescript-url]
 [![CSS][css]][css-url]
-[![TailwindCSS][tailwind]][tailwind-url]
+[![Tailwind][tailwind]][tailwind-url]
 [![Material Web][material]][material-url]
 [![Git][git]][git-url]
 [![GitHub][github]][github-url]
@@ -140,7 +140,7 @@ For any bug reports, feature requests, business inquiries, or general questions,
 [typescript-url]: https://typescriptlang.org/
 [css]: https://img.shields.io/badge/CSS-663497?style=for-the-badge&logo=css&logoColor=ffffff
 [css-url]: https://developer.mozilla.org/en-US/docs/Web/CSS/
-[tailwind]: https://img.shields.io/badge/TailwindCSS-030712?style=for-the-badge&logo=tailwindcss&logoColor=3cbcf6
+[tailwind]: https://img.shields.io/badge/Tailwind-030712?style=for-the-badge&logo=tailwindcss&logoColor=3cbcf6
 [tailwind-url]: https://tailwindcss.com/
 [material]: https://img.shields.io/badge/Material%20Web-00639b?style=for-the-badge&logo=materialdesign&logoColor=fbf7ff
 [material-url]: https://m3.material.io/develop/web/
