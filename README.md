@@ -138,7 +138,7 @@ For any bug reports, feature requests, business inquiries, or general questions,
 [vue-url]: https://vuejs.org/
 [typescript]: https://img.shields.io/badge/TypeScript-3377c4?style=for-the-badge&logo=typescript&logoColor=ffffff
 [typescript-url]: https://typescriptlang.org/
-[css]: https://img.shields.io/badge/CSS-2465f1?style=for-the-badge&logo=css&logoColor=ffffff
+[css]: https://img.shields.io/badge/CSS-663497?style=for-the-badge&logo=css&logoColor=ffffff
 [css-url]: https://developer.mozilla.org/en-US/docs/Web/CSS/
 [tailwind]: https://img.shields.io/badge/TailwindCSS-030712?style=for-the-badge&logo=tailwindcss&logoColor=3cbcf6
 [tailwind-url]: https://tailwindcss.com/
